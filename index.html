@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-gzjlANA9LhJ43CSHY9NOHj1MuHc8yKLLWbn+ADRXzfk='; style-src 'unsafe-inline'; img-src 'self' data:; base-uri 'none'; form-action 'none'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>28卒・文系からねらうIT企業ガイド</title>
+<meta name="description" content="28卒の文系向け。業界地図2027と会社四季報の数字で、上場IT企業131社から狙い目24社を選びました。大手・難関12社と全社一覧もあります。">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://shuyaofficial.github.io/it-company-guide/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="28卒・文系からねらうIT企業ガイド">
+<meta property="og:description" content="28卒の文系向け。業界地図2027と会社四季報の数字で、上場IT企業131社から狙い目24社を選びました。大手・難関12社と全社一覧もあります。">
+<meta property="og:url" content="https://shuyaofficial.github.io/it-company-guide/">
+<meta property="og:image" content="https://shuyaofficial.github.io/it-company-guide/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root {
+  --bg: #fbfaf5;
+  --ink: #1c1b19;
+  --sub: #5f5b53;
+  --line: #e3e0d6;
+  --line-strong: #bdb8aa;
+  --accent: #18327f;
+  --accent-soft: #eef0f7;
+  --warn: #8f3b25;
+  --serif: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif;
+  --sans: system-ui, "Hiragino Sans", sans-serif;
+  --bar-h: 3.25rem;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { background: var(--bg); -webkit-text-size-adjust: 100%; text-size-adjust: 100%; scroll-padding-top: calc(var(--bar-h) + 0.5rem); }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--sans); font-size: 1rem; line-height: 1.7; overflow-wrap: break-word; word-break: auto-phrase; }
+body.has-dock { padding-bottom: var(--dock-h, 0px); }
+html.sheet-open, html.sheet-open body { overflow: hidden; }
+[hidden] { display: none !important; }
+a { color: var(--accent); text-decoration: underline; text-underline-offset: 0.2em; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.sr { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.app { max-width: 480px; min-height: 100vh; margin: 0 auto; background: var(--bg); }
+h1, h2, h3, h4 { font-family: var(--serif); font-weight: 700; }
+
+/* top bar */
+.topbar { position: sticky; top: 0; z-index: 20; display: flex; align-items: center; justify-content: space-between; height: var(--bar-h); padding: 0 1rem; background: var(--bg); border-bottom: 1px solid var(--line); }
+.brand { display: inline-flex; align-items: center; min-height: 44px; color: var(--ink); font-family: var(--serif); font-size: 1.05rem; font-weight: 700; text-decoration: none; }
+.search-btn { min-width: 44px; min-height: 44px; padding: 0 0.9rem; border: 1px solid var(--line-strong); border-radius: 3px; background: var(--bg); color: var(--ink); font: inherit; font-size: 0.9375rem; font-weight: 600; cursor: pointer; }
+
+/* hero */
+.hero { padding: 1rem 1rem 0.4rem; }
+.kicker { margin: 0 0 0.4rem; color: var(--sub); font-family: var(--serif); font-size: 0.9375rem; font-weight: 600; }
+h1 { margin: 0 0 0.7rem; font-size: clamp(1.75rem, 8.4vw, 2.5rem); line-height: 1.25; }
+.lede { margin: 0 0 0.6rem; font-size: 0.9375rem; line-height: 1.65; }
+.asof { margin: 0 0 0.6rem; color: var(--sub); font-size: 0.8125rem; line-height: 1.6; }
+.stamp { display: inline-block; margin: 0 0 0.4rem; padding: 0.15rem 0.6rem; border-radius: 2px; background: var(--accent); color: #fff; font-size: 0.8125rem; font-weight: 700; line-height: 1.6; }
+.notice { margin: 0; color: var(--sub); font-size: 0.8125rem; line-height: 1.6; }
+.tap { display: flex; align-items: center; min-height: 44px; font-size: 0.875rem; font-weight: 600; }
+.digits { margin-top: 0.4rem; padding-top: 0.7rem; border-top: 1px solid var(--line); }
+.digits h2 { margin: 0; color: var(--accent); font-size: 1.1rem; }
+.digits-note { margin: 0 0 0.4rem; color: var(--sub); font-size: 0.8125rem; }
+.cta-sub { display: flex; align-items: center; justify-content: center; width: 100%; min-height: 48px; margin: 0.5rem 0 0; border: 2px solid var(--accent); border-radius: 3px; background: var(--bg); color: var(--accent); font: inherit; font-size: 1rem; font-weight: 700; cursor: pointer; }
+.cta { display: flex; align-items: center; justify-content: center; min-height: 52px; margin: 0.7rem 0 0; border-radius: 3px; background: var(--accent); color: #fff; font-size: 1.05rem; font-weight: 700; text-decoration: none; }
+
+/* numbers (3 columns) */
+.nums { display: grid; grid-template-columns: repeat(3, 1fr); margin: 0; }
+.num { min-width: 0; padding: 0.25rem 0.5rem 0.25rem 0.7rem; border-left: 1px solid var(--line-strong); }
+.num:first-child { padding-left: 0; border-left: 0; }
+.num dt { color: var(--sub); font-size: 0.75rem; }
+.num dd { margin: 0; font-family: var(--serif); font-size: 1.4rem; font-weight: 700; line-height: 1.15; font-variant-numeric: tabular-nums; }
+.num .u { margin-left: 0.15rem; color: var(--sub); font-family: var(--sans); font-size: 0.6875rem; font-weight: 600; }
+.digits .num dd { color: var(--accent); font-size: 1.9rem; }
+
+/* sections */
+main { padding: 0 1rem 2rem; }
+main > section { margin-top: 1.25rem; padding-top: 1.1rem; border-top: 1px solid var(--line); }
+h2 { margin: 0 0 0.5rem; font-size: 1.35rem; line-height: 1.4; }
+h3 { margin: 0; font-size: 1.1rem; line-height: 1.5; }
+.intro { margin: 0 0 0.7rem; color: var(--sub); font-size: 0.875rem; line-height: 1.6; }
+.status { margin: 0.5rem 0 0; color: var(--sub); font-size: 0.8125rem; }
+.steps { margin: 0; padding: 0; list-style: none; counter-reset: step; }
+.steps li { position: relative; margin: 0 0 0.5rem; padding-left: 2.4rem; counter-increment: step; font-size: 0.875rem; line-height: 1.6; }
+.steps li::before { content: counter(step, decimal-leading-zero); position: absolute; left: 0; top: 0; color: var(--accent); font-family: var(--serif); font-size: 1.2rem; font-weight: 700; line-height: 1.5; }
+
+/* segment tabs (sticky, horizontal scroll) */
+#picks { padding-top: 0; border-top: 0; }
+.tabs { position: sticky; top: var(--bar-h); z-index: 10; display: flex; margin: 0 -1rem; padding: 0.6rem 1rem; overflow-x: auto; background: var(--bg); border-top: 1px solid var(--line); scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+.tabs::-webkit-scrollbar { display: none; }
+.tab { flex: none; min-width: 44px; min-height: 44px; padding: 0 0.9rem; border: 1px solid var(--line-strong); border-left-width: 0; background: var(--bg); color: var(--ink); font-family: var(--serif); font-size: 0.9375rem; font-weight: 700; white-space: nowrap; cursor: pointer; }
+.tab:first-child { border-left-width: 1px; border-radius: 3px 0 0 3px; }
+.tab:last-child { border-radius: 0 3px 3px 0; }
+.tab[aria-pressed="true"] { border-color: var(--accent); background: var(--accent); color: #fff; }
+.tab:focus-visible { outline-offset: -3px; }
+#picks > h2 { margin-top: 1.1rem; }
+
+/* company block */
+.list { margin: 0.6rem 0 0; }
+.co { margin: 0 0 0.6rem; padding: 0.55rem 0.8rem 0.6rem; border: 1px solid var(--line-strong); border-radius: 4px; background: var(--bg); }
+.co-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 0.5rem; }
+.co-name { min-width: 0; font-size: 1.2rem; line-height: 1.35; overflow-wrap: anywhere; }
+.co-code { margin-left: 0.4rem; color: var(--sub); font-family: var(--sans); font-size: 0.75rem; font-weight: 400; }
+.seg-tag { flex: none; max-width: 7.5rem; padding: 0.1rem 0.5rem; border: 1px solid var(--line-strong); border-radius: 2px; background: var(--accent-soft); font-size: 0.75rem; font-weight: 600; line-height: 1.5; text-align: center; }
+.co .nums { margin-top: 0.45rem; padding-top: 0.35rem; border-top: 1px solid var(--line); }
+.why-row { display: flex; align-items: center; gap: 0.25rem; margin-top: 0.25rem; }
+.why-body { flex: 1; min-width: 0; }
+.lab { margin: 0; font-size: 0.8125rem; font-weight: 700; }
+.why { margin: 0; padding-left: 1.1rem; font-size: 0.875rem; line-height: 1.4; }
+.why li { margin: 0; }
+.expander { flex: none; width: 44px; min-height: 44px; border: 0; background: none; color: var(--accent); font-size: 1.9rem; line-height: 1; cursor: pointer; }
+.expander[aria-expanded="true"] { transform: rotate(90deg); }
+.co.is-open .why { padding-left: 0; list-style: none; counter-reset: why; }
+.co.is-open .why li { position: relative; padding-left: 2.2rem; counter-increment: why; }
+.co.is-open .why li::before { content: counter(why, decimal-leading-zero); position: absolute; left: 0; color: var(--accent); font-family: var(--serif); font-weight: 700; }
+.detail { margin-top: 0.4rem; border-top: 1px solid var(--line); }
+.dsec { padding: 0.7rem 0; border-bottom: 1px solid var(--line); font-size: 0.9375rem; }
+.dsec h4 { margin: 0 0 0.3rem; font-size: 1.05rem; }
+.dsec ul { margin: 0; padding-left: 1.1rem; }
+.dsec p { margin: 0; }
+.kv { display: grid; grid-template-columns: max-content 1fr; gap: 0.2rem 0.75rem; margin: 0; }
+.kv dt { color: var(--sub); white-space: nowrap; }
+.kv dd { margin: 0; text-align: right; font-variant-numeric: tabular-nums; }
+.kv a { display: inline-flex; align-items: center; min-height: 44px; }
+.btn-line { display: flex; align-items: center; justify-content: center; min-height: 44px; margin-top: 0.8rem; border: 1px solid var(--accent); border-radius: 3px; color: var(--accent); font-size: 0.9375rem; font-weight: 700; text-decoration: none; }
+.toggle { display: block; width: 100%; min-height: 44px; margin-top: 0.3rem; border: 2px solid var(--accent); border-radius: 3px; background: var(--accent); color: #fff; font: inherit; font-size: 1rem; font-weight: 700; cursor: pointer; }
+.toggle[data-on="true"] { background: var(--bg); color: var(--accent); }
+.empty { margin: 1rem 0 0; color: var(--sub); }
+
+/* map */
+.seg { padding: 0.7rem 0; border-top: 1px solid var(--line); }
+.seg:first-of-type { border-top: 0; padding-top: 0.1rem; }
+.seg > p { margin: 0.1rem 0 0.3rem; font-size: 0.875rem; line-height: 1.6; }
+.seg-kv { display: grid; grid-template-columns: 5rem 1fr; gap: 0.15rem 0.5rem; margin: 0; font-size: 0.8125rem; line-height: 1.55; }
+.seg-kv dt { color: var(--sub); font-weight: 600; }
+.seg-kv dd { margin: 0; }
+.seg-kv ul { margin: 0; padding: 0; list-style: none; }
+.seg details { grid-column: 1 / -1; }
+.seg summary { display: flex; align-items: center; min-height: 44px; color: var(--accent); font-weight: 600; cursor: pointer; }
+.seg details ul { padding-bottom: 0.3rem; color: var(--sub); }
+
+/* all companies */
+.controls { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin: 0 0 0.5rem; }
+.field { display: flex; flex-direction: column; gap: 0.15rem; min-width: 0; color: var(--sub); font-size: 0.8125rem; }
+.field.wide { grid-column: 1 / -1; }
+.field input, .field select { width: 100%; min-height: 44px; padding: 0.35rem 0.6rem; border: 1px solid var(--line-strong); border-radius: 3px; background: var(--bg); color: var(--ink); font: inherit; font-size: 1rem; }
+.rows { margin: 0.5rem 0 0; padding: 0; list-style: none; }
+.row { padding: 0.4rem 0; border-top: 1px solid var(--line); }
+.row-main { display: flex; align-items: baseline; justify-content: space-between; gap: 0.5rem; }
+.row-main > span:first-child { min-width: 0; overflow-wrap: anywhere; }
+.row-name { font-weight: 700; }
+.row-code { margin-left: 0.4rem; color: var(--sub); font-size: 0.75rem; font-weight: 400; }
+.row-seg { flex: none; color: var(--sub); font-size: 0.75rem; }
+.row-sub { display: flex; flex-wrap: wrap; gap: 0 0.7rem; margin: 0; color: var(--sub); font-size: 0.75rem; line-height: 1.55; font-variant-numeric: tabular-nums; }
+.row-note { margin: 0.25rem 0 0; font-size: 0.8rem; color: var(--warn); }
+.row-sub span { white-space: nowrap; }
+.more { display: block; width: 100%; min-height: 48px; margin-top: 0.5rem; border: 1px solid var(--accent); border-radius: 3px; background: var(--bg); color: var(--accent); font: inherit; font-weight: 700; cursor: pointer; }
+
+/* not listed, sources */
+.group { margin: 0 0 0.7rem; }
+.group h3 { font-size: 1.05rem; }
+.plain { margin: 0.2rem 0 0; padding-left: 1.1rem; font-size: 0.875rem; line-height: 1.55; }
+.group p { margin: 0.15rem 0 0; font-size: 0.875rem; line-height: 1.55; }
+.group .note { color: var(--sub); font-size: 0.8125rem; }
+.plain li { margin: 0 0 0.3rem; }
+.src h3 { margin-top: 1rem; font-size: 1.05rem; }
+.disclaimer { margin: 1rem 0 0; padding: 0.2rem 0 0.2rem 0.8rem; border-left: 3px solid var(--accent); font-size: 0.9375rem; }
+.built { margin: 1rem 0 0; color: var(--sub); font-size: 0.8125rem; }
+
+/* candidates dock */
+.dock { position: fixed; left: 50%; bottom: 0; z-index: 30; width: min(100%, 480px); max-height: 25vh; overflow-y: auto; padding: 0.3rem 1rem calc(0.5rem + env(safe-area-inset-bottom)); border-top: 2px solid var(--accent); background: var(--bg); transform: translateX(-50%); }
+.dock-top { display: flex; align-items: center; justify-content: space-between; min-height: 40px; }
+.dock-n { margin: 0; font-family: var(--serif); font-size: 1rem; font-weight: 700; }
+.dock-n strong { margin: 0 0.15rem; font-size: 1.5rem; font-variant-numeric: tabular-nums; }
+.link-btn { min-height: 44px; padding: 0 0.25rem; border: 0; background: none; color: var(--accent); font: inherit; font-size: 0.8125rem; text-decoration: underline; text-underline-offset: 0.2em; cursor: pointer; }
+.dock-msg { margin: 0 0 0.3rem; color: var(--warn); font-size: 0.8125rem; line-height: 1.5; }
+.dock-row { display: flex; align-items: center; gap: 0.5rem; }
+.chips { display: flex; flex: 1; gap: 0.4rem; min-width: 0; overflow-x: auto; scrollbar-width: none; }
+.chips::-webkit-scrollbar { display: none; }
+.chip { flex: none; display: flex; flex-direction: column; align-items: flex-start; width: 6.5rem; min-height: 48px; padding: 0.2rem 0.5rem; border: 1px solid var(--line-strong); border-radius: 3px; background: var(--bg); color: var(--ink); font: inherit; text-align: left; cursor: pointer; }
+.chip-name { display: block; max-width: 100%; overflow: hidden; font-size: 0.8125rem; font-weight: 700; line-height: 1.4; text-overflow: ellipsis; white-space: nowrap; }
+.chip-code { color: var(--sub); font-size: 0.6875rem; line-height: 1.4; }
+.btn-primary { flex: none; min-height: 48px; padding: 0 1rem; border: 0; border-radius: 3px; background: var(--accent); color: #fff; font: inherit; font-size: 0.9375rem; font-weight: 700; cursor: pointer; }
+
+/* compare sheet (native dialog) */
+.sheet { position: fixed; inset: 0; width: min(100%, 480px); max-width: none; max-height: 85vh; margin: auto auto 0; padding: 0; overflow: hidden; border: 0; border-top: 2px solid var(--accent); background: var(--bg); color: var(--ink); transform: translateY(100%); transition: transform 0.18s ease-out; }
+.sheet.is-in { transform: none; }
+.sheet::backdrop { background: rgba(28, 27, 25, 0.5); }
+.sheet[open] { display: flex; flex-direction: column; }
+.sheet-head { display: flex; align-items: center; justify-content: space-between; padding: 0.4rem 1rem; border-bottom: 1px solid var(--line); }
+.sheet-head h2 { margin: 0; font-size: 1.15rem; }
+.sheet-close { min-width: 44px; min-height: 44px; padding: 0 0.9rem; border: 1px solid var(--line-strong); border-radius: 3px; background: var(--bg); color: var(--ink); font: inherit; font-size: 0.9375rem; font-weight: 600; cursor: pointer; }
+.sheet-body { flex: 1; min-height: 0; padding: 0.5rem 0.75rem 1rem; overflow: auto; overscroll-behavior: contain; }
+.cmp { width: calc(6.6rem + var(--cols, 3) * 5.2rem); min-width: 100%; border-collapse: collapse; table-layout: fixed; font-size: 0.8125rem; }
+.cmp th, .cmp td { padding: 0.5rem 0.4rem; border-bottom: 1px solid var(--line); vertical-align: top; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.cmp td { text-align: right; }
+.cmp thead td { width: 6.6rem; }
+.cmp thead th { font-family: var(--serif); font-size: 0.75rem; line-height: 1.4; text-align: right; vertical-align: bottom; word-break: auto-phrase; line-break: strict; }
+.cmp tbody th { position: sticky; left: 0; background: var(--bg); color: var(--sub); font-weight: 600; text-align: left; white-space: nowrap; }
+
+.cmp-note { margin: 0 0 0.5rem; color: var(--warn); font-size: 0.8125rem; line-height: 1.5; }
+
+/* finder (6問で近い会社を探す) */
+.f-prog { margin: 0 0 0.9rem; }
+.f-prog-text { margin: 0 0 0.3rem; color: var(--sub); font-size: 0.8125rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+progress { display: block; width: 100%; height: 4px; border: 0; background: var(--line); color: var(--accent); -webkit-appearance: none; appearance: none; }
+progress::-webkit-progress-bar { background: var(--line); }
+progress::-webkit-progress-value { background: var(--accent); }
+progress::-moz-progress-bar { background: var(--accent); }
+.f-intro { margin: 0 0 0.8rem; color: var(--sub); font-size: 0.875rem; line-height: 1.6; }
+.q { min-width: 0; margin: 0; padding: 0; border: 0; }
+.q legend { padding: 0; }
+.q-title { margin: 0; font-size: 1.25rem; line-height: 1.4; }
+.q-ends { display: flex; justify-content: space-between; gap: 0.75rem; margin: 0.25rem 0 0.6rem; color: var(--sub); font-size: 0.8125rem; line-height: 1.5; }
+.q-ends span:last-child { text-align: right; }
+.q-opts { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.4rem; }
+.opt { position: relative; display: block; }
+.opt input { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: pointer; }
+.opt span { display: flex; align-items: center; justify-content: center; min-height: 48px; border: 1px solid var(--line-strong); border-radius: 3px; background: var(--bg); font-family: var(--serif); font-size: 1.15rem; font-weight: 700; }
+.opt-skip { grid-column: 1 / -1; }
+.opt-skip span { font-family: var(--sans); font-size: 0.9375rem; }
+.opt input:checked + span { border-color: var(--accent); background: var(--accent); color: #fff; }
+.opt input:focus-visible + span { outline: 3px solid var(--accent); outline-offset: 2px; }
+.f-region { margin: 0.9rem 0 0; color: var(--sub); font-size: 0.8125rem; line-height: 1.55; }
+.f-act { display: flex; align-items: center; justify-content: center; width: 100%; min-height: 44px; margin: 0.5rem 0 0; padding: 0 0.8rem; border: 1px solid var(--accent); border-radius: 3px; background: var(--bg); color: var(--accent); font: inherit; font-size: 0.9375rem; font-weight: 700; text-decoration: none; cursor: pointer; }
+.f-act.solid { background: var(--accent); color: #fff; }
+.f-back { width: auto; min-width: 44px; margin-top: 0.9rem; border-color: var(--line-strong); color: var(--ink); font-weight: 600; }
+.f-note { margin: 0.3rem 0 0; color: var(--sub); font-size: 0.8125rem; line-height: 1.55; }
+.f-need { margin: 0.8rem 0 0; color: var(--warn); font-size: 0.9375rem; }
+.f-lead { margin: 0.8rem 0 0; padding: 0.2rem 0 0.2rem 0.8rem; border-left: 3px solid var(--accent); font-size: 0.9375rem; }
+.f-res { margin: 0.6rem 0 0; padding: 0; list-style: none; }
+.f-item { padding: 0.8rem 0; border-top: 1px solid var(--line); }
+.f-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 0.5rem; }
+.f-name { min-width: 0; margin: 0; font-size: 1.1rem; line-height: 1.35; overflow-wrap: anywhere; }
+.f-match { flex: none; margin: 0; color: var(--accent); font-family: var(--serif); font-size: 1.5rem; font-weight: 700; line-height: 1.2; font-variant-numeric: tabular-nums; }
+.f-match small { margin-right: 0.3rem; color: var(--sub); font-family: var(--sans); font-size: 0.6875rem; font-weight: 600; }
+.f-seg { margin: 0; color: var(--sub); font-size: 0.8125rem; }
+.f-why { margin: 0.3rem 0 0; padding-left: 1.1rem; font-size: 0.875rem; line-height: 1.5; list-style: disc; }
+.f-gap { margin: 0.2rem 0 0; font-size: 0.8125rem; color: var(--sub); }
+.f-btns { display: flex; gap: 0.5rem; }
+.f-btns .f-act, .f-btns .toggle { flex: 1; width: auto; margin-top: 0.5rem; }
+.f-btns .toggle { min-height: 44px; font-size: 0.9375rem; }
+.f-url { width: 100%; min-height: 44px; margin-top: 0.4rem; padding: 0.35rem 0.6rem; border: 1px solid var(--line-strong); border-radius: 3px; background: var(--bg); color: var(--ink); font: inherit; font-size: 0.875rem; }
+.f-sec { margin-top: 1rem; padding-top: 0.2rem; border-top: 1px solid var(--line); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
+</style>
+</head>
+<body>
+<div class="app" id="top">
+  <div class="topbar">
+    <a class="brand" href="#top">28卒 IT企業ガイド</a>
+    <button type="button" class="search-btn" id="search-btn">検索</button>
+  </div>
+
+  <header class="hero">
+    <p class="kicker">数字で見つける、文系のキャリア</p>
+    <h1>28卒・文系から<br>ねらうIT企業ガイド</h1>
+    <p class="lede">『会社四季報 業界地図』2027年版と『会社四季報』の数字で、IT業界の上場企業を比べました。伸びている業界にいて新卒の枠が広そうな会社を「狙い目」、応募が集まりやすい会社を「大手・難関」に分けています。</p>
+    <p class="asof">データ時点：会社四季報 業界地図 2027年版／会社四季報 2026年4集（26年6月時点のデータ）／時価総額は2026年6月末時点</p>
+    <p class="stamp">上場企業のみ掲載</p>
+    <p class="notice">ここに載っているのは上場企業だけです。比べるのに使った四季報が上場企業しか扱っていないためです。NTTデータやNTTドコモ、外資系の日本法人、コンサル会社のように、上場していなくても新卒を採る会社はたくさんあります。主な社名はページ下の「載らない会社」にまとめました。</p>
+    <a class="tap" href="#not-listed">載らない会社を見る →</a>
+    <section class="digits" aria-labelledby="digits-h">
+      <h2 id="digits-h">まず見るべき3つの数字</h2>
+      <p class="digits-note" id="digits-note"></p>
+      <dl class="nums" id="digits"></dl>
+    </section>
+    <a class="cta" href="#picks">おすすめを見る →</a>
+    <button type="button" class="cta-sub" id="finder-open" hidden>6問で近い会社を探す</button>
+  </header>
+
+  <main>
+    <noscript><p class="notice">このページの表示には JavaScript が必要です。</p></noscript>
+
+    <section id="how" aria-labelledby="how-h">
+      <h2 id="how-h">使い方</h2>
+      <div id="how-body"></div>
+    </section>
+
+    <section id="picks" aria-labelledby="picks-h">
+      <div class="tabs" id="seg-tabs" role="group" aria-label="区分で絞り込む"></div>
+      <h2 id="picks-h">おすすめ（狙い目）</h2>
+      <p class="intro" data-intro="picks"></p>
+      <p class="status" id="picks-status" aria-live="polite"></p>
+      <div class="list" id="picks-list"></div>
+      <p class="empty" id="picks-empty" hidden>この区分に載せた会社はありません。</p>
+    </section>
+
+    <section id="major" aria-labelledby="major-h">
+      <h2 id="major-h">大手・難関（参考）</h2>
+      <p class="intro" data-intro="major"></p>
+      <div class="list" id="major-list"></div>
+    </section>
+
+    <section id="map" aria-labelledby="map-h">
+      <h2 id="map-h">IT業界の区分</h2>
+      <p class="intro" data-intro="map"></p>
+      <div id="map-body"></div>
+    </section>
+
+    <section id="all" aria-labelledby="all-h">
+      <h2 id="all-h">全社一覧</h2>
+      <p class="intro" data-intro="all"></p>
+      <div class="controls">
+        <div class="field wide">
+          <label for="all-q">社名・コードで探す</label>
+          <input id="all-q" type="search" autocomplete="off" placeholder="例: NTT、4443">
+        </div>
+        <div class="field">
+          <label for="all-seg">区分</label>
+          <select id="all-seg"><option value="">すべて</option></select>
+        </div>
+        <div class="field">
+          <label for="all-sort">並べ替え</label>
+          <select id="all-sort"></select>
+        </div>
+      </div>
+      <p class="status" id="all-status" aria-live="polite"></p>
+      <ul class="rows" id="all-rows"></ul>
+      <p class="empty" id="all-empty" hidden>条件に合う会社はありません。</p>
+      <button type="button" class="more" id="all-more" hidden></button>
+    </section>
+
+    <section id="not-listed" aria-labelledby="not-listed-h">
+      <h2 id="not-listed-h">載らない会社</h2>
+      <p class="intro" data-intro="not_listed"></p>
+      <div id="not-listed-body"></div>
+    </section>
+
+    <section id="sources" class="src" aria-labelledby="sources-h">
+      <h2 id="sources-h">出典と限界</h2>
+      <p class="intro" data-intro="sources"></p>
+      <div id="sources-body"></div>
+    </section>
+  </main>
+</div>
+
+<aside class="dock" id="dock" aria-label="候補" hidden>
+  <div class="dock-top">
+    <p class="dock-n">候補<strong id="dock-count">0</strong>社</p>
+    <button type="button" class="link-btn" id="dock-clear">すべて削除</button>
+  </div>
+  <p class="dock-msg" id="dock-msg" aria-live="polite" hidden></p>
+  <div class="dock-row">
+    <div class="chips" id="dock-chips"></div>
+    <button type="button" class="btn-primary" id="dock-compare">比較する →</button>
+  </div>
+</aside>
+
+<dialog class="sheet" id="sheet" aria-labelledby="sheet-h">
+  <div class="sheet-head">
+    <h2 id="sheet-h">候補の比較</h2>
+    <button type="button" class="sheet-close" id="sheet-close">閉じる</button>
+  </div>
+  <div class="sheet-body" id="sheet-body"></div>
+</dialog>
+
+<dialog class="sheet" id="finder" aria-labelledby="finder-h">
+  <div class="sheet-head">
+    <h2 id="finder-h">6問で近い会社を探す</h2>
+    <button type="button" class="sheet-close" id="finder-close">閉じる</button>
+  </div>
+  <div class="sheet-body" id="finder-body"></div>
+</dialog>
+
+<script>
+(() => {
+"use strict";
+const DATA = {"meta":{"title":"IT企業ガイド（28卒・文系向け）","generated":"2026-10-18","edition_gyokai":"会社四季報 業界地図 2027年版","edition_shikiho":"会社四季報 2026年4集（26年6月時点のデータ）","mcap_asof":"2026年6月末","universe_count":131,"featured_counts":{"pick":24,"major":12},"url":"https://shuyaofficial.github.io/it-company-guide/"},"segments":[{"key":"telecom","label":"通信","what":"スマホ回線や光回線を売り、その上で金融・クラウド・法人向けサービスを広げている","entry_roles":["法人営業","総合職（企画・マーケ）","SE（ネットワーク）"],"industries":[{"no":35,"name":"携帯電話事業者","weather_26h2":"晴れ","weather_27":"晴れ","market_japan":"16兆2,351億円(情報通信業基本調査、24年度、総務省)"}],"count":6},{"key":"sier","label":"SIer・ITコンサル","what":"企業や官公庁のシステムを請け負って作り、運用する。上流の企画からかかわるコンサル寄りの会社もある","entry_roles":["SE（文系採用が多い職種）","IT営業","ITコンサル"],"industries":[{"no":30,"name":"システム開発","weather_26h2":"快晴","weather_27":"快晴","market_japan":"17兆2,220億円"},{"no":90,"name":"コンサルティング","weather_26h2":"快晴","weather_27":"晴れ","market_japan":"8.4兆円(国内ITサービス市場と国内ビジネスコンサルティング市場の合算、2025年、ノースサンド)"}],"count":17},{"key":"security","label":"セキュリティ","what":"ウイルス対策やネットワーク防御の製品・サービスを売る。攻撃の増加で需要が伸びている","entry_roles":["技術営業","カスタマーサポート","SE"],"industries":[{"no":36,"name":"サイバーセキュリティー","weather_26h2":"快晴","weather_27":"快晴","market_japan":"1兆7,427億円(2025年の企業のセキュリティやリスクマネジメントへの支出、26年3月時点、ガートナー)"}],"count":9},{"key":"saas","label":"ソフトウェア・SaaS","what":"会計・名刺管理・勤怠などの業務ソフトや、業界ごとの専用ソフトを月額で売る","entry_roles":["インサイドセールス","フィールドセールス","カスタマーサクセス"],"industries":[{"no":33,"name":"ソフトウェア(業務特化)","weather_26h2":"晴れ","weather_27":"晴れ","market_japan":"1兆0,902億円"},{"no":34,"name":"ソフトウェア(業界特化)","weather_26h2":"晴れ","weather_27":"晴れ","market_japan":"-"}],"count":41},{"key":"cloud","label":"クラウド・データセンター","what":"サーバーや計算基盤を貸す。生成AIの計算需要で設備投資が増えている","entry_roles":["法人営業","SE（インフラ）","カスタマーサクセス"],"industries":[{"no":32,"name":"クラウド","weather_26h2":"快晴","weather_27":"快晴","market_japan":"2兆1,818億円(IaaS/PaaS市場規模、2025年度予測、ITR)"},{"no":6,"name":"データセンター","weather_26h2":"快晴","weather_27":"快晴","market_japan":"2兆1,310億円↑"}],"count":9},{"key":"web","label":"Web・ネットサービス","what":"通販・フリマ・検索・求人・口コミなど、個人が使うネットサービスを運営する","entry_roles":["企画・ディレクター","広告営業","マーケティング"],"industries":[{"no":28,"name":"eコマース","weather_26h2":"晴れ","weather_27":"晴れ","market_japan":"15.2兆円(物販系分野のBtoC EC市場規模、2024年、経済産業省)"},{"no":29,"name":"Webアプリ","weather_26h2":"晴れ","weather_27":"晴れ","market_japan":"9,900万人(ソーシャルメディアユーザー数、2026年、WeAreSocial)"}],"count":18},{"key":"media","label":"ゲーム・動画・ネット広告","what":"ゲームや動画配信、ネット広告の運用でもうける。ヒット作や景気で業績が振れやすい","entry_roles":["広告営業・運用","企画・プロデューサー","マーケティング"],"industries":[{"no":125,"name":"ゲーム","weather_26h2":"晴れ","weather_27":"晴れ","market_japan":"-"},{"no":126,"name":"動画配信","weather_26h2":"晴れ","weather_27":"晴れ","market_japan":"6,740億円↑(動画配信サービス市場規模、2025年推計、GEM Partners)"},{"no":127,"name":"広告","weather_26h2":"晴れ","weather_27":"晴れ","market_japan":"8兆623億円(日本の総広告費、2025年、電通)"},{"no":133,"name":"ネットメディア","weather_26h2":"雨","weather_27":"雨","market_japan":"3,376億円↑(通信系コンテンツのうち新聞記事と雑誌記事の市場規模、2024年、総務省「メディア・ソフトの制作及び流通の実態に関する調査」)"}],"count":17},{"key":"ai","label":"AI","what":"企業向けにAIを組み込んだ製品や開発を請け負う。上場して日が浅い小さな会社が多い","entry_roles":["ビジネス職（営業・企画）","AIコンサル","カスタマーサクセス"],"industries":[{"no":31,"name":"AI(国内)","weather_26h2":"快晴","weather_27":"快晴","market_japan":"2,155億円(AI分野の研究費、2024年、総務省「科学技術研究調査」)"}],"count":14}],"companies":[{"code":"3774","name":"インターネットイニシアティブ(IIJ)","segment":"telecom","segment_label":"通信","industries":[6,32,35],"mcap_rank":21,"mcap_oku":5865,"tier":"狙い目","featured":"pick","rank_in_segment":1,"growth_score":5,"access_score":4,"growth_reasons":["業界天気 晴れ→晴れ（携帯電話事業者）+1","売上予想 +11.5% +2","営業利益率10.1% +1"],"access_reasons":["就職難易度 2/5（出典: reashu 業界別偏差値）から換算（6−難易度）"],"why":["業界天気 晴れ→晴れ（携帯電話事業者）","営業利益率10.1%（目安10%）","売上予想 +11.5%"],"entry_roles":["法人営業","総合職（企画・マーケ）","SE（ネットワーク）"],"fit":"企業向けのネット回線とクラウドを提供する。格安SIMの会社に回線を貸す事業（MVNE）では、業界地図2027で国内1位。","caution":null,"caution_auto":[],"metrics":{"employees":5818,"employees_single":null,"avg_age":37.5,"avg_salary_man_yen":747,"equity_ratio_pct":44.2,"op_margin_pct":10.1,"sales_latest_oku":3454.0,"sales_forecast_oku":3850.0,"sales_growth_pct":11.5,"op_margin_forecast_pct":10.0},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":3,"role":3,"customer":2,"growth":5,"access":4,"pay":3},"difficulty":{"difficulty_5":2.0,"url":"https://reashu.com/it-gyoukai-ranking/","hensachi":53,"source":"就活の教科書・就職偏差値"},"shikiho_page":"p0279"},{"code":"9436","name":"沖縄セルラー電話","segment":"telecom","segment_label":"通信","industries":[35],"mcap_rank":26,"mcap_oku":3387,"tier":"狙い目","featured":"pick","rank_in_segment":2,"growth_score":4,"access_score":3,"growth_reasons":["業界天気 晴れ→晴れ（携帯電話事業者）+1","営業利益率21.8%（今期予想） +1","営業利益率15%以上 +1"],"access_reasons":[],"why":["業界天気 晴れ→晴れ（携帯電話事業者）","営業利益率21.8%（今期予想。目安10%）","平均年収720万円・平均年齢39.2歳"],"entry_roles":["法人営業","総合職（企画・マーケ）","SE（ネットワーク）"],"fit":"KDDIの子会社で、沖縄県でauを展開している。沖縄で働きたい人の有力な選択肢。","caution":"事業の地盤は沖縄県","caution_auto":[],"metrics":{"employees":545,"employees_single":347,"avg_age":39.2,"avg_salary_man_yen":720,"equity_ratio_pct":83.5,"op_margin_pct":21.6,"sales_latest_oku":863.5,"sales_forecast_oku":900.0,"sales_growth_pct":4.2,"op_margin_forecast_pct":21.8},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":2,"role":3,"customer":2,"growth":4,"access":3,"pay":3},"difficulty":null,"shikiho_page":"p0933"},{"code":"3697","name":"SHIFT","segment":"sier","segment_label":"SIer・ITコンサル","industries":[30],"mcap_rank":34,"mcap_oku":1802,"tier":"狙い目","featured":"pick","rank_in_segment":1,"growth_score":5,"access_score":5,"growth_reasons":["業界天気 快晴→快晴（システム開発）+2","売上予想 +23.2% +2","営業利益率12% +1"],"access_reasons":["従業員11,688人で採用枠が大きい +2","平均年齢38歳と若い +1"],"why":["業界天気 快晴→快晴（システム開発）","営業利益率12%（目安10%）","売上予想 +23.2%"],"entry_roles":["SE（文系採用が多い職種）","IT営業","ITコンサル"],"fit":"システムがちゃんと動くかを確かめるテストの仕事で大きくなった会社。いまは開発やコンサルも請け負う。","caution":null,"caution_auto":[],"metrics":{"employees":11688,"employees_single":6201,"avg_age":38.0,"avg_salary_man_yen":684,"equity_ratio_pct":36.1,"op_margin_pct":12.0,"sales_latest_oku":1298.2,"sales_forecast_oku":1600.0,"sales_growth_pct":23.2,"op_margin_forecast_pct":10.0},"weather":{"h2":"快晴","y27":"快晴"},"axes":{"size":4,"role":4,"customer":5,"growth":5,"access":5,"pay":2},"difficulty":null,"shikiho_page":"p0271"},{"code":"446A","name":"ノースサンド","segment":"sier","segment_label":"SIer・ITコンサル","industries":[90],"mcap_rank":null,"mcap_oku":1362,"tier":"狙い目","featured":"pick","rank_in_segment":2,"growth_score":5,"access_score":5,"growth_reasons":["業界天気 快晴→晴れ（コンサルティング）+1","売上予想 +47% +2","営業利益率22.3%（今期予想） +1","営業利益率15%以上 +1"],"access_reasons":["従業員2,147人 +1","平均年齢32.1歳と若い +1"],"why":["業界天気 快晴→晴れ（コンサルティング）","営業利益率22.3%（今期予想。目安10%）","売上予想 +47%"],"entry_roles":["ITコンサル","マーケティング支援"],"fit":"ベイカレント出身の社長が立ち上げたITコンサル。2025年11月に上場した。業界地図2027によると、26年度はコンサルタント840人の採用を目標にしている。","caution":null,"caution_auto":[],"metrics":{"employees":2147,"employees_single":2147,"avg_age":32.1,"avg_salary_man_yen":689,"equity_ratio_pct":80.0,"op_margin_pct":21.2,"sales_latest_oku":261.9,"sales_forecast_oku":385.0,"sales_growth_pct":47.0,"op_margin_forecast_pct":22.3},"weather":{"h2":"快晴","y27":"晴れ"},"axes":{"size":3,"role":4,"customer":5,"growth":5,"access":5,"pay":2},"difficulty":null,"shikiho_page":"p0383"},{"code":"9759","name":"NSD","segment":"sier","segment_label":"SIer・ITコンサル","industries":[30],"mcap_rank":32,"mcap_oku":2119,"tier":"狙い目","featured":"pick","rank_in_segment":3,"growth_score":5,"access_score":4,"growth_reasons":["業界天気 快晴→快晴（システム開発）+2","売上予想 +7% +1","営業利益率16.2% +1","営業利益率15%以上 +1"],"access_reasons":["従業員4,787人 +1"],"why":["業界天気 快晴→快晴（システム開発）","営業利益率16.2%（目安10%）","売上予想 +7%"],"entry_roles":["SE（文系採用が多い職種）","IT営業","ITコンサル"],"fit":"銀行や保険、電力などのシステムを作るSIer。日立や富士通のようなメーカーの系列に入っていない、いわゆる独立系。","caution":null,"caution_auto":[],"metrics":{"employees":4787,"employees_single":3469,"avg_age":39.2,"avg_salary_man_yen":751,"equity_ratio_pct":76.0,"op_margin_pct":16.2,"sales_latest_oku":1178.1,"sales_forecast_oku":1260.0,"sales_growth_pct":7.0,"op_margin_forecast_pct":15.5},"weather":{"h2":"快晴","y27":"快晴"},"axes":{"size":3,"role":4,"customer":5,"growth":5,"access":4,"pay":3},"difficulty":null,"shikiho_page":"p0963"},{"code":"9449","name":"GMOインターネットグループ","segment":"security","segment_label":"セキュリティ","industries":[36],"mcap_rank":25,"mcap_oku":3587,"tier":"狙い目","featured":"pick","rank_in_segment":1,"growth_score":5,"access_score":5,"growth_reasons":["業界天気 快晴→快晴（サイバーセキュリティー）+2","売上予想 +8.5% +1","営業利益率22.6%（今期予想） +1","営業利益率15%以上 +1"],"access_reasons":["従業員6,614人で採用枠が大きい +2"],"why":["業界天気 快晴→快晴（サイバーセキュリティー）","営業利益率22.6%（今期予想。目安10%）","売上予想 +8.5%"],"entry_roles":["法人営業","企画・ディレクター","SE"],"fit":"ドメイン、サーバー、決済、ネット銀行、セキュリティまで手がける総合ネットグループ。","caution":null,"caution_auto":["単独の従業員は208人。新卒採用はグループ会社ごとのことがある"],"metrics":{"employees":6614,"employees_single":208,"avg_age":39.0,"avg_salary_man_yen":841,"equity_ratio_pct":7.3,"op_margin_pct":20.0,"sales_latest_oku":2856.3,"sales_forecast_oku":3100.0,"sales_growth_pct":8.5,"op_margin_forecast_pct":22.6},"weather":{"h2":"快晴","y27":"快晴"},"axes":{"size":3,"role":4,"customer":4,"growth":5,"access":5,"pay":4},"difficulty":null,"shikiho_page":"p0934"},{"code":"4475","name":"HENNGE","segment":"security","segment_label":"セキュリティ","industries":[36],"mcap_rank":70,"mcap_oku":370,"tier":"狙い目","featured":"pick","rank_in_segment":2,"growth_score":5,"access_score":4,"growth_reasons":["業界天気 快晴→快晴（サイバーセキュリティー）+2","売上予想 +17.2% +2","営業利益率16.4% +1","営業利益率15%以上 +1"],"access_reasons":["平均年齢35.3歳と若い +1"],"why":["業界天気 快晴→快晴（サイバーセキュリティー）","営業利益率16.4%（目安10%）","売上予想 +17.2%"],"entry_roles":["技術営業","カスタマーサポート","SE"],"fit":"「HENNGE One」で、社員がいくつものクラウドサービスに一つのIDで安全にログインできるようにする。料金は月額。","caution":null,"caution_auto":[],"metrics":{"employees":430,"employees_single":null,"avg_age":35.3,"avg_salary_man_yen":847,"equity_ratio_pct":33.5,"op_margin_pct":16.4,"sales_latest_oku":109.2,"sales_forecast_oku":128.0,"sales_growth_pct":17.2,"op_margin_forecast_pct":16.2},"weather":{"h2":"快晴","y27":"快晴"},"axes":{"size":1,"role":4,"customer":4,"growth":5,"access":4,"pay":4},"difficulty":null,"shikiho_page":"p0383"},{"code":"2326","name":"デジタルアーツ","segment":"security","segment_label":"セキュリティ","industries":[36],"mcap_rank":61,"mcap_oku":523,"tier":"狙い目","featured":"pick","rank_in_segment":3,"growth_score":5,"access_score":4,"growth_reasons":["業界天気 快晴→快晴（サイバーセキュリティー）+2","売上予想 +10.7% +2","営業利益率45%（今期予想） +1","営業利益率15%以上 +1"],"access_reasons":["平均年齢34.9歳と若い +1"],"why":["業界天気 快晴→快晴（サイバーセキュリティー）","営業利益率45%（今期予想。目安10%）","売上予想 +10.7%"],"entry_roles":["技術営業","カスタマーサポート","SE"],"fit":"子どもや社員が危ないサイトを開かないようにするフィルタリングソフトの会社。メールの安全対策も売っている。","caution":null,"caution_auto":[],"metrics":{"employees":304,"employees_single":304,"avg_age":34.9,"avg_salary_man_yen":699,"equity_ratio_pct":62.3,"op_margin_pct":44.2,"sales_latest_oku":108.4,"sales_forecast_oku":120.0,"sales_growth_pct":10.7,"op_margin_forecast_pct":45.0},"weather":{"h2":"快晴","y27":"快晴"},"axes":{"size":1,"role":4,"customer":4,"growth":5,"access":4,"pay":2},"difficulty":null,"shikiho_page":"p0112"},{"code":"4443","name":"Sansan","segment":"saas","segment_label":"ソフトウェア・SaaS","industries":[33],"mcap_rank":33,"mcap_oku":1969,"tier":"狙い目","featured":"pick","rank_in_segment":1,"growth_score":5,"access_score":5,"growth_reasons":["業界天気 晴れ→晴れ（ソフトウェア(業務特化)）+1","売上予想 +20% +2","営業利益率20.9%（今期予想） +1","営業利益率15%以上 +1"],"access_reasons":["従業員2,336人 +1","平均年齢32.1歳と若い +1"],"why":["業界天気 晴れ→晴れ（ソフトウェア(業務特化)）","営業利益率20.9%（今期予想。目安10%）","売上予想 +20%"],"entry_roles":["インサイドセールス","フィールドセールス","カスタマーサクセス"],"fit":"名刺管理の「Sansan」と請求書受け取りの「Bill One」を企業に売るSaaS。売る相手は企業なので、営業とカスタマーサクセスの仕事が多い。","caution":null,"caution_auto":[],"metrics":{"employees":2336,"employees_single":2077,"avg_age":32.1,"avg_salary_man_yen":810,"equity_ratio_pct":36.4,"op_margin_pct":15.2,"sales_latest_oku":537.6,"sales_forecast_oku":645.0,"sales_growth_pct":20.0,"op_margin_forecast_pct":20.9},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":3,"role":2,"customer":5,"growth":5,"access":5,"pay":4},"difficulty":null,"shikiho_page":"p0379"},{"code":"4733","name":"オービックビジネスコンサルタント","segment":"saas","segment_label":"ソフトウェア・SaaS","industries":[33],"mcap_rank":22,"mcap_oku":4586,"tier":"狙い目","featured":"pick","rank_in_segment":2,"growth_score":5,"access_score":5,"growth_reasons":["業界天気 晴れ→晴れ（ソフトウェア(業務特化)）+1","売上予想 +11.9% +2","営業利益率46.1%（今期予想） +1","営業利益率15%以上 +1"],"access_reasons":["従業員1,065人 +1","平均年齢34.7歳と若い +1"],"why":["業界天気 晴れ→晴れ（ソフトウェア(業務特化)）","営業利益率46.1%（今期予想。目安10%）","売上予想 +11.9%"],"entry_roles":["インサイドセールス","フィールドセールス","カスタマーサクセス"],"fit":"経理の担当者が使う会計ソフト「勘定奉行」の会社。お客さんは中小企業が中心。","caution":null,"caution_auto":[],"metrics":{"employees":null,"employees_single":1065,"avg_age":34.7,"avg_salary_man_yen":831,"equity_ratio_pct":77.8,"op_margin_pct":45.9,"sales_latest_oku":514.0,"sales_forecast_oku":575.0,"sales_growth_pct":11.9,"op_margin_forecast_pct":46.1},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":2,"role":2,"customer":5,"growth":5,"access":5,"pay":4},"difficulty":null,"shikiho_page":"p0421"},{"code":"4776","name":"サイボウズ","segment":"saas","segment_label":"ソフトウェア・SaaS","industries":[33],"mcap_rank":39,"mcap_oku":1191,"tier":"狙い目","featured":"pick","rank_in_segment":3,"growth_score":5,"access_score":5,"growth_reasons":["業界天気 晴れ→晴れ（ソフトウェア(業務特化)）+1","売上予想 +13.5% +2","営業利益率27% +1","営業利益率15%以上 +1"],"access_reasons":["従業員1,356人 +1","平均年齢36.4歳と若い +1"],"why":["業界天気 晴れ→晴れ（ソフトウェア(業務特化)）","営業利益率27%（目安10%）","売上予想 +13.5%"],"entry_roles":["インサイドセールス","フィールドセールス","カスタマーサクセス"],"fit":"グループウェアの「サイボウズOffice」と、業務アプリを自分で作れる「kintone」が2本柱。","caution":null,"caution_auto":[],"metrics":{"employees":1356,"employees_single":1080,"avg_age":36.4,"avg_salary_man_yen":718,"equity_ratio_pct":59.5,"op_margin_pct":27.0,"sales_latest_oku":374.3,"sales_forecast_oku":425.0,"sales_growth_pct":13.5,"op_margin_forecast_pct":25.4},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":2,"role":2,"customer":5,"growth":5,"access":5,"pay":3},"difficulty":null,"shikiho_page":"p0426"},{"code":"4194","name":"ビジョナル","segment":"saas","segment_label":"ソフトウェア・SaaS","industries":[33],"mcap_rank":28,"mcap_oku":3150,"tier":"狙い目","featured":"pick","rank_in_segment":4,"growth_score":5,"access_score":4,"growth_reasons":["業界天気 晴れ→晴れ（ソフトウェア(業務特化)）+1","売上予想 +24% +2","営業利益率26.7% +1","営業利益率15%以上 +1"],"access_reasons":["従業員2,840人 +1"],"why":["業界天気 晴れ→晴れ（ソフトウェア(業務特化)）","営業利益率26.7%（目安10%）","売上予想 +24%"],"entry_roles":["インサイドセールス","フィールドセールス","カスタマーサクセス"],"fit":"転職サイト「ビズリーチ」の会社。人事向けのシステムや事業承継のマッチングにも広げている。","caution":null,"caution_auto":[],"metrics":{"employees":2840,"employees_single":null,"avg_age":38.6,"avg_salary_man_yen":861,"equity_ratio_pct":72.5,"op_margin_pct":26.7,"sales_latest_oku":801.6,"sales_forecast_oku":994.0,"sales_growth_pct":24.0,"op_margin_forecast_pct":23.9},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":3,"role":2,"customer":5,"growth":5,"access":4,"pay":4},"difficulty":null,"shikiho_page":"p0340"},{"code":"5036","name":"日本ビジネスシステムズ","segment":"cloud","segment_label":"クラウド・データセンター","industries":[32],"mcap_rank":52,"mcap_oku":691,"tier":"狙い目","featured":"pick","rank_in_segment":1,"growth_score":5,"access_score":5,"growth_reasons":["業界天気 快晴→快晴（クラウド）+2","売上予想 +25.4% +2"],"access_reasons":["従業員3,013人 +1","平均年齢35.4歳と若い +1"],"why":["業界天気 快晴→快晴（クラウド）","売上予想 +25.4%","平均年収641万円・平均年齢35.4歳"],"entry_roles":["法人営業","SE（インフラ）","カスタマーサクセス"],"fit":"マイクロソフトのクラウドを企業に導入し、そのあとの運用も引き受ける。","caution":null,"caution_auto":["営業利益率は4.4%と低め（目安10%）"],"metrics":{"employees":3013,"employees_single":2768,"avg_age":35.4,"avg_salary_man_yen":641,"equity_ratio_pct":28.2,"op_margin_pct":4.4,"sales_latest_oku":1725.8,"sales_forecast_oku":2165.0,"sales_growth_pct":25.4,"op_margin_forecast_pct":4.2},"weather":{"h2":"快晴","y27":"快晴"},"axes":{"size":3,"role":4,"customer":5,"growth":5,"access":5,"pay":2},"difficulty":null,"shikiho_page":"p0456"},{"code":"3844","name":"コムチュア","segment":"cloud","segment_label":"クラウド・データセンター","industries":[32],"mcap_rank":65,"mcap_oku":413,"tier":"狙い目","featured":"pick","rank_in_segment":2,"growth_score":5,"access_score":5,"growth_reasons":["業界天気 快晴→快晴（クラウド）+2","売上予想 +10.2% +2","営業利益率12.2% +1"],"access_reasons":["従業員2,059人 +1","平均年齢35.5歳と若い +1"],"why":["業界天気 快晴→快晴（クラウド）","営業利益率12.2%（目安10%）","売上予想 +10.2%"],"entry_roles":["法人営業","SE（インフラ）","カスタマーサクセス"],"fit":"企業のシステムをクラウドに移したり、データを分析できるようにしたりする独立系のSIer。","caution":null,"caution_auto":[],"metrics":{"employees":2059,"employees_single":1764,"avg_age":35.5,"avg_salary_man_yen":698,"equity_ratio_pct":76.6,"op_margin_pct":12.2,"sales_latest_oku":381.1,"sales_forecast_oku":420.0,"sales_growth_pct":10.2,"op_margin_forecast_pct":11.2},"weather":{"h2":"快晴","y27":"快晴"},"axes":{"size":3,"role":4,"customer":5,"growth":5,"access":5,"pay":2},"difficulty":null,"shikiho_page":"p0288"},{"code":"3915","name":"テラスカイ","segment":"cloud","segment_label":"クラウド・データセンター","industries":[32],"mcap_rank":75,"mcap_oku":291,"tier":"狙い目","featured":"pick","rank_in_segment":3,"growth_score":5,"access_score":5,"growth_reasons":["業界天気 快晴→快晴（クラウド）+2","売上予想 +22.2% +2"],"access_reasons":["従業員1,745人 +1","平均年齢35.3歳と若い +1"],"why":["業界天気 快晴→快晴（クラウド）","売上予想 +22.2%","平均年収660万円・平均年齢35.3歳"],"entry_roles":["法人営業","SE（インフラ）","カスタマーサクセス"],"fit":"セールスフォースの顧客管理システムを企業に入れて、使いこなせるよう支える会社。","caution":null,"caution_auto":[],"metrics":{"employees":1745,"employees_single":876,"avg_age":35.3,"avg_salary_man_yen":660,"equity_ratio_pct":56.5,"op_margin_pct":5.6,"sales_latest_oku":280.6,"sales_forecast_oku":343.0,"sales_growth_pct":22.2,"op_margin_forecast_pct":7.4},"weather":{"h2":"快晴","y27":"快晴"},"axes":{"size":2,"role":4,"customer":5,"growth":5,"access":5,"pay":2},"difficulty":null,"shikiho_page":"p0297"},{"code":"3679","name":"じげん","segment":"web","segment_label":"Web・ネットサービス","industries":[29],"mcap_rank":64,"mcap_oku":419,"tier":"狙い目","featured":"pick","rank_in_segment":1,"growth_score":5,"access_score":5,"growth_reasons":["業界天気 晴れ→晴れ（Webアプリ）+1","売上予想 +14.6% +2","営業利益率20.2% +1","営業利益率15%以上 +1"],"access_reasons":["従業員1,350人 +1","平均年齢33.2歳と若い +1"],"why":["業界天気 晴れ→晴れ（Webアプリ）","営業利益率20.2%（目安10%）","売上予想 +14.6%"],"entry_roles":["企画・ディレクター","広告営業","マーケティング"],"fit":"求人や賃貸物件をまとめて探せるサイトをいくつも運営する。応募や問い合わせが出たときに料金をもらう仕組みが多い。","caution":null,"caution_auto":[],"metrics":{"employees":1350,"employees_single":226,"avg_age":33.2,"avg_salary_man_yen":554,"equity_ratio_pct":56.0,"op_margin_pct":20.2,"sales_latest_oku":292.2,"sales_forecast_oku":335.0,"sales_growth_pct":14.6,"op_margin_forecast_pct":19.2},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":2,"role":2,"customer":1,"growth":5,"access":5,"pay":1},"difficulty":null,"shikiho_page":"p0268"},{"code":"4825","name":"ウェザーニューズ","segment":"web","segment_label":"Web・ネットサービス","industries":[29],"mcap_rank":44,"mcap_oku":947,"tier":"狙い目","featured":"pick","rank_in_segment":2,"growth_score":5,"access_score":4,"growth_reasons":["業界天気 晴れ→晴れ（Webアプリ）+1","売上予想 +5.4% +1","営業利益率21.4% +1","営業利益率15%以上 +1"],"access_reasons":["従業員1,105人 +1"],"why":["業界天気 晴れ→晴れ（Webアプリ）","営業利益率21.4%（目安10%）","売上予想 +5.4%"],"entry_roles":["企画・ディレクター","広告営業","マーケティング"],"fit":"天気予報の会社。アプリ「ウェザーニュース」のほか、船や飛行機の運航会社向けの予報も売っている。","caution":null,"caution_auto":[],"metrics":{"employees":1105,"employees_single":978,"avg_age":40.0,"avg_salary_man_yen":654,"equity_ratio_pct":84.5,"op_margin_pct":21.4,"sales_latest_oku":244.8,"sales_forecast_oku":258.0,"sales_growth_pct":5.4,"op_margin_forecast_pct":20.9},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":2,"role":2,"customer":1,"growth":5,"access":4,"pay":2},"difficulty":null,"shikiho_page":"p0431"},{"code":"4477","name":"BASE","segment":"web","segment_label":"Web・ネットサービス","industries":[28],"mcap_rank":71,"mcap_oku":313,"tier":"狙い目","featured":"pick","rank_in_segment":3,"growth_score":4,"access_score":4,"growth_reasons":["業界天気 晴れ→晴れ（eコマース）+1","売上予想 +37% +2"],"access_reasons":["平均年齢36.3歳と若い +1"],"why":["業界天気 晴れ→晴れ（eコマース）","売上予想 +37%","平均年収800万円・平均年齢36.3歳"],"entry_roles":["企画・ディレクター","広告営業","マーケティング"],"fit":"初期費用なしでネットショップを作れる「BASE」と、決済の「PAY.JP」を運営する。","caution":"SBIグループが株式の最大20%を買い付けた。上場は続ける方針（四季報2026年4集）","caution_auto":[],"metrics":{"employees":401,"employees_single":247,"avg_age":36.3,"avg_salary_man_yen":800,"equity_ratio_pct":28.4,"op_margin_pct":8.1,"sales_latest_oku":207.3,"sales_forecast_oku":284.0,"sales_growth_pct":37.0,"op_margin_forecast_pct":7.9},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":1,"role":2,"customer":1,"growth":4,"access":4,"pay":4},"difficulty":null,"shikiho_page":"p0384"},{"code":"9468","name":"KADOKAWA","segment":"media","segment_label":"ゲーム・動画・ネット広告","industries":[125,126],"mcap_rank":null,"mcap_oku":5156,"tier":"狙い目","featured":"pick","rank_in_segment":1,"growth_score":3,"access_score":5,"growth_reasons":["業界天気 晴れ→晴れ（ゲーム）+1","売上予想 +6.4% +1"],"access_reasons":["従業員7,332人で採用枠が大きい +2"],"why":["業界天気 晴れ→晴れ（ゲーム）","売上予想 +6.4%","平均年収871万円・平均年齢41.6歳"],"entry_roles":["広告営業・運用","企画・プロデューサー","マーケティング"],"fit":"出版から始まり、アニメやゲーム、ニコニコ動画まで持つ。小説や漫画をアニメやゲームに広げる仕事がしたい人向き。","caution":null,"caution_auto":["営業利益率は3.4%と低め（目安10%）"],"metrics":{"employees":7332,"employees_single":2471,"avg_age":41.6,"avg_salary_man_yen":871,"equity_ratio_pct":62.7,"op_margin_pct":2.9,"sales_latest_oku":2823.1,"sales_forecast_oku":3003.0,"sales_growth_pct":6.4,"op_margin_forecast_pct":3.4},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":3,"role":2,"customer":1,"growth":3,"access":5,"pay":4},"difficulty":null,"shikiho_page":"p0935"},{"code":"9418","name":"U-NEXT HOLDINGS","segment":"media","segment_label":"ゲーム・動画・ネット広告","industries":[126],"mcap_rank":null,"mcap_oku":2972,"tier":"狙い目","featured":"pick","rank_in_segment":2,"growth_score":4,"access_score":5,"growth_reasons":["業界天気 晴れ→晴れ（動画配信）+1","売上予想 +10.1% +2"],"access_reasons":["従業員5,737人で採用枠が大きい +2","平均年齢37.8歳と若い +1"],"why":["業界天気 晴れ→晴れ（動画配信）","売上予想 +10.1%","平均年収649万円・平均年齢37.8歳"],"entry_roles":["広告営業・運用","企画・プロデューサー","マーケティング"],"fit":"動画配信サービス「U-NEXT」を運営する。お店のBGMで知られるUSENも同じグループ。","caution":null,"caution_auto":["単独の従業員は274人。新卒採用はグループ会社ごとのことがある"],"metrics":{"employees":5737,"employees_single":274,"avg_age":37.8,"avg_salary_man_yen":649,"equity_ratio_pct":31.9,"op_margin_pct":8.1,"sales_latest_oku":3904.1,"sales_forecast_oku":4300.0,"sales_growth_pct":10.1,"op_margin_forecast_pct":7.4},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":3,"role":2,"customer":1,"growth":4,"access":5,"pay":2},"difficulty":null,"shikiho_page":"p0930"},{"code":"2148","name":"アイティメディア","segment":"media","segment_label":"ゲーム・動画・ネット広告","industries":[133],"mcap_rank":null,"mcap_oku":243,"tier":"狙い目","featured":"pick","rank_in_segment":3,"growth_score":5,"access_score":3,"growth_reasons":["売上予想 +10.7% +2","営業利益率21.7%（今期予想） +1","営業利益率15%以上 +1"],"access_reasons":[],"why":["営業利益率21.7%（今期予想。目安10%）","売上予想 +10.7%","平均年収698万円・平均年齢39.9歳"],"entry_roles":["広告営業・運用","企画・プロデューサー","マーケティング"],"fit":"IT系のニュースサイトを30ほど運営するネットメディア。ソフトバンクグループの子会社。","caution":null,"caution_auto":[],"metrics":{"employees":434,"employees_single":337,"avg_age":39.9,"avg_salary_man_yen":698,"equity_ratio_pct":79.2,"op_margin_pct":21.2,"sales_latest_oku":83.1,"sales_forecast_oku":92.0,"sales_growth_pct":10.7,"op_margin_forecast_pct":21.7},"weather":{"h2":"雨","y27":"雨"},"axes":{"size":1,"role":2,"customer":1,"growth":5,"access":3,"pay":2},"difficulty":null,"shikiho_page":"p0093"},{"code":"3993","name":"PKSHA Technology","segment":"ai","segment_label":"AI","industries":[31],"mcap_rank":46,"mcap_oku":851,"tier":"狙い目","featured":"pick","rank_in_segment":1,"growth_score":5,"access_score":5,"growth_reasons":["業界天気 快晴→快晴（AI(国内)）+2","売上予想 +67.2% +2","営業利益率24.3% +1","営業利益率15%以上 +1"],"access_reasons":["従業員1,001人 +1","平均年齢36.1歳と若い +1"],"why":["業界天気 快晴→快晴（AI(国内)）","営業利益率24.3%（目安10%）","売上予想 +67.2%"],"entry_roles":["ビジネス職（営業・企画）","AIコンサル","カスタマーサクセス"],"fit":"問い合わせに答える対話AIなど、仕事を自動化するソフトを企業に売る。会社ごとの開発も請け負う。","caution":null,"caution_auto":[],"metrics":{"employees":1001,"employees_single":366,"avg_age":36.1,"avg_salary_man_yen":922,"equity_ratio_pct":65.7,"op_margin_pct":24.3,"sales_latest_oku":217.7,"sales_forecast_oku":364.0,"sales_growth_pct":67.2,"op_margin_forecast_pct":16.5},"weather":{"h2":"快晴","y27":"快晴"},"axes":{"size":2,"role":4,"customer":5,"growth":5,"access":5,"pay":4},"difficulty":null,"shikiho_page":"p0312"},{"code":"4259","name":"エクサウィザーズ","segment":"ai","segment_label":"AI","industries":[31],"mcap_rank":49,"mcap_oku":775,"tier":"狙い目","featured":"pick","rank_in_segment":2,"growth_score":5,"access_score":4,"growth_reasons":["業界天気 快晴→快晴（AI(国内)）+2","売上予想 +33.3% +2","営業利益率15%（今期予想） +1","営業利益率15%以上 +1"],"access_reasons":["平均年齢34.9歳と若い +1"],"why":["業界天気 快晴→快晴（AI(国内)）","営業利益率15%（今期予想。目安10%）","売上予想 +33.3%"],"entry_roles":["ビジネス職（営業・企画）","AIコンサル","カスタマーサクセス"],"fit":"企業のAI導入を手伝い、自社でもAIのソフトを作って売っている。","caution":null,"caution_auto":[],"metrics":{"employees":659,"employees_single":null,"avg_age":34.9,"avg_salary_man_yen":855,"equity_ratio_pct":70.1,"op_margin_pct":13.3,"sales_latest_oku":120.0,"sales_forecast_oku":160.0,"sales_growth_pct":33.3,"op_margin_forecast_pct":15.0},"weather":{"h2":"快晴","y27":"快晴"},"axes":{"size":2,"role":4,"customer":5,"growth":5,"access":4,"pay":4},"difficulty":null,"shikiho_page":"p0350"},{"code":"3773","name":"アドバンスト・メディア","segment":"ai","segment_label":"AI","industries":[31],"mcap_rank":81,"mcap_oku":189,"tier":"狙い目","featured":"pick","rank_in_segment":3,"growth_score":5,"access_score":4,"growth_reasons":["業界天気 快晴→快晴（AI(国内)）+2","売上予想 +41.6% +2","営業利益率20.4% +1","営業利益率15%以上 +1"],"access_reasons":["平均年齢37.5歳と若い +1"],"why":["業界天気 快晴→快晴（AI(国内)）","営業利益率20.4%（目安10%）","売上予想 +41.6%"],"entry_roles":["ビジネス職（営業・企画）","AIコンサル","カスタマーサクセス"],"fit":"音声認識「アミボイス」が主力。AIエージェントと組み合わせた業務支援に広げている。","caution":null,"caution_auto":[],"metrics":{"employees":507,"employees_single":271,"avg_age":37.5,"avg_salary_man_yen":637,"equity_ratio_pct":73.7,"op_margin_pct":20.4,"sales_latest_oku":70.6,"sales_forecast_oku":100.0,"sales_growth_pct":41.6,"op_margin_forecast_pct":15.0},"weather":{"h2":"快晴","y27":"快晴"},"axes":{"size":2,"role":4,"customer":5,"growth":5,"access":4,"pay":2},"difficulty":null,"shikiho_page":"p0278"},{"code":"6501","name":"日立製作所","segment":"sier","segment_label":"SIer・ITコンサル","industries":[6,30,31],"mcap_rank":2,"mcap_oku":202784,"tier":"大手・難関","featured":"major","rank_in_segment":1,"growth_score":5,"access_score":1,"growth_reasons":["業界天気 快晴→快晴（システム開発）+2","売上予想 +13.3% +2","営業利益率11%（今期予想） +1"],"access_reasons":["就職難易度 5/5（出典: reashu 業界別偏差値）から換算（6−難易度）"],"why":["業界天気 快晴→快晴（システム開発）","営業利益率11%（今期予想。目安10%）","売上予想 +13.3%"],"entry_roles":["SE（文系採用が多い職種）","IT営業","ITコンサル"],"fit":"国内4位のSIerで、鉄道や電力などインフラの仕組みづくりに強い。IT部門の中核は子会社の日立システムズ。","caution":null,"caution_auto":["単独の従業員は26,833人。新卒採用はグループ会社ごとのことがある"],"metrics":{"employees":287571,"employees_single":26833,"avg_age":42.2,"avg_salary_man_yen":994,"equity_ratio_pct":43.7,"op_margin_pct":10.7,"sales_latest_oku":105867.8,"sales_forecast_oku":120000.0,"sales_growth_pct":13.3,"op_margin_forecast_pct":11.0},"weather":{"h2":"快晴","y27":"快晴"},"axes":{"size":5,"role":4,"customer":5,"growth":5,"access":1,"pay":4},"difficulty":{"difficulty_5":5.0,"url":"https://reashu.com/it-gyoukai-ranking/","hensachi":67,"source":"就活の教科書・就職偏差値"},"shikiho_page":"p0606"},{"code":"6758","name":"ソニーグループ","segment":"media","segment_label":"ゲーム・動画・ネット広告","industries":[125],"mcap_rank":null,"mcap_oku":195662,"tier":"大手・難関","featured":"major","rank_in_segment":1,"growth_score":3,"access_score":2,"growth_reasons":["業界天気 晴れ→晴れ（ゲーム）+1","営業利益率13.8%（今期予想） +1"],"access_reasons":["就職難易度 4/5（出典: reashu 業界別偏差値）から換算（6−難易度）"],"why":["業界天気 晴れ→晴れ（ゲーム）","営業利益率13.8%（今期予想。目安10%）","平均年収1,155万円・平均年齢42.7歳"],"entry_roles":["広告営業・運用","企画・プロデューサー","マーケティング"],"fit":"ゲーム（プレイステーション）、音楽、映画、イメージセンサーまで持つ。","caution":null,"caution_auto":["単独の従業員は2,166人。新卒採用はグループ会社ごとのことがある"],"metrics":{"employees":94900,"employees_single":2166,"avg_age":42.7,"avg_salary_man_yen":1155,"equity_ratio_pct":52.2,"op_margin_pct":11.6,"sales_latest_oku":124796.2,"sales_forecast_oku":125000.0,"sales_growth_pct":0.2,"op_margin_forecast_pct":13.8},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":5,"role":2,"customer":1,"growth":3,"access":2,"pay":5},"difficulty":{"difficulty_5":4.0,"url":"https://reashu.com/dennkime-ka-syuusyokunannido/","hensachi":63,"source":"就活の教科書・就職偏差値"},"shikiho_page":"p0640"},{"code":"6098","name":"リクルートホールディングス","segment":"web","segment_label":"Web・ネットサービス","industries":[29],"mcap_rank":3,"mcap_oku":166834,"tier":"大手・難関","featured":"major","rank_in_segment":1,"growth_score":5,"access_score":2,"growth_reasons":["業界天気 晴れ→晴れ（Webアプリ）+1","売上予想 +14.4% +2","営業利益率22.3%（今期予想） +1","営業利益率15%以上 +1"],"access_reasons":["従業員43,660人で採用枠が大きい +2","平均年齢33.7歳と若い +1","時価総額166,834億円の大手で応募が集まりやすいので、2を上限にした"],"why":["業界天気 晴れ→晴れ（Webアプリ）","営業利益率22.3%（今期予想。目安10%）","売上予想 +14.4%"],"entry_roles":["企画・ディレクター","広告営業","マーケティング"],"fit":"求人の「インディード」と、ホットペッパー、じゃらん、SUUMOを運営する。","caution":null,"caution_auto":[],"metrics":{"employees":43660,"employees_single":12559,"avg_age":33.7,"avg_salary_man_yen":763,"equity_ratio_pct":61.0,"op_margin_pct":17.1,"sales_latest_oku":36973.5,"sales_forecast_oku":42300.0,"sales_growth_pct":14.4,"op_margin_forecast_pct":22.3},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":5,"role":2,"customer":1,"growth":5,"access":2,"pay":3},"difficulty":null,"shikiho_page":"p0549"},{"code":"9432","name":"日本電信電話(NTT)","segment":"telecom","segment_label":"通信","industries":[6,31,35],"mcap_rank":4,"mcap_oku":131297,"tier":"大手・難関","featured":"major","rank_in_segment":1,"growth_score":4,"access_score":1,"growth_reasons":["業界天気 晴れ→晴れ（携帯電話事業者）+1","売上予想 +5.5% +1","営業利益率11.8% +1"],"access_reasons":["就職難易度 5/5（出典: reashu 業界別偏差値）から換算（6−難易度）"],"why":["業界天気 晴れ→晴れ（携帯電話事業者）","営業利益率11.8%（目安10%）","売上予想 +5.5%"],"entry_roles":["法人営業","総合職（企画・マーケ）","SE（ネットワーク）"],"fit":"NTTドコモやNTTデータを傘下に持つ持株会社。","caution":"持株会社なので、新卒採用はドコモなどグループ会社ごとに確かめる","caution_auto":[],"metrics":{"employees":354050,"employees_single":null,"avg_age":37.8,"avg_salary_man_yen":958,"equity_ratio_pct":20.8,"op_margin_pct":11.8,"sales_latest_oku":144091.2,"sales_forecast_oku":152000.0,"sales_growth_pct":5.5,"op_margin_forecast_pct":11.3},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":5,"role":3,"customer":2,"growth":4,"access":1,"pay":4},"difficulty":{"difficulty_5":5.0,"url":"https://reashu.com/shukatsuhensachi/","hensachi":69,"source":"就活の教科書・就職偏差値"},"shikiho_page":"p0932"},{"code":"9433","name":"KDDI","segment":"telecom","segment_label":"通信","industries":[6,31,32,35],"mcap_rank":5,"mcap_oku":110004,"tier":"大手・難関","featured":"major","rank_in_segment":2,"growth_score":5,"access_score":2,"growth_reasons":["業界天気 晴れ→晴れ（携帯電話事業者）+1","売上予想 +5.6% +1","営業利益率18.9%（今期予想） +1","営業利益率15%以上 +1"],"access_reasons":["就職難易度 4/5（出典: reashu 企業別記事）から換算（6−難易度）"],"why":["業界天気 晴れ→晴れ（携帯電話事業者）","営業利益率18.9%（今期予想。目安10%）","売上予想 +5.6%"],"entry_roles":["法人営業","総合職（企画・マーケ）","SE（ネットワーク）"],"fit":"auとUQ mobileの携帯2位。決済のau PAY、データセンター、法人向けAIにも広げている。","caution":null,"caution_auto":[],"metrics":{"employees":null,"employees_single":9885,"avg_age":42.3,"avg_salary_man_yen":1051,"equity_ratio_pct":27.2,"op_margin_pct":18.1,"sales_latest_oku":60719.2,"sales_forecast_oku":64100.0,"sales_growth_pct":5.6,"op_margin_forecast_pct":18.9},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":3,"role":3,"customer":2,"growth":5,"access":2,"pay":5},"difficulty":{"difficulty_5":4.0,"url":"https://reashu.com/kddi_saiyoudaigaku/","hensachi":null,"source":"就活の教科書・企業別記事"},"shikiho_page":"p0932"},{"code":"9434","name":"ソフトバンク","segment":"telecom","segment_label":"通信","industries":[6,32,35],"mcap_rank":6,"mcap_oku":99887,"tier":"大手・難関","featured":"major","rank_in_segment":3,"growth_score":4,"access_score":2,"growth_reasons":["業界天気 晴れ→晴れ（携帯電話事業者）+1","売上予想 +7.3% +1","営業利益率14.8% +1"],"access_reasons":["従業員58,432人で採用枠が大きい +2","時価総額99,887億円の大手で応募が集まりやすいので、2を上限にした"],"why":["業界天気 晴れ→晴れ（携帯電話事業者）","営業利益率14.8%（目安10%）","売上予想 +7.3%"],"entry_roles":["法人営業","総合職（企画・マーケ）","SE（ネットワーク）"],"fit":"携帯3位で、ワイモバイルとLINEMOも持つ。AIのデータセンターや国産AIの開発に投資している。","caution":null,"caution_auto":[],"metrics":{"employees":58432,"employees_single":19150,"avg_age":42.0,"avg_salary_man_yen":871,"equity_ratio_pct":15.1,"op_margin_pct":14.8,"sales_latest_oku":70386.8,"sales_forecast_oku":75500.0,"sales_growth_pct":7.3,"op_margin_forecast_pct":14.8},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":5,"role":3,"customer":2,"growth":4,"access":2,"pay":4},"difficulty":null,"shikiho_page":"p0932"},{"code":"7974","name":"任天堂","segment":"media","segment_label":"ゲーム・動画・ネット広告","industries":[125],"mcap_rank":null,"mcap_oku":87726,"tier":"大手・難関","featured":"major","rank_in_segment":2,"growth_score":4,"access_score":1,"growth_reasons":["業界天気 晴れ→晴れ（ゲーム）+1","営業利益率20%（今期予想） +1","営業利益率15%以上 +1"],"access_reasons":["就職難易度 5/5（出典: reashu 業界別偏差値）から換算（6−難易度）"],"why":["業界天気 晴れ→晴れ（ゲーム）","営業利益率20%（今期予想。目安10%）","平均年収982万円・平均年齢40.5歳"],"entry_roles":["広告営業・運用","企画・プロデューサー","マーケティング"],"fit":"ゲーム機とソフトで国内最大手。2025年にニンテンドースイッチ2を発売した。","caution":null,"caution_auto":["売上は減る予想"],"metrics":{"employees":8666,"employees_single":3084,"avg_age":40.5,"avg_salary_man_yen":982,"equity_ratio_pct":76.5,"op_margin_pct":15.6,"sales_latest_oku":23130.5,"sales_forecast_oku":21500.0,"sales_growth_pct":-7.0,"op_margin_forecast_pct":20.0},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":3,"role":2,"customer":1,"growth":4,"access":1,"pay":4},"difficulty":{"difficulty_5":5.0,"url":"https://reashu.com/dennkime-ka-syuusyokunannido/","hensachi":67,"source":"就活の教科書・就職偏差値"},"shikiho_page":"p0800"},{"code":"6702","name":"富士通","segment":"sier","segment_label":"SIer・ITコンサル","industries":[30,31,32],"mcap_rank":7,"mcap_oku":56490,"tier":"大手・難関","featured":"major","rank_in_segment":2,"growth_score":4,"access_score":1,"growth_reasons":["業界天気 快晴→快晴（システム開発）+2","営業利益率11.8%（今期予想） +1"],"access_reasons":["就職難易度 5/5（出典: reashu 業界別偏差値）から換算（6−難易度）"],"why":["業界天気 快晴→快晴（システム開発）","営業利益率11.8%（今期予想。目安10%）","平均年収1,012万円・平均年齢42.7歳"],"entry_roles":["SE（文系採用が多い職種）","IT営業","ITコンサル"],"fit":"国内3位のSIerで、大手金融と官公庁に強い。DXコンサルの子会社も持つ。","caution":null,"caution_auto":[],"metrics":{"employees":99203,"employees_single":32224,"avg_age":42.7,"avg_salary_man_yen":1012,"equity_ratio_pct":61.5,"op_margin_pct":9.9,"sales_latest_oku":35029.7,"sales_forecast_oku":35100.0,"sales_growth_pct":0.2,"op_margin_forecast_pct":11.8},"weather":{"h2":"快晴","y27":"快晴"},"axes":{"size":5,"role":4,"customer":5,"growth":4,"access":1,"pay":5},"difficulty":{"difficulty_5":5.0,"url":"https://reashu.com/it-gyoukai-ranking/","hensachi":67,"source":"就活の教科書・就職偏差値"},"shikiho_page":"p0634"},{"code":"6701","name":"NEC","segment":"sier","segment_label":"SIer・ITコンサル","industries":[30,31,32],"mcap_rank":8,"mcap_oku":53546,"tier":"大手・難関","featured":"major","rank_in_segment":3,"growth_score":4,"access_score":1,"growth_reasons":["業界天気 快晴→快晴（システム開発）+2","営業利益率11.1%（今期予想） +1"],"access_reasons":["就職難易度 5/5（出典: reashu 業界別偏差値）から換算（6−難易度）"],"why":["業界天気 快晴→快晴（システム開発）","営業利益率11.1%（今期予想。目安10%）","平均年収993万円・平均年齢43.1歳"],"entry_roles":["SE（文系採用が多い職種）","IT営業","ITコンサル"],"fit":"国内2位のSIerで、通信ネットワークと官公庁に強い。アビームコンサルティングも傘下。","caution":null,"caution_auto":[],"metrics":{"employees":101800,"employees_single":21934,"avg_age":43.1,"avg_salary_man_yen":993,"equity_ratio_pct":49.6,"op_margin_pct":10.0,"sales_latest_oku":35827.3,"sales_forecast_oku":37500.0,"sales_growth_pct":4.7,"op_margin_forecast_pct":11.1},"weather":{"h2":"快晴","y27":"快晴"},"axes":{"size":5,"role":4,"customer":5,"growth":4,"access":1,"pay":4},"difficulty":{"difficulty_5":5.0,"url":"https://reashu.com/it-gyoukai-ranking/","hensachi":65,"source":"就活の教科書・就職偏差値"},"shikiho_page":"p0634"},{"code":"4689","name":"LINEヤフー","segment":"web","segment_label":"Web・ネットサービス","industries":[28,29,133],"mcap_rank":9,"mcap_oku":29865,"tier":"大手・難関","featured":"major","rank_in_segment":2,"growth_score":5,"access_score":3,"growth_reasons":["業界天気 晴れ→晴れ（eコマース）+1","売上予想 +10% +2","営業利益率16.8% +1","営業利益率15%以上 +1"],"access_reasons":["就職難易度 3/5（出典: reashu 業界別偏差値）から換算（6−難易度）"],"why":["業界天気 晴れ→晴れ（eコマース）","営業利益率16.8%（目安10%）","売上予想 +10%"],"entry_roles":["企画・ディレクター","広告営業","マーケティング"],"fit":"LINEとYahoo! JAPANを運営し、ZOZOも傘下に持つ。","caution":null,"caution_auto":[],"metrics":{"employees":29863,"employees_single":10577,"avg_age":39.0,"avg_salary_man_yen":902,"equity_ratio_pct":25.9,"op_margin_pct":16.8,"sales_latest_oku":20363.7,"sales_forecast_oku":22400.0,"sales_growth_pct":10.0,"op_margin_forecast_pct":16.5},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":4,"role":2,"customer":1,"growth":5,"access":3,"pay":4},"difficulty":{"difficulty_5":3.0,"url":"https://reashu.com/koukoku-mascomi-shushoku/","hensachi":58,"source":"就活の教科書・就職偏差値"},"shikiho_page":"p0416"},{"code":"9766","name":"コナミグループ","segment":"media","segment_label":"ゲーム・動画・ネット広告","industries":[125],"mcap_rank":null,"mcap_oku":25349,"tier":"大手・難関","featured":"major","rank_in_segment":3,"growth_score":5,"access_score":3,"growth_reasons":["業界天気 晴れ→晴れ（ゲーム）+1","売上予想 +21.5% +2","営業利益率30%（今期予想） +1","営業利益率15%以上 +1"],"access_reasons":["就職難易度 3/5（出典: reashu 業界別偏差値）から換算（6−難易度）"],"why":["業界天気 晴れ→晴れ（ゲーム）","営業利益率30%（今期予想。目安10%）","売上予想 +21.5%"],"entry_roles":["広告営業・運用","企画・プロデューサー","マーケティング"],"fit":"eFootballなどのゲームが主力で、カジノ機やスポーツクラブも手がける。","caution":null,"caution_auto":[],"metrics":{"employees":5430,"employees_single":null,"avg_age":39.8,"avg_salary_man_yen":889,"equity_ratio_pct":77.1,"op_margin_pct":27.5,"sales_latest_oku":4936.8,"sales_forecast_oku":6000.0,"sales_growth_pct":21.5,"op_margin_forecast_pct":30.0},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":3,"role":2,"customer":1,"growth":5,"access":3,"pay":4},"difficulty":{"difficulty_5":3.0,"url":"https://reashu.com/maker-gyoukai/","hensachi":55,"source":"就活の教科書・就職偏差値"},"shikiho_page":"p0964"},{"code":"4755","name":"楽天グループ","segment":"web","segment_label":"Web・ネットサービス","industries":[28,29,31],"mcap_rank":12,"mcap_oku":16424,"tier":"大手・難関","featured":"major","rank_in_segment":3,"growth_score":4,"access_score":1,"growth_reasons":["業界天気 晴れ→晴れ（eコマース）+1","売上予想 +10.2% +2"],"access_reasons":["就職難易度 5/5（出典: reashu 業界別偏差値）から換算（6−難易度）"],"why":["業界天気 晴れ→晴れ（eコマース）","売上予想 +10.2%","平均年収850万円・平均年齢36歳"],"entry_roles":["企画・ディレクター","広告営業","マーケティング"],"fit":"楽天市場、楽天カード、楽天モバイルなど、楽天経済圏のサービスを運営する。","caution":null,"caution_auto":["営業利益率は4.7%と低め（目安10%）"],"metrics":{"employees":29419,"employees_single":9989,"avg_age":36.0,"avg_salary_man_yen":850,"equity_ratio_pct":2.9,"op_margin_pct":0.6,"sales_latest_oku":24965.8,"sales_forecast_oku":27500.0,"sales_growth_pct":10.2,"op_margin_forecast_pct":4.7},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":4,"role":2,"customer":1,"growth":4,"access":1,"pay":4},"difficulty":{"difficulty_5":5.0,"url":"https://reashu.com/it-gyoukai-ranking/","hensachi":65,"source":"就活の教科書・就職偏差値"},"shikiho_page":"p0423"},{"code":"135A","name":"ヴレインソリューション","segment":"ai","segment_label":"AI","industries":[31],"mcap_rank":63,"mcap_oku":435,"tier":"大手・難関","featured":null,"rank_in_segment":null,"growth_score":5,"access_score":2,"growth_reasons":["業界天気 快晴→快晴（AI(国内)）+2","売上予想 +46.3% +2","営業利益率30.2%（今期予想） +1","営業利益率15%以上 +1"],"access_reasons":["従業員156人で採用枠は小さい −1"],"why":["業界天気 快晴→快晴（AI(国内)）","営業利益率30.2%（今期予想。目安10%）","売上予想 +46.3%"],"entry_roles":["ビジネス職（営業・企画）","AIコンサル","カスタマーサクセス"],"fit":null,"caution":null,"caution_auto":[],"metrics":{"employees":null,"employees_single":156,"avg_age":38.1,"avg_salary_man_yen":646,"equity_ratio_pct":82.5,"op_margin_pct":27.9,"sales_latest_oku":32.8,"sales_forecast_oku":48.0,"sales_growth_pct":46.3,"op_margin_forecast_pct":30.2},"weather":{"h2":"快晴","y27":"快晴"},"axes":{"size":1,"role":4,"customer":5,"growth":5,"access":2,"pay":2},"difficulty":null,"shikiho_page":"p0039"},{"code":"2170","name":"リンクアンドモチベーション","segment":"saas","segment_label":"ソフトウェア・SaaS","industries":[33],"mcap_rank":55,"mcap_oku":607,"tier":"大手・難関","featured":null,"rank_in_segment":null,"growth_score":5,"access_score":2,"growth_reasons":["業界天気 晴れ→晴れ（ソフトウェア(業務特化)）+1","売上予想 +12.5% +2","営業利益率13.5%（今期予想） +1"],"access_reasons":["就職難易度 4/5（出典: reashu 業界別偏差値）から換算（6−難易度）"],"why":["業界天気 晴れ→晴れ（ソフトウェア(業務特化)）","営業利益率13.5%（今期予想。目安10%）","売上予想 +12.5%"],"entry_roles":["インサイドセールス","フィールドセールス","カスタマーサクセス"],"fit":null,"caution":null,"caution_auto":[],"metrics":{"employees":1629,"employees_single":558,"avg_age":32.5,"avg_salary_man_yen":696,"equity_ratio_pct":29.0,"op_margin_pct":10.1,"sales_latest_oku":415.2,"sales_forecast_oku":467.0,"sales_growth_pct":12.5,"op_margin_forecast_pct":13.5},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":2,"role":2,"customer":5,"growth":5,"access":2,"pay":2},"difficulty":{"difficulty_5":4.0,"url":"https://reashu.com/education-ranking/","hensachi":64,"source":"就活の教科書・就職偏差値"},"shikiho_page":"p0096"},{"code":"2193","name":"クックパッド","segment":"web","segment_label":"Web・ネットサービス","industries":[29],"mcap_rank":100,"mcap_oku":92,"tier":"大手・難関","featured":null,"rank_in_segment":null,"growth_score":2,"access_score":2,"growth_reasons":["業界天気 晴れ→晴れ（Webアプリ）+1"],"access_reasons":["平均年齢37.5歳と若い +1","平均年収1,007万円で人気が集まりやすい −1","従業員79人で採用枠は小さい −1"],"why":["業界天気 晴れ→晴れ（Webアプリ）","平均年収1,007万円・平均年齢37.5歳","従業員79人"],"entry_roles":["企画・ディレクター","広告営業","マーケティング"],"fit":null,"caution":null,"caution_auto":["売上は減る予想","営業利益率は4.9%と低め（目安10%）"],"metrics":{"employees":79,"employees_single":null,"avg_age":37.5,"avg_salary_man_yen":1007,"equity_ratio_pct":92.3,"op_margin_pct":4.9,"sales_latest_oku":53.4,"sales_forecast_oku":50.0,"sales_growth_pct":-6.4,"op_margin_forecast_pct":4.0},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":1,"role":2,"customer":1,"growth":2,"access":2,"pay":5},"difficulty":null,"shikiho_page":"p0099"},{"code":"2327","name":"日鉄ソリューションズ","segment":"sier","segment_label":"SIer・ITコンサル","industries":[30,32],"mcap_rank":20,"mcap_oku":6218,"tier":"大手・難関","featured":null,"rank_in_segment":null,"growth_score":5,"access_score":2,"growth_reasons":["業界天気 快晴→快晴（システム開発）+2","売上予想 +10.9% +2","営業利益率11.8%（今期予想） +1"],"access_reasons":["従業員10,276人で採用枠が大きい +2","時価総額6,218億円の大手で応募が集まりやすいので、2を上限にした"],"why":["業界天気 快晴→快晴（システム開発）","営業利益率11.8%（今期予想。目安10%）","売上予想 +10.9%"],"entry_roles":["SE（文系採用が多い職種）","IT営業","ITコンサル"],"fit":null,"caution":null,"caution_auto":[],"metrics":{"employees":10276,"employees_single":4102,"avg_age":39.8,"avg_salary_man_yen":935,"equity_ratio_pct":66.8,"op_margin_pct":11.6,"sales_latest_oku":3813.4,"sales_forecast_oku":4230.0,"sales_growth_pct":10.9,"op_margin_forecast_pct":11.8},"weather":{"h2":"快晴","y27":"快晴"},"axes":{"size":4,"role":4,"customer":5,"growth":5,"access":2,"pay":4},"difficulty":null,"shikiho_page":"p0112"},{"code":"2371","name":"カカクコム","segment":"web","segment_label":"Web・ネットサービス","industries":[28,29],"mcap_rank":null,"mcap_oku":null,"tier":"大手・難関","featured":null,"rank_in_segment":null,"growth_score":5,"access_score":2,"growth_reasons":["業界天気 晴れ→晴れ（eコマース）+1","売上予想 +21.6% +2","営業利益率28.9% +1","営業利益率15%以上 +1"],"access_reasons":["就職難易度 3.9/5（出典: reashu 企業別記事）から換算（6−難易度）"],"why":["業界天気 晴れ→晴れ（eコマース）","営業利益率28.9%（目安10%）","売上予想 +21.6%"],"entry_roles":["企画・ディレクター","広告営業","マーケティング"],"fit":null,"caution":"TOBの争奪戦が続いていて、成立すると上場廃止になる見込み（四季報2026年4集）","caution_auto":[],"metrics":{"employees":1629,"employees_single":1163,"avg_age":37.3,"avg_salary_man_yen":754,"equity_ratio_pct":64.7,"op_margin_pct":28.9,"sales_latest_oku":941.3,"sales_forecast_oku":1145.0,"sales_growth_pct":21.6,"op_margin_forecast_pct":26.9},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":2,"role":2,"customer":1,"growth":5,"access":2,"pay":3},"difficulty":{"difficulty_5":3.9,"url":"https://reashu.com/kakakucom-saiyoudaigaku/","hensachi":null,"source":"就活の教科書・企業別記事"},"shikiho_page":"p0117"},{"code":"2433","name":"博報堂DYホールディングス","segment":"media","segment_label":"ゲーム・動画・ネット広告","industries":[127],"mcap_rank":null,"mcap_oku":4172,"tier":"大手・難関","featured":null,"rank_in_segment":null,"growth_score":3,"access_score":4,"growth_reasons":["業界天気 晴れ→晴れ（広告）+1","売上予想 +5.7% +1"],"access_reasons":["従業員29,101人で採用枠が大きい +2","平均年収1,099万円で人気が集まりやすい −1"],"why":["業界天気 晴れ→晴れ（広告）","売上予想 +5.7%","平均年収1,099万円・平均年齢40.1歳"],"entry_roles":["広告営業・運用","企画・プロデューサー","マーケティング"],"fit":null,"caution":null,"caution_auto":[],"metrics":{"employees":29101,"employees_single":3539,"avg_age":40.1,"avg_salary_man_yen":1099,"equity_ratio_pct":42.3,"op_margin_pct":5.2,"sales_latest_oku":8610.0,"sales_forecast_oku":9100.0,"sales_growth_pct":5.7,"op_margin_forecast_pct":5.1},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":4,"role":2,"customer":1,"growth":3,"access":4,"pay":5},"difficulty":null,"shikiho_page":"p0123"},{"code":"2440","name":"ぐるなび","segment":"web","segment_label":"Web・ネットサービス","industries":[29],"mcap_rank":null,"mcap_oku":null,"tier":"狙い目","featured":null,"rank_in_segment":null,"growth_score":3,"access_score":3,"growth_reasons":["業界天気 晴れ→晴れ（Webアプリ）+1","売上予想 +6.9% +1"],"access_reasons":[],"why":["業界天気 晴れ→晴れ（Webアプリ）","売上予想 +6.9%","平均年収635万円・平均年齢40.5歳"],"entry_roles":["企画・ディレクター","広告営業","マーケティング"],"fit":null,"caution":null,"caution_auto":["営業利益率は2.8%と低め（目安10%）"],"metrics":{"employees":777,"employees_single":745,"avg_age":40.5,"avg_salary_man_yen":635,"equity_ratio_pct":47.7,"op_margin_pct":2.8,"sales_latest_oku":141.3,"sales_forecast_oku":151.0,"sales_growth_pct":6.9,"op_margin_forecast_pct":-5.5},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":2,"role":2,"customer":1,"growth":3,"access":3,"pay":2},"difficulty":null,"shikiho_page":"p0125"},{"code":"2461","name":"ファンコミュニケーションズ","segment":"media","segment_label":"ゲーム・動画・ネット広告","industries":[127],"mcap_rank":null,"mcap_oku":264,"tier":"狙い目","featured":null,"rank_in_segment":null,"growth_score":4,"access_score":4,"growth_reasons":["業界天気 晴れ→晴れ（広告）+1","営業利益率27.7% +1","営業利益率15%以上 +1"],"access_reasons":["平均年齢35.8歳と若い +1"],"why":["業界天気 晴れ→晴れ（広告）","営業利益率27.7%（目安10%）","平均年収559万円・平均年齢35.8歳"],"entry_roles":["広告営業・運用","企画・プロデューサー","マーケティング"],"fit":null,"caution":null,"caution_auto":[],"metrics":{"employees":361,"employees_single":322,"avg_age":35.8,"avg_salary_man_yen":559,"equity_ratio_pct":76.4,"op_margin_pct":27.7,"sales_latest_oku":71.0,"sales_forecast_oku":73.3,"sales_growth_pct":3.2,"op_margin_forecast_pct":16.4},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":1,"role":2,"customer":1,"growth":4,"access":4,"pay":1},"difficulty":null,"shikiho_page":"p0126"},{"code":"2477","name":"手間いらず","segment":"saas","segment_label":"ソフトウェア・SaaS","industries":[34],"mcap_rank":90,"mcap_oku":143,"tier":"狙い目","featured":null,"rank_in_segment":null,"growth_score":5,"access_score":3,"growth_reasons":["業界天気 晴れ→晴れ（ソフトウェア(業界特化)）+1","売上予想 +14.1% +2","営業利益率72.7%（今期予想） +1","営業利益率15%以上 +1"],"access_reasons":["平均年齢34.7歳と若い +1","従業員44人で採用枠は小さい −1"],"why":["業界天気 晴れ→晴れ（ソフトウェア(業界特化)）","営業利益率72.7%（今期予想。目安10%）","売上予想 +14.1%"],"entry_roles":["インサイドセールス","フィールドセールス","カスタマーサクセス"],"fit":null,"caution":null,"caution_auto":["平均年収は誌面に無い"],"metrics":{"employees":null,"employees_single":44,"avg_age":34.7,"avg_salary_man_yen":null,"equity_ratio_pct":93.2,"op_margin_pct":72.4,"sales_latest_oku":24.1,"sales_forecast_oku":27.5,"sales_growth_pct":14.1,"op_margin_forecast_pct":72.7},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":1,"role":2,"customer":5,"growth":5,"access":3,"pay":null},"difficulty":null,"shikiho_page":"p0128"},{"code":"2489","name":"アドウェイズ","segment":"media","segment_label":"ゲーム・動画・ネット広告","industries":[127],"mcap_rank":null,"mcap_oku":null,"tier":"狙い目","featured":null,"rank_in_segment":null,"growth_score":3,"access_score":4,"growth_reasons":["業界天気 晴れ→晴れ（広告）+1","営業利益率12.7%（今期予想） +1"],"access_reasons":["平均年齢34.8歳と若い +1"],"why":["業界天気 晴れ→晴れ（広告）","営業利益率12.7%（今期予想。目安10%）","平均年収638万円・平均年齢34.8歳"],"entry_roles":["広告営業・運用","企画・プロデューサー","マーケティング"],"fit":null,"caution":null,"caution_auto":["売上は減る予想"],"metrics":{"employees":828,"employees_single":365,"avg_age":34.8,"avg_salary_man_yen":638,"equity_ratio_pct":63.2,"op_margin_pct":2.4,"sales_latest_oku":122.2,"sales_forecast_oku":118.0,"sales_growth_pct":-3.4,"op_margin_forecast_pct":12.7},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":2,"role":2,"customer":1,"growth":3,"access":4,"pay":2},"difficulty":null,"shikiho_page":"p0131"},{"code":"2492","name":"インフォマート","segment":"saas","segment_label":"ソフトウェア・SaaS","industries":[34],"mcap_rank":42,"mcap_oku":1027,"tier":"狙い目","featured":null,"rank_in_segment":null,"growth_score":5,"access_score":4,"growth_reasons":["業界天気 晴れ→晴れ（ソフトウェア(業界特化)）+1","売上予想 +13.2% +2","営業利益率23.5%（今期予想） +1","営業利益率15%以上 +1"],"access_reasons":["平均年齢36.6歳と若い +1"],"why":["業界天気 晴れ→晴れ（ソフトウェア(業界特化)）","営業利益率23.5%（今期予想。目安10%）","売上予想 +13.2%"],"entry_roles":["インサイドセールス","フィールドセールス","カスタマーサクセス"],"fit":null,"caution":null,"caution_auto":[],"metrics":{"employees":924,"employees_single":897,"avg_age":36.6,"avg_salary_man_yen":668,"equity_ratio_pct":88.8,"op_margin_pct":15.2,"sales_latest_oku":188.2,"sales_forecast_oku":213.0,"sales_growth_pct":13.2,"op_margin_forecast_pct":23.5},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":2,"role":2,"customer":5,"growth":5,"access":4,"pay":2},"difficulty":null,"shikiho_page":"p0131"},{"code":"2678","name":"アスクル","segment":"web","segment_label":"Web・ネットサービス","industries":[28],"mcap_rank":41,"mcap_oku":1069,"tier":"狙い目","featured":null,"rank_in_segment":null,"growth_score":4,"access_score":4,"growth_reasons":["業界天気 晴れ→晴れ（eコマース）+1","売上予想 +22.4% +2"],"access_reasons":["従業員3,646人 +1"],"why":["業界天気 晴れ→晴れ（eコマース）","売上予想 +22.4%","平均年収715万円・平均年齢41.6歳"],"entry_roles":["企画・ディレクター","広告営業","マーケティング"],"fit":null,"caution":null,"caution_auto":["直近は営業赤字","営業利益率は1.4%と低め（目安10%）"],"metrics":{"employees":3646,"employees_single":976,"avg_age":41.6,"avg_salary_man_yen":715,"equity_ratio_pct":20.8,"op_margin_pct":-4.4,"sales_latest_oku":4002.0,"sales_forecast_oku":4900.0,"sales_growth_pct":22.4,"op_margin_forecast_pct":1.4},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":3,"role":2,"customer":1,"growth":4,"access":4,"pay":3},"difficulty":null,"shikiho_page":"p0144"},{"code":"3040","name":"ソリトンシステムズ","segment":"security","segment_label":"セキュリティ","industries":[36],"mcap_rank":68,"mcap_oku":382,"tier":"狙い目","featured":null,"rank_in_segment":null,"growth_score":5,"access_score":3,"growth_reasons":["業界天気 快晴→快晴（サイバーセキュリティー）+2","売上予想 +12.9% +2","営業利益率17.5%（今期予想） +1","営業利益率15%以上 +1"],"access_reasons":[],"why":["業界天気 快晴→快晴（サイバーセキュリティー）","営業利益率17.5%（今期予想。目安10%）","売上予想 +12.9%"],"entry_roles":["技術営業","カスタマーサポート","SE"],"fit":null,"caution":null,"caution_auto":[],"metrics":{"employees":655,"employees_single":643,"avg_age":43.0,"avg_salary_man_yen":680,"equity_ratio_pct":52.7,"op_margin_pct":14.4,"sales_latest_oku":197.6,"sales_forecast_oku":223.0,"sales_growth_pct":12.9,"op_margin_forecast_pct":17.5},"weather":{"h2":"快晴","y27":"快晴"},"axes":{"size":2,"role":4,"customer":4,"growth":5,"access":3,"pay":2},"difficulty":null,"shikiho_page":"p0185"},{"code":"3092","name":"ZOZO","segment":"web","segment_label":"Web・ネットサービス","industries":[28],"mcap_rank":15,"mcap_oku":10249,"tier":"大手・難関","featured":null,"rank_in_segment":null,"growth_score":5,"access_score":3,"growth_reasons":["業界天気 晴れ→晴れ（eコマース）+1","売上予想 +5.9% +1","営業利益率30.8%（今期予想） +1","営業利益率15%以上 +1"],"access_reasons":["就職難易度 3/5（出典: reashu 企業別記事）から換算（6−難易度）"],"why":["業界天気 晴れ→晴れ（eコマース）","営業利益率30.8%（今期予想。目安10%）","売上予想 +5.9%"],"entry_roles":["企画・ディレクター","広告営業","マーケティング"],"fit":null,"caution":null,"caution_auto":[],"metrics":{"employees":1894,"employees_single":1662,"avg_age":34.7,"avg_salary_man_yen":855,"equity_ratio_pct":55.1,"op_margin_pct":30.4,"sales_latest_oku":2283.7,"sales_forecast_oku":2419.0,"sales_growth_pct":5.9,"op_margin_forecast_pct":30.8},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":2,"role":2,"customer":1,"growth":5,"access":3,"pay":4},"difficulty":{"difficulty_5":3.0,"url":"https://reashu.com/zozo-saiyoudaigaku/","hensachi":null,"source":"就活の教科書・企業別記事"},"shikiho_page":"p0194"},{"code":"3182","name":"オイシックス","segment":"web","segment_label":"Web・ネットサービス","industries":[28],"mcap_rank":58,"mcap_oku":555,"tier":"狙い目","featured":null,"rank_in_segment":null,"growth_score":2,"access_score":5,"growth_reasons":["業界天気 晴れ→晴れ（eコマース）+1"],"access_reasons":["従業員8,196人で採用枠が大きい +2"],"why":["業界天気 晴れ→晴れ（eコマース）","平均年収693万円・平均年齢41.1歳","従業員8,196人"],"entry_roles":["企画・ディレクター","広告営業","マーケティング"],"fit":null,"caution":null,"caution_auto":["営業利益率は3.5%と低め（目安10%）"],"metrics":{"employees":8196,"employees_single":916,"avg_age":41.1,"avg_salary_man_yen":693,"equity_ratio_pct":25.8,"op_margin_pct":2.9,"sales_latest_oku":2514.2,"sales_forecast_oku":2520.0,"sales_growth_pct":0.2,"op_margin_forecast_pct":3.5},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":3,"role":2,"customer":1,"growth":2,"access":5,"pay":2},"difficulty":null,"shikiho_page":"p0207"},{"code":"3393","name":"スターティアホールディングス","segment":"saas","segment_label":"ソフトウェア・SaaS","industries":[33],"mcap_rank":72,"mcap_oku":309,"tier":"狙い目","featured":null,"rank_in_segment":null,"growth_score":4,"access_score":5,"growth_reasons":["業界天気 晴れ→晴れ（ソフトウェア(業務特化)）+1","売上予想 +9.3% +1","営業利益率13.7%（今期予想） +1"],"access_reasons":["従業員1,018人 +1","平均年齢33.2歳と若い +1"],"why":["業界天気 晴れ→晴れ（ソフトウェア(業務特化)）","営業利益率13.7%（今期予想。目安10%）","売上予想 +9.3%"],"entry_roles":["インサイドセールス","フィールドセールス","カスタマーサクセス"],"fit":null,"caution":null,"caution_auto":[],"metrics":{"employees":1018,"employees_single":null,"avg_age":33.2,"avg_salary_man_yen":596,"equity_ratio_pct":58.3,"op_margin_pct":13.6,"sales_latest_oku":237.9,"sales_forecast_oku":260.0,"sales_growth_pct":9.3,"op_margin_forecast_pct":13.7},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":2,"role":2,"customer":5,"growth":4,"access":5,"pay":1},"difficulty":null,"shikiho_page":"p0230"},{"code":"3491","name":"GA technologies","segment":"saas","segment_label":"ソフトウェア・SaaS","industries":[34],"mcap_rank":59,"mcap_oku":550,"tier":"狙い目","featured":null,"rank_in_segment":null,"growth_score":4,"access_score":5,"growth_reasons":["業界天気 晴れ→晴れ（ソフトウェア(業界特化)）+1","売上予想 +29.7% +2"],"access_reasons":["従業員1,793人 +1","平均年齢32.5歳と若い +1"],"why":["業界天気 晴れ→晴れ（ソフトウェア(業界特化)）","売上予想 +29.7%","平均年収770万円・平均年齢32.5歳"],"entry_roles":["インサイドセールス","フィールドセールス","カスタマーサクセス"],"fit":null,"caution":null,"caution_auto":["営業利益率は3.1%と低め（目安10%）"],"metrics":{"employees":1793,"employees_single":709,"avg_age":32.5,"avg_salary_man_yen":770,"equity_ratio_pct":33.0,"op_margin_pct":2.9,"sales_latest_oku":2489.5,"sales_forecast_oku":3230.0,"sales_growth_pct":29.7,"op_margin_forecast_pct":3.1},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":2,"role":2,"customer":5,"growth":4,"access":5,"pay":3},"difficulty":null,"shikiho_page":"p0244"},{"code":"3558","name":"ジェイドグループ","segment":"web","segment_label":"Web・ネットサービス","industries":[28],"mcap_rank":85,"mcap_oku":176,"tier":"狙い目","featured":null,"rank_in_segment":null,"growth_score":5,"access_score":4,"growth_reasons":["業界天気 晴れ→晴れ（eコマース）+1","売上予想 +28.6% +2","営業利益率12.4% +1"],"access_reasons":["平均年齢36.9歳と若い +1"],"why":["業界天気 晴れ→晴れ（eコマース）","営業利益率12.4%（目安10%）","売上予想 +28.6%"],"entry_roles":["企画・ディレクター","広告営業","マーケティング"],"fit":null,"caution":null,"caution_auto":[],"metrics":{"employees":336,"employees_single":164,"avg_age":36.9,"avg_salary_man_yen":528,"equity_ratio_pct":51.8,"op_margin_pct":12.4,"sales_latest_oku":194.4,"sales_forecast_oku":250.0,"sales_growth_pct":28.6,"op_margin_forecast_pct":11.2},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":1,"role":2,"customer":1,"growth":5,"access":4,"pay":1},"difficulty":null,"shikiho_page":"p0252"},{"code":"3626","name":"TISI","segment":"sier","segment_label":"SIer・ITコンサル","industries":[6,30,32],"mcap_rank":17,"mcap_oku":7233,"tier":"大手・難関","featured":null,"rank_in_segment":null,"growth_score":5,"access_score":2,"growth_reasons":["業界天気 快晴→快晴（システム開発）+2","売上予想 +7.3% +1","営業利益率13.1%（今期予想） +1"],"access_reasons":["従業員22,239人で採用枠が大きい +2","時価総額7,233億円の大手で応募が集まりやすいので、2を上限にした"],"why":["業界天気 快晴→快晴（システム開発）","営業利益率13.1%（今期予想。目安10%）","売上予想 +7.3%"],"entry_roles":["SE（文系採用が多い職種）","IT営業","ITコンサル"],"fit":"2026年7月にTISとインテックが合併して社名をTISIにした独立系SIer大手。カード決済など金融系に強い。","caution":null,"caution_auto":[],"metrics":{"employees":22239,"employees_single":6412,"avg_age":40.7,"avg_salary_man_yen":828,"equity_ratio_pct":55.7,"op_margin_pct":12.8,"sales_latest_oku":5964.8,"sales_forecast_oku":6400.0,"sales_growth_pct":7.3,"op_margin_forecast_pct":13.1},"weather":{"h2":"快晴","y27":"快晴"},"axes":{"size":4,"role":4,"customer":5,"growth":5,"access":2,"pay":4},"difficulty":null,"shikiho_page":"p0258"},{"code":"3660","name":"アイスタイル","segment":"web","segment_label":"Web・ネットサービス","industries":[29],"mcap_rank":67,"mcap_oku":384,"tier":"狙い目","featured":null,"rank_in_segment":null,"growth_score":4,"access_score":4,"growth_reasons":["業界天気 晴れ→晴れ（Webアプリ）+1","売上予想 +10% +2"],"access_reasons":["従業員1,395人 +1"],"why":["業界天気 晴れ→晴れ（Webアプリ）","売上予想 +10%","従業員1,395人"],"entry_roles":["企画・ディレクター","広告営業","マーケティング"],"fit":null,"caution":null,"caution_auto":["平均年収は誌面に無い"],"metrics":{"employees":1395,"employees_single":null,"avg_age":null,"avg_salary_man_yen":null,"equity_ratio_pct":56.1,"op_margin_pct":5.0,"sales_latest_oku":818.1,"sales_forecast_oku":900.0,"sales_growth_pct":10.0,"op_margin_forecast_pct":5.6},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":2,"role":2,"customer":1,"growth":4,"access":4,"pay":null},"difficulty":null,"shikiho_page":"p0263"},{"code":"3663","name":"セルシス","segment":"saas","segment_label":"ソフトウェア・SaaS","industries":[34],"mcap_rank":53,"mcap_oku":653,"tier":"大手・難関","featured":null,"rank_in_segment":null,"growth_score":5,"access_score":2,"growth_reasons":["業界天気 晴れ→晴れ（ソフトウェア(業界特化)）+1","売上予想 +14% +2","営業利益率37%（今期予想） +1","営業利益率15%以上 +1"],"access_reasons":["従業員272人で採用枠は小さい −1"],"why":["業界天気 晴れ→晴れ（ソフトウェア(業界特化)）","営業利益率37%（今期予想。目安10%）","売上予想 +14%"],"entry_roles":["インサイドセールス","フィールドセールス","カスタマーサクセス"],"fit":null,"caution":null,"caution_auto":[],"metrics":{"employees":null,"employees_single":272,"avg_age":38.1,"avg_salary_man_yen":575,"equity_ratio_pct":58.3,"op_margin_pct":31.3,"sales_latest_oku":94.7,"sales_forecast_oku":108.0,"sales_growth_pct":14.0,"op_margin_forecast_pct":37.0},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":1,"role":2,"customer":5,"growth":5,"access":2,"pay":1},"difficulty":null,"shikiho_page":"p0264"},{"code":"3665","name":"エニグモ","segment":"web","segment_label":"Web・ネットサービス","industries":[28],"mcap_rank":87,"mcap_oku":162,"tier":"狙い目","featured":null,"rank_in_segment":null,"growth_score":4,"access_score":3,"growth_reasons":["業界天気 晴れ→晴れ（eコマース）+1","売上予想 +15.9% +2"],"access_reasons":["平均年齢37.8歳と若い +1","従業員157人で採用枠は小さい −1"],"why":["業界天気 晴れ→晴れ（eコマース）","売上予想 +15.9%","平均年収680万円・平均年齢37.8歳"],"entry_roles":["企画・ディレクター","広告営業","マーケティング"],"fit":null,"caution":null,"caution_auto":["営業利益率は0.7%と低め（目安10%）"],"metrics":{"employees":157,"employees_single":119,"avg_age":37.8,"avg_salary_man_yen":680,"equity_ratio_pct":76.9,"op_margin_pct":0.7,"sales_latest_oku":63.0,"sales_forecast_oku":73.0,"sales_growth_pct":15.9,"op_margin_forecast_pct":0.7},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":1,"role":2,"customer":1,"growth":4,"access":3,"pay":2},"difficulty":null,"shikiho_page":"p0265"},{"code":"3673","name":"ブロードリーフ","segment":"saas","segment_label":"ソフトウェア・SaaS","industries":[34],"mcap_rank":50,"mcap_oku":767,"tier":"狙い目","featured":null,"rank_in_segment":null,"growth_score":5,"access_score":3,"growth_reasons":["業界天気 晴れ→晴れ（ソフトウェア(業界特化)）+1","売上予想 +14.3% +2","営業利益率20.2%（今期予想） +1","営業利益率15%以上 +1"],"access_reasons":[],"why":["業界天気 晴れ→晴れ（ソフトウェア(業界特化)）","営業利益率20.2%（今期予想。目安10%）","売上予想 +14.3%"],"entry_roles":["インサイドセールス","フィールドセールス","カスタマーサクセス"],"fit":null,"caution":null,"caution_auto":[],"metrics":{"employees":924,"employees_single":723,"avg_age":46.6,"avg_salary_man_yen":647,"equity_ratio_pct":58.5,"op_margin_pct":9.9,"sales_latest_oku":208.2,"sales_forecast_oku":238.0,"sales_growth_pct":14.3,"op_margin_forecast_pct":20.2},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":2,"role":2,"customer":5,"growth":5,"access":3,"pay":2},"difficulty":null,"shikiho_page":"p0266"},{"code":"3692","name":"FFRIセキュリティ","segment":"security","segment_label":"セキュリティ","industries":[36],"mcap_rank":66,"mcap_oku":391,"tier":"大手・難関","featured":null,"rank_in_segment":null,"growth_score":5,"access_score":2,"growth_reasons":["業界天気 快晴→快晴（サイバーセキュリティー）+2","売上予想 +19.5% +2","営業利益率31.4% +1","営業利益率15%以上 +1"],"access_reasons":["従業員255人で採用枠は小さい −1"],"why":["業界天気 快晴→快晴（サイバーセキュリティー）","営業利益率31.4%（目安10%）","売上予想 +19.5%"],"entry_roles":["技術営業","カスタマーサポート","SE"],"fit":null,"caution":null,"caution_auto":[],"metrics":{"employees":255,"employees_single":193,"avg_age":38.1,"avg_salary_man_yen":765,"equity_ratio_pct":70.6,"op_margin_pct":31.4,"sales_latest_oku":43.5,"sales_forecast_oku":52.0,"sales_growth_pct":19.5,"op_margin_forecast_pct":30.8},"weather":{"h2":"快晴","y27":"快晴"},"axes":{"size":1,"role":4,"customer":4,"growth":5,"access":2,"pay":3},"difficulty":null,"shikiho_page":"p0270"},{"code":"3696","name":"セレス","segment":"web","segment_label":"Web・ネットサービス","industries":[29],"mcap_rank":77,"mcap_oku":254,"tier":"狙い目","featured":null,"rank_in_segment":null,"growth_score":5,"access_score":4,"growth_reasons":["業界天気 晴れ→晴れ（Webアプリ）+1","売上予想 +24.7% +2","営業利益率10%（今期予想） +1"],"access_reasons":["平均年齢32.4歳と若い +1"],"why":["業界天気 晴れ→晴れ（Webアプリ）","営業利益率10%（今期予想。目安10%）","売上予想 +24.7%"],"entry_roles":["企画・ディレクター","広告営業","マーケティング"],"fit":null,"caution":null,"caution_auto":[],"metrics":{"employees":391,"employees_single":314,"avg_age":32.4,"avg_salary_man_yen":596,"equity_ratio_pct":33.4,"op_margin_pct":7.9,"sales_latest_oku":296.6,"sales_forecast_oku":370.0,"sales_growth_pct":24.7,"op_margin_forecast_pct":10.0},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":1,"role":2,"customer":1,"growth":5,"access":4,"pay":1},"difficulty":null,"shikiho_page":"p0271"},{"code":"3698","name":"CRI・ミドルウェア","segment":"saas","segment_label":"ソフトウェア・SaaS","industries":[34],"mcap_rank":null,"mcap_oku":null,"tier":"大手・難関","featured":null,"rank_in_segment":null,"growth_score":5,"access_score":2,"growth_reasons":["業界天気 晴れ→晴れ（ソフトウェア(業界特化)）+1","売上予想 +13.3% +2","営業利益率16.1% +1","営業利益率15%以上 +1"],"access_reasons":["従業員185人で採用枠は小さい −1"],"why":["業界天気 晴れ→晴れ（ソフトウェア(業界特化)）","営業利益率16.1%（目安10%）","売上予想 +13.3%"],"entry_roles":["インサイドセールス","フィールドセールス","カスタマーサクセス"],"fit":null,"caution":null,"caution_auto":[],"metrics":{"employees":185,"employees_single":162,"avg_age":39.5,"avg_salary_man_yen":649,"equity_ratio_pct":86.7,"op_margin_pct":16.1,"sales_latest_oku":34.5,"sales_forecast_oku":39.1,"sales_growth_pct":13.3,"op_margin_forecast_pct":15.3},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":1,"role":2,"customer":5,"growth":5,"access":2,"pay":2},"difficulty":null,"shikiho_page":"p0271"},{"code":"3776","name":"ブロードバンドタワー","segment":"cloud","segment_label":"クラウド・データセンター","industries":[6],"mcap_rank":84,"mcap_oku":176,"tier":"大手・難関","featured":null,"rank_in_segment":null,"growth_score":3,"access_score":2,"growth_reasons":["業界天気 快晴→快晴（データセンター）+2"],"access_reasons":["従業員217人で採用枠は小さい −1"],"why":["業界天気 快晴→快晴（データセンター）","平均年収635万円・平均年齢41.1歳","従業員217人"],"entry_roles":["法人営業","SE（インフラ）","カスタマーサクセス"],"fit":null,"caution":null,"caution_auto":["売上は減る予想"],"metrics":{"employees":217,"employees_single":129,"avg_age":41.1,"avg_salary_man_yen":635,"equity_ratio_pct":47.1,"op_margin_pct":5.3,"sales_latest_oku":152.9,"sales_forecast_oku":140.0,"sales_growth_pct":-8.4,"op_margin_forecast_pct":5.8},"weather":{"h2":"快晴","y27":"快晴"},"axes":{"size":1,"role":4,"customer":5,"growth":3,"access":2,"pay":2},"difficulty":null,"shikiho_page":"p0279"},{"code":"3778","name":"さくらインターネット","segment":"cloud","segment_label":"クラウド・データセンター","industries":[6,32],"mcap_rank":37,"mcap_oku":1238,"tier":"狙い目","featured":null,"rank_in_segment":null,"growth_score":5,"access_score":4,"growth_reasons":["業界天気 快晴→快晴（クラウド）+2","売上予想 +28.9% +2"],"access_reasons":["従業員1,171人 +1"],"why":["業界天気 快晴→快晴（クラウド）","売上予想 +28.9%","平均年収741万円・平均年齢40.3歳"],"entry_roles":["法人営業","SE（インフラ）","カスタマーサクセス"],"fit":null,"caution":null,"caution_auto":["直近は営業赤字"],"metrics":{"employees":1171,"employees_single":960,"avg_age":40.3,"avg_salary_man_yen":741,"equity_ratio_pct":35.1,"op_margin_pct":-1.1,"sales_latest_oku":353.0,"sales_forecast_oku":455.0,"sales_growth_pct":28.9,"op_margin_forecast_pct":5.5},"weather":{"h2":"快晴","y27":"快晴"},"axes":{"size":2,"role":4,"customer":5,"growth":5,"access":4,"pay":3},"difficulty":null,"shikiho_page":"p0280"},{"code":"3796","name":"いい生活","segment":"saas","segment_label":"ソフトウェア・SaaS","industries":[34],"mcap_rank":null,"mcap_oku":null,"tier":"狙い目","featured":null,"rank_in_segment":null,"growth_score":3,"access_score":3,"growth_reasons":["業界天気 晴れ→晴れ（ソフトウェア(業界特化)）+1","売上予想 +5.9% +1"],"access_reasons":["平均年齢35.6歳と若い +1","従業員221人で採用枠は小さい −1"],"why":["業界天気 晴れ→晴れ（ソフトウェア(業界特化)）","売上予想 +5.9%","平均年収628万円・平均年齢35.6歳"],"entry_roles":["インサイドセールス","フィールドセールス","カスタマーサクセス"],"fit":null,"caution":null,"caution_auto":[],"metrics":{"employees":221,"employees_single":200,"avg_age":35.6,"avg_salary_man_yen":628,"equity_ratio_pct":78.2,"op_margin_pct":7.1,"sales_latest_oku":32.3,"sales_forecast_oku":34.2,"sales_growth_pct":5.9,"op_margin_forecast_pct":9.4},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":1,"role":2,"customer":5,"growth":3,"access":3,"pay":2},"difficulty":null,"shikiho_page":"p0282"},{"code":"3804","name":"システムディ","segment":"saas","segment_label":"ソフトウェア・SaaS","industries":[34],"mcap_rank":null,"mcap_oku":null,"tier":"狙い目","featured":null,"rank_in_segment":null,"growth_score":5,"access_score":4,"growth_reasons":["業界天気 晴れ→晴れ（ソフトウェア(業界特化)）+1","売上予想 +9.3% +1","営業利益率19.1%（今期予想） +1","営業利益率15%以上 +1"],"access_reasons":["平均年齢36.5歳と若い +1"],"why":["業界天気 晴れ→晴れ（ソフトウェア(業界特化)）","営業利益率19.1%（今期予想。目安10%）","売上予想 +9.3%"],"entry_roles":["インサイドセールス","フィールドセールス","カスタマーサクセス"],"fit":null,"caution":null,"caution_auto":[],"metrics":{"employees":312,"employees_single":303,"avg_age":36.5,"avg_salary_man_yen":593,"equity_ratio_pct":69.3,"op_margin_pct":18.6,"sales_latest_oku":50.3,"sales_forecast_oku":55.0,"sales_growth_pct":9.3,"op_margin_forecast_pct":19.1},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":1,"role":2,"customer":5,"growth":5,"access":4,"pay":1},"difficulty":null,"shikiho_page":"p0283"},{"code":"3923","name":"ラクス","segment":"saas","segment_label":"ソフトウェア・SaaS","industries":[33],"mcap_rank":27,"mcap_oku":3349,"tier":"狙い目","featured":null,"rank_in_segment":null,"growth_score":4,"access_score":5,"growth_reasons":["業界天気 晴れ→晴れ（ソフトウェア(業務特化)）+1","営業利益率35%（今期予想） +1","営業利益率15%以上 +1"],"access_reasons":["従業員2,396人 +1","平均年齢32.7歳と若い +1"],"why":["業界天気 晴れ→晴れ（ソフトウェア(業務特化)）","営業利益率35%（今期予想。目安10%）","平均年収664万円・平均年齢32.7歳"],"entry_roles":["インサイドセールス","フィールドセールス","カスタマーサクセス"],"fit":null,"caution":null,"caution_auto":["売上は減る予想"],"metrics":{"employees":2396,"employees_single":2259,"avg_age":32.7,"avg_salary_man_yen":664,"equity_ratio_pct":74.6,"op_margin_pct":28.8,"sales_latest_oku":602.9,"sales_forecast_oku":600.0,"sales_growth_pct":-0.5,"op_margin_forecast_pct":35.0},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":3,"role":2,"customer":5,"growth":4,"access":5,"pay":2},"difficulty":null,"shikiho_page":"p0299"},{"code":"3984","name":"ユーザーローカル","segment":"ai","segment_label":"AI","industries":[31],"mcap_rank":76,"mcap_oku":265,"tier":"狙い目","featured":null,"rank_in_segment":null,"growth_score":5,"access_score":3,"growth_reasons":["業界天気 快晴→快晴（AI(国内)）+2","売上予想 +14.2% +2","営業利益率41.1% +1","営業利益率15%以上 +1"],"access_reasons":["平均年齢28.7歳と若い +1","従業員121人で採用枠は小さい −1"],"why":["業界天気 快晴→快晴（AI(国内)）","営業利益率41.1%（目安10%）","売上予想 +14.2%"],"entry_roles":["ビジネス職（営業・企画）","AIコンサル","カスタマーサクセス"],"fit":null,"caution":null,"caution_auto":["平均年収は誌面に無い"],"metrics":{"employees":121,"employees_single":null,"avg_age":28.7,"avg_salary_man_yen":null,"equity_ratio_pct":84.5,"op_margin_pct":41.1,"sales_latest_oku":53.4,"sales_forecast_oku":61.0,"sales_growth_pct":14.2,"op_margin_forecast_pct":35.2},"weather":{"h2":"快晴","y27":"快晴"},"axes":{"size":1,"role":4,"customer":5,"growth":5,"access":3,"pay":null},"difficulty":null,"shikiho_page":"p0310"},{"code":"3994","name":"マネーフォワード","segment":"saas","segment_label":"ソフトウェア・SaaS","industries":[33],"mcap_rank":30,"mcap_oku":2434,"tier":"狙い目","featured":null,"rank_in_segment":null,"growth_score":4,"access_score":5,"growth_reasons":["業界天気 晴れ→晴れ（ソフトウェア(業務特化)）+1","売上予想 +21.9% +2"],"access_reasons":["従業員2,839人 +1","平均年齢34.3歳と若い +1"],"why":["業界天気 晴れ→晴れ（ソフトウェア(業務特化)）","売上予想 +21.9%","平均年収723万円・平均年齢34.3歳"],"entry_roles":["インサイドセールス","フィールドセールス","カスタマーサクセス"],"fit":null,"caution":null,"caution_auto":["直近は営業赤字","営業利益率は0.8%と低め（目安10%）"],"metrics":{"employees":2839,"employees_single":1707,"avg_age":34.3,"avg_salary_man_yen":723,"equity_ratio_pct":28.7,"op_margin_pct":-5.3,"sales_latest_oku":503.5,"sales_forecast_oku":614.0,"sales_growth_pct":21.9,"op_margin_forecast_pct":0.8},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":3,"role":2,"customer":5,"growth":4,"access":5,"pay":3},"difficulty":null,"shikiho_page":"p0312"},{"code":"3998","name":"すららネット","segment":"saas","segment_label":"ソフトウェア・SaaS","industries":[34],"mcap_rank":null,"mcap_oku":null,"tier":"狙い目","featured":null,"rank_in_segment":null,"growth_score":2,"access_score":5,"growth_reasons":["業界天気 晴れ→晴れ（ソフトウェア(業界特化)）+1"],"access_reasons":["就職難易度 1/5（出典: reashu 業界別偏差値）から換算（6−難易度）"],"why":["業界天気 晴れ→晴れ（ソフトウェア(業界特化)）","平均年収549万円・平均年齢38.4歳","従業員102人"],"entry_roles":["インサイドセールス","フィールドセールス","カスタマーサクセス"],"fit":null,"caution":null,"caution_auto":["売上は減る予想","営業利益率は3.4%と低め（目安10%）"],"metrics":{"employees":102,"employees_single":88,"avg_age":38.4,"avg_salary_man_yen":549,"equity_ratio_pct":73.0,"op_margin_pct":3.4,"sales_latest_oku":19.3,"sales_forecast_oku":17.5,"sales_growth_pct":-9.3,"op_margin_forecast_pct":-16.0},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":1,"role":2,"customer":5,"growth":2,"access":5,"pay":1},"difficulty":{"difficulty_5":1.0,"url":"https://reashu.com/education-ranking/","hensachi":35,"source":"就活の教科書・就職偏差値"},"shikiho_page":"p0313"},{"code":"4011","name":"ヘッドウォータース","segment":"ai","segment_label":"AI","industries":[31],"mcap_rank":94,"mcap_oku":123,"tier":"狙い目","featured":null,"rank_in_segment":null,"growth_score":5,"access_score":4,"growth_reasons":["業界天気 快晴→快晴（AI(国内)）+2","売上予想 +117.9% +2"],"access_reasons":["平均年齢35.2歳と若い +1"],"why":["業界天気 快晴→快晴（AI(国内)）","売上予想 +117.9%","平均年収558万円・平均年齢35.2歳"],"entry_roles":["ビジネス職（営業・企画）","AIコンサル","カスタマーサクセス"],"fit":null,"caution":null,"caution_auto":[],"metrics":{"employees":637,"employees_single":189,"avg_age":35.2,"avg_salary_man_yen":558,"equity_ratio_pct":59.5,"op_margin_pct":5.9,"sales_latest_oku":39.0,"sales_forecast_oku":85.0,"sales_growth_pct":117.9,"op_margin_forecast_pct":8.8},"weather":{"h2":"快晴","y27":"快晴"},"axes":{"size":2,"role":4,"customer":5,"growth":5,"access":4,"pay":1},"difficulty":null,"shikiho_page":"p0314"},{"code":"4058","name":"トヨクモ","segment":"saas","segment_label":"ソフトウェア・SaaS","industries":[33],"mcap_rank":78,"mcap_oku":216,"tier":"狙い目","featured":null,"rank_in_segment":null,"growth_score":5,"access_score":3,"growth_reasons":["業界天気 晴れ→晴れ（ソフトウェア(業務特化)）+1","売上予想 +23.5% +2","営業利益率35%（今期予想） +1","営業利益率15%以上 +1"],"access_reasons":["平均年齢33.2歳と若い +1","従業員121人で採用枠は小さい −1"],"why":["業界天気 晴れ→晴れ（ソフトウェア(業務特化)）","営業利益率35%（今期予想。目安10%）","売上予想 +23.5%"],"entry_roles":["インサイドセールス","フィールドセールス","カスタマーサクセス"],"fit":null,"caution":null,"caution_auto":[],"metrics":{"employees":121,"employees_single":91,"avg_age":33.2,"avg_salary_man_yen":947,"equity_ratio_pct":61.8,"op_margin_pct":33.0,"sales_latest_oku":48.6,"sales_forecast_oku":60.0,"sales_growth_pct":23.5,"op_margin_forecast_pct":35.0},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":1,"role":2,"customer":5,"growth":5,"access":3,"pay":4},"difficulty":null,"shikiho_page":"p0322"},{"code":"4071","name":"プラスアルファ・コンサルティング","segment":"saas","segment_label":"ソフトウェア・SaaS","industries":[33],"mcap_rank":40,"mcap_oku":1133,"tier":"狙い目","featured":null,"rank_in_segment":null,"growth_score":5,"access_score":4,"growth_reasons":["業界天気 晴れ→晴れ（ソフトウェア(業務特化)）+1","売上予想 +14.2% +2","営業利益率38.5%（今期予想） +1","営業利益率15%以上 +1"],"access_reasons":["平均年齢31.6歳と若い +1"],"why":["業界天気 晴れ→晴れ（ソフトウェア(業務特化)）","営業利益率38.5%（今期予想。目安10%）","売上予想 +14.2%"],"entry_roles":["インサイドセールス","フィールドセールス","カスタマーサクセス"],"fit":null,"caution":null,"caution_auto":[],"metrics":{"employees":520,"employees_single":387,"avg_age":31.6,"avg_salary_man_yen":698,"equity_ratio_pct":83.8,"op_margin_pct":37.3,"sales_latest_oku":170.8,"sales_forecast_oku":195.0,"sales_growth_pct":14.2,"op_margin_forecast_pct":38.5},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":2,"role":2,"customer":5,"growth":5,"access":4,"pay":2},"difficulty":null,"shikiho_page":"p0325"},{"code":"4072","name":"電算システムHD","segment":"cloud","segment_label":"クラウド・データセンター","industries":[32],"mcap_rank":74,"mcap_oku":301,"tier":"狙い目","featured":null,"rank_in_segment":null,"growth_score":3,"access_score":4,"growth_reasons":["業界天気 快晴→快晴（クラウド）+2"],"access_reasons":["従業員1,065人 +1"],"why":["業界天気 快晴→快晴（クラウド）","平均年収649万円・平均年齢42歳","従業員1,065人"],"entry_roles":["法人営業","SE（インフラ）","カスタマーサクセス"],"fit":null,"caution":null,"caution_auto":[],"metrics":{"employees":1065,"employees_single":813,"avg_age":42.0,"avg_salary_man_yen":649,"equity_ratio_pct":32.5,"op_margin_pct":5.3,"sales_latest_oku":681.3,"sales_forecast_oku":710.0,"sales_growth_pct":4.2,"op_margin_forecast_pct":5.4},"weather":{"h2":"快晴","y27":"快晴"},"axes":{"size":2,"role":4,"customer":5,"growth":3,"access":4,"pay":2},"difficulty":null,"shikiho_page":"p0325"},{"code":"4165","name":"プレイド","segment":"saas","segment_label":"ソフトウェア・SaaS","industries":[33],"mcap_rank":80,"mcap_oku":201,"tier":"狙い目","featured":null,"rank_in_segment":null,"growth_score":3,"access_score":4,"growth_reasons":["業界天気 晴れ→晴れ（ソフトウェア(業務特化)）+1","営業利益率10.7% +1"],"access_reasons":["平均年齢35.2歳と若い +1"],"why":["業界天気 晴れ→晴れ（ソフトウェア(業務特化)）","営業利益率10.7%（目安10%）","平均年収939万円・平均年齢35.2歳"],"entry_roles":["インサイドセールス","フィールドセールス","カスタマーサクセス"],"fit":null,"caution":null,"caution_auto":[],"metrics":{"employees":624,"employees_single":486,"avg_age":35.2,"avg_salary_man_yen":939,"equity_ratio_pct":38.7,"op_margin_pct":10.7,"sales_latest_oku":134.0,"sales_forecast_oku":null,"sales_growth_pct":null,"op_margin_forecast_pct":null},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":2,"role":2,"customer":5,"growth":3,"access":4,"pay":4},"difficulty":null,"shikiho_page":"p0334"},{"code":"4180","name":"Appier Group","segment":"ai","segment_label":"AI","industries":[31],"mcap_rank":47,"mcap_oku":829,"tier":"狙い目","featured":null,"rank_in_segment":null,"growth_score":5,"access_score":3,"growth_reasons":["業界天気 快晴→快晴（AI(国内)）+2","売上予想 +24.4% +2"],"access_reasons":[],"why":["業界天気 快晴→快晴（AI(国内)）","売上予想 +24.4%","従業員754人"],"entry_roles":["ビジネス職（営業・企画）","AIコンサル","カスタマーサクセス"],"fit":null,"caution":null,"caution_auto":["平均年収は誌面に無い","単独の従業員は0人。新卒採用はグループ会社ごとのことがある"],"metrics":{"employees":754,"employees_single":0,"avg_age":null,"avg_salary_man_yen":null,"equity_ratio_pct":63.5,"op_margin_pct":6.8,"sales_latest_oku":437.4,"sales_forecast_oku":544.0,"sales_growth_pct":24.4,"op_margin_forecast_pct":9.2},"weather":{"h2":"快晴","y27":"快晴"},"axes":{"size":2,"role":4,"customer":5,"growth":5,"access":3,"pay":null},"difficulty":null,"shikiho_page":"p0337"},{"code":"4192","name":"スパイダープラス","segment":"saas","segment_label":"ソフトウェア・SaaS","industries":[34],"mcap_rank":99,"mcap_oku":93,"tier":"狙い目","featured":null,"rank_in_segment":null,"growth_score":4,"access_score":3,"growth_reasons":["業界天気 晴れ→晴れ（ソフトウェア(業界特化)）+1","売上予想 +20.4% +2"],"access_reasons":["平均年齢35.3歳と若い +1","従業員260人で採用枠は小さい −1"],"why":["業界天気 晴れ→晴れ（ソフトウェア(業界特化)）","売上予想 +20.4%","平均年収624万円・平均年齢35.3歳"],"entry_roles":["インサイドセールス","フィールドセールス","カスタマーサクセス"],"fit":null,"caution":null,"caution_auto":["直近は営業赤字","営業利益率は1.7%と低め（目安10%）"],"metrics":{"employees":260,"employees_single":258,"avg_age":35.3,"avg_salary_man_yen":624,"equity_ratio_pct":66.5,"op_margin_pct":-0.2,"sales_latest_oku":49.0,"sales_forecast_oku":59.0,"sales_growth_pct":20.4,"op_margin_forecast_pct":1.7},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":1,"role":2,"customer":5,"growth":4,"access":3,"pay":2},"difficulty":null,"shikiho_page":"p0339"},{"code":"4193","name":"ファブリカホールディングス","segment":"saas","segment_label":"ソフトウェア・SaaS","industries":[34],"mcap_rank":93,"mcap_oku":125,"tier":"狙い目","featured":null,"rank_in_segment":null,"growth_score":4,"access_score":3,"growth_reasons":["業界天気 晴れ→晴れ（ソフトウェア(業界特化)）+1","売上予想 +9.7% +1","営業利益率12.1%（今期予想） +1"],"access_reasons":["平均年齢36.7歳と若い +1","従業員240人で採用枠は小さい −1"],"why":["業界天気 晴れ→晴れ（ソフトウェア(業界特化)）","営業利益率12.1%（今期予想。目安10%）","売上予想 +9.7%"],"entry_roles":["インサイドセールス","フィールドセールス","カスタマーサクセス"],"fit":null,"caution":null,"caution_auto":[],"metrics":{"employees":240,"employees_single":202,"avg_age":36.7,"avg_salary_man_yen":543,"equity_ratio_pct":65.8,"op_margin_pct":11.5,"sales_latest_oku":105.7,"sales_forecast_oku":116.0,"sales_growth_pct":9.7,"op_margin_forecast_pct":12.1},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":1,"role":2,"customer":5,"growth":4,"access":3,"pay":1},"difficulty":null,"shikiho_page":"p0340"},{"code":"4256","name":"サインド","segment":"saas","segment_label":"ソフトウェア・SaaS","industries":[34],"mcap_rank":null,"mcap_oku":null,"tier":"狙い目","featured":null,"rank_in_segment":null,"growth_score":5,"access_score":3,"growth_reasons":["業界天気 晴れ→晴れ（ソフトウェア(業界特化)）+1","売上予想 +18.1% +2","営業利益率13% +1"],"access_reasons":["平均年齢34.2歳と若い +1","従業員128人で採用枠は小さい −1"],"why":["業界天気 晴れ→晴れ（ソフトウェア(業界特化)）","営業利益率13%（目安10%）","売上予想 +18.1%"],"entry_roles":["インサイドセールス","フィールドセールス","カスタマーサクセス"],"fit":null,"caution":null,"caution_auto":[],"metrics":{"employees":128,"employees_single":97,"avg_age":34.2,"avg_salary_man_yen":644,"equity_ratio_pct":71.7,"op_margin_pct":13.0,"sales_latest_oku":25.4,"sales_forecast_oku":30.0,"sales_growth_pct":18.1,"op_margin_forecast_pct":11.3},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":1,"role":2,"customer":5,"growth":5,"access":3,"pay":2},"difficulty":null,"shikiho_page":"p0350"},{"code":"4258","name":"網屋","segment":"security","segment_label":"セキュリティ","industries":[36],"mcap_rank":73,"mcap_oku":309,"tier":"狙い目","featured":null,"rank_in_segment":null,"growth_score":5,"access_score":4,"growth_reasons":["業界天気 快晴→快晴（サイバーセキュリティー）+2","売上予想 +33% +2","営業利益率18.4%（今期予想） +1","営業利益率15%以上 +1"],"access_reasons":["平均年齢34歳と若い +1"],"why":["業界天気 快晴→快晴（サイバーセキュリティー）","営業利益率18.4%（今期予想。目安10%）","売上予想 +33%"],"entry_roles":["技術営業","カスタマーサポート","SE"],"fit":null,"caution":null,"caution_auto":[],"metrics":{"employees":341,"employees_single":224,"avg_age":34.0,"avg_salary_man_yen":598,"equity_ratio_pct":26.2,"op_margin_pct":17.7,"sales_latest_oku":59.4,"sales_forecast_oku":79.0,"sales_growth_pct":33.0,"op_margin_forecast_pct":18.4},"weather":{"h2":"快晴","y27":"快晴"},"axes":{"size":1,"role":4,"customer":4,"growth":5,"access":4,"pay":1},"difficulty":null,"shikiho_page":"p0350"},{"code":"4293","name":"セプテーニ・ホールディングス","segment":"media","segment_label":"ゲーム・動画・ネット広告","industries":[127],"mcap_rank":null,"mcap_oku":940,"tier":"大手・難関","featured":null,"rank_in_segment":null,"growth_score":5,"access_score":2,"growth_reasons":["業界天気 晴れ→晴れ（広告）+1","売上予想 +9.9% +1","営業利益率17.4%（今期予想） +1","営業利益率15%以上 +1"],"access_reasons":["就職難易度 4/5（出典: reashu 業界別偏差値）から換算（6−難易度）"],"why":["業界天気 晴れ→晴れ（広告）","営業利益率17.4%（今期予想。目安10%）","売上予想 +9.9%"],"entry_roles":["広告営業・運用","企画・プロデューサー","マーケティング"],"fit":null,"caution":null,"caution_auto":["単独の従業員は97人。新卒採用はグループ会社ごとのことがある"],"metrics":{"employees":1614,"employees_single":97,"avg_age":34.9,"avg_salary_man_yen":655,"equity_ratio_pct":68.5,"op_margin_pct":14.0,"sales_latest_oku":303.1,"sales_forecast_oku":333.0,"sales_growth_pct":9.9,"op_margin_forecast_pct":17.4},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":2,"role":2,"customer":1,"growth":5,"access":2,"pay":2},"difficulty":{"difficulty_5":4.0,"url":"https://reashu.com/it-gyoukai-ranking/","hensachi":60,"source":"就活の教科書・就職偏差値"},"shikiho_page":"p0354"},{"code":"4307","name":"野村総合研究所","segment":"sier","segment_label":"SIer・ITコンサル","industries":[30,32,90],"mcap_rank":10,"mcap_oku":25770,"tier":"大手・難関","featured":null,"rank_in_segment":null,"growth_score":5,"access_score":1,"growth_reasons":["業界天気 快晴→快晴（システム開発）+2","売上予想 +5.6% +1","営業利益率20.9%（今期予想） +1","営業利益率15%以上 +1"],"access_reasons":["就職難易度 5/5（出典: reashu 業界別偏差値）から換算（6−難易度）"],"why":["業界天気 快晴→快晴（システム開発）","営業利益率20.9%（今期予想。目安10%）","売上予想 +5.6%"],"entry_roles":["SE（文系採用が多い職種）","IT営業","ITコンサル"],"fit":"野村證券の調査部から生まれたSIer兼コンサル。金融と流通に強い。","caution":"直近の決算は海外子会社の減損で利益が落ちた。今期は回復する予想（四季報2026年4集）","caution_auto":[],"metrics":{"employees":16894,"employees_single":7982,"avg_age":39.7,"avg_salary_man_yen":1332,"equity_ratio_pct":41.2,"op_margin_pct":7.2,"sales_latest_oku":8147.1,"sales_forecast_oku":8600.0,"sales_growth_pct":5.6,"op_margin_forecast_pct":20.9},"weather":{"h2":"快晴","y27":"快晴"},"axes":{"size":4,"role":4,"customer":5,"growth":5,"access":1,"pay":5},"difficulty":{"difficulty_5":5.0,"url":"https://reashu.com/it-gyoukai-ranking/","hensachi":67,"source":"就活の教科書・就職偏差値"},"shikiho_page":"p0355"},{"code":"4324","name":"電通グループ","segment":"media","segment_label":"ゲーム・動画・ネット広告","industries":[127],"mcap_rank":null,"mcap_oku":8231,"tier":"大手・難関","featured":null,"rank_in_segment":null,"growth_score":3,"access_score":1,"growth_reasons":["業界天気 晴れ→晴れ（広告）+1","営業利益率10.2%（今期予想） +1"],"access_reasons":["就職難易度 5/5（出典: reashu 業界別偏差値）から換算（6−難易度）"],"why":["業界天気 晴れ→晴れ（広告）","営業利益率10.2%（今期予想。目安10%）","平均年収1,595万円・平均年齢45歳"],"entry_roles":["広告営業・運用","企画・プロデューサー","マーケティング"],"fit":null,"caution":null,"caution_auto":["単独の従業員は141人。新卒採用はグループ会社ごとのことがある","直近は営業赤字"],"metrics":{"employees":65164,"employees_single":141,"avg_age":45.0,"avg_salary_man_yen":1595,"equity_ratio_pct":13.8,"op_margin_pct":-20.2,"sales_latest_oku":14352.5,"sales_forecast_oku":14920.0,"sales_growth_pct":4.0,"op_margin_forecast_pct":10.2},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":5,"role":2,"customer":1,"growth":3,"access":1,"pay":5},"difficulty":{"difficulty_5":5.0,"url":"https://reashu.com/koukoku-mascomi-shushoku/","hensachi":75,"source":"就活の教科書・就職偏差値"},"shikiho_page":"p0358"},{"code":"4382","name":"HEROZ","segment":"ai","segment_label":"AI","industries":[31],"mcap_rank":92,"mcap_oku":127,"tier":"狙い目","featured":null,"rank_in_segment":null,"growth_score":5,"access_score":3,"growth_reasons":["業界天気 快晴→快晴（AI(国内)）+2","売上予想 +7.5% +1","営業利益率11.6%（今期予想） +1"],"access_reasons":["平均年齢37.7歳と若い +1","従業員259人で採用枠は小さい −1"],"why":["業界天気 快晴→快晴（AI(国内)）","営業利益率11.6%（今期予想。目安10%）","売上予想 +7.5%"],"entry_roles":["ビジネス職（営業・企画）","AIコンサル","カスタマーサクセス"],"fit":null,"caution":null,"caution_auto":[],"metrics":{"employees":259,"employees_single":105,"avg_age":37.7,"avg_salary_man_yen":762,"equity_ratio_pct":58.7,"op_margin_pct":8.1,"sales_latest_oku":64.2,"sales_forecast_oku":69.0,"sales_growth_pct":7.5,"op_margin_forecast_pct":11.6},"weather":{"h2":"快晴","y27":"快晴"},"axes":{"size":1,"role":4,"customer":5,"growth":5,"access":3,"pay":3},"difficulty":null,"shikiho_page":"p0366"},{"code":"4385","name":"メルカリ","segment":"web","segment_label":"Web・ネットサービス","industries":[28],"mcap_rank":19,"mcap_oku":6756,"tier":"大手・難関","featured":null,"rank_in_segment":null,"growth_score":5,"access_score":2,"growth_reasons":["業界天気 晴れ→晴れ（eコマース）+1","売上予想 +19.9% +2","営業利益率19.1% +1","営業利益率15%以上 +1"],"access_reasons":["従業員2,064人 +1","平均年齢36.3歳と若い +1","平均年収1,176万円で人気が集まりやすい −1","時価総額6,756億円の大手で応募が集まりやすいので、2を上限にした"],"why":["業界天気 晴れ→晴れ（eコマース）","営業利益率19.1%（目安10%）","売上予想 +19.9%"],"entry_roles":["企画・ディレクター","広告営業","マーケティング"],"fit":null,"caution":null,"caution_auto":[],"metrics":{"employees":2064,"employees_single":null,"avg_age":36.3,"avg_salary_man_yen":1176,"equity_ratio_pct":18.9,"op_margin_pct":19.1,"sales_latest_oku":2292.9,"sales_forecast_oku":2750.0,"sales_growth_pct":19.9,"op_margin_forecast_pct":16.3},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":3,"role":2,"customer":1,"growth":5,"access":2,"pay":5},"difficulty":null,"shikiho_page":"p0367"},{"code":"4389","name":"プロパティデータバンク","segment":"saas","segment_label":"ソフトウェア・SaaS","industries":[34],"mcap_rank":96,"mcap_oku":107,"tier":"大手・難関","featured":null,"rank_in_segment":null,"growth_score":5,"access_score":2,"growth_reasons":["業界天気 晴れ→晴れ（ソフトウェア(業界特化)）+1","売上予想 +13.4% +2","営業利益率32.7%（今期予想） +1","営業利益率15%以上 +1"],"access_reasons":["従業員75人で採用枠は小さい −1"],"why":["業界天気 晴れ→晴れ（ソフトウェア(業界特化)）","営業利益率32.7%（今期予想。目安10%）","売上予想 +13.4%"],"entry_roles":["インサイドセールス","フィールドセールス","カスタマーサクセス"],"fit":null,"caution":null,"caution_auto":[],"metrics":{"employees":75,"employees_single":44,"avg_age":45.6,"avg_salary_man_yen":776,"equity_ratio_pct":70.8,"op_margin_pct":29.9,"sales_latest_oku":37.2,"sales_forecast_oku":42.2,"sales_growth_pct":13.4,"op_margin_forecast_pct":32.7},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":1,"role":2,"customer":5,"growth":5,"access":2,"pay":3},"difficulty":null,"shikiho_page":"p0368"},{"code":"4391","name":"ロジザード","segment":"saas","segment_label":"ソフトウェア・SaaS","industries":[34],"mcap_rank":null,"mcap_oku":null,"tier":"大手・難関","featured":null,"rank_in_segment":null,"growth_score":5,"access_score":2,"growth_reasons":["業界天気 晴れ→晴れ（ソフトウェア(業界特化)）+1","売上予想 +15.6% +2","営業利益率16.6% +1","営業利益率15%以上 +1"],"access_reasons":["従業員147人で採用枠は小さい −1"],"why":["業界天気 晴れ→晴れ（ソフトウェア(業界特化)）","営業利益率16.6%（目安10%）","売上予想 +15.6%"],"entry_roles":["インサイドセールス","フィールドセールス","カスタマーサクセス"],"fit":null,"caution":null,"caution_auto":[],"metrics":{"employees":147,"employees_single":147,"avg_age":40.1,"avg_salary_man_yen":694,"equity_ratio_pct":83.7,"op_margin_pct":16.6,"sales_latest_oku":24.4,"sales_forecast_oku":28.2,"sales_growth_pct":15.6,"op_margin_forecast_pct":14.9},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":1,"role":2,"customer":5,"growth":5,"access":2,"pay":2},"difficulty":null,"shikiho_page":"p0368"},{"code":"4414","name":"フレクト","segment":"cloud","segment_label":"クラウド・データセンター","industries":[32],"mcap_rank":null,"mcap_oku":null,"tier":"狙い目","featured":null,"rank_in_segment":null,"growth_score":5,"access_score":4,"growth_reasons":["業界天気 快晴→快晴（クラウド）+2","売上予想 +26.1% +2","営業利益率15.1% +1","営業利益率15%以上 +1"],"access_reasons":["平均年齢36.5歳と若い +1"],"why":["業界天気 快晴→快晴（クラウド）","営業利益率15.1%（目安10%）","売上予想 +26.1%"],"entry_roles":["法人営業","SE（インフラ）","カスタマーサクセス"],"fit":null,"caution":null,"caution_auto":[],"metrics":{"employees":481,"employees_single":481,"avg_age":36.5,"avg_salary_man_yen":665,"equity_ratio_pct":64.9,"op_margin_pct":15.1,"sales_latest_oku":82.5,"sales_forecast_oku":104.0,"sales_growth_pct":26.1,"op_margin_forecast_pct":12.0},"weather":{"h2":"快晴","y27":"快晴"},"axes":{"size":1,"role":4,"customer":5,"growth":5,"access":4,"pay":2},"difficulty":null,"shikiho_page":"p0372"},{"code":"4417","name":"グローバルセキュリティエキスパート","segment":"security","segment_label":"セキュリティ","industries":[36],"mcap_rank":56,"mcap_oku":589,"tier":"大手・難関","featured":null,"rank_in_segment":null,"growth_score":5,"access_score":2,"growth_reasons":["業界天気 快晴→快晴（サイバーセキュリティー）+2","売上予想 +25.2% +2","営業利益率21.3%（今期予想） +1","営業利益率15%以上 +1"],"access_reasons":["従業員237人で採用枠は小さい −1"],"why":["業界天気 快晴→快晴（サイバーセキュリティー）","営業利益率21.3%（今期予想。目安10%）","売上予想 +25.2%"],"entry_roles":["技術営業","カスタマーサポート","SE"],"fit":null,"caution":null,"caution_auto":[],"metrics":{"employees":237,"employees_single":194,"avg_age":41.0,"avg_salary_man_yen":769,"equity_ratio_pct":47.0,"op_margin_pct":20.3,"sales_latest_oku":110.2,"sales_forecast_oku":138.0,"sales_growth_pct":25.2,"op_margin_forecast_pct":21.3},"weather":{"h2":"快晴","y27":"快晴"},"axes":{"size":1,"role":4,"customer":4,"growth":5,"access":2,"pay":3},"difficulty":null,"shikiho_page":"p0373"},{"code":"4418","name":"JDSC","segment":"ai","segment_label":"AI","industries":[31],"mcap_rank":97,"mcap_oku":106,"tier":"狙い目","featured":null,"rank_in_segment":null,"growth_score":3,"access_score":3,"growth_reasons":["業界天気 快晴→快晴（AI(国内)）+2"],"access_reasons":["平均年齢36.3歳と若い +1","従業員163人で採用枠は小さい −1"],"why":["業界天気 快晴→快晴（AI(国内)）","平均年収960万円・平均年齢36.3歳","従業員163人"],"entry_roles":["ビジネス職（営業・企画）","AIコンサル","カスタマーサクセス"],"fit":null,"caution":null,"caution_auto":["売上は減る予想"],"metrics":{"employees":163,"employees_single":124,"avg_age":36.3,"avg_salary_man_yen":960,"equity_ratio_pct":62.1,"op_margin_pct":2.8,"sales_latest_oku":228.3,"sales_forecast_oku":110.0,"sales_growth_pct":-51.8,"op_margin_forecast_pct":8.6},"weather":{"h2":"快晴","y27":"快晴"},"axes":{"size":1,"role":4,"customer":5,"growth":3,"access":3,"pay":4},"difficulty":null,"shikiho_page":"p0373"},{"code":"4419","name":"Finatext HD","segment":"saas","segment_label":"ソフトウェア・SaaS","industries":[34],"mcap_rank":51,"mcap_oku":705,"tier":"狙い目","featured":null,"rank_in_segment":null,"growth_score":5,"access_score":4,"growth_reasons":["業界天気 晴れ→晴れ（ソフトウェア(業界特化)）+1","売上予想 +40.3% +2","営業利益率21.3%（今期予想） +1","営業利益率15%以上 +1"],"access_reasons":["平均年齢35.5歳と若い +1"],"why":["業界天気 晴れ→晴れ（ソフトウェア(業界特化)）","営業利益率21.3%（今期予想。目安10%）","売上予想 +40.3%"],"entry_roles":["インサイドセールス","フィールドセールス","カスタマーサクセス"],"fit":null,"caution":null,"caution_auto":[],"metrics":{"employees":452,"employees_single":170,"avg_age":35.5,"avg_salary_man_yen":883,"equity_ratio_pct":44.2,"op_margin_pct":17.2,"sales_latest_oku":110.5,"sales_forecast_oku":155.0,"sales_growth_pct":40.3,"op_margin_forecast_pct":21.3},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":1,"role":2,"customer":5,"growth":5,"access":4,"pay":4},"difficulty":null,"shikiho_page":"p0374"},{"code":"4431","name":"スマレジ","segment":"saas","segment_label":"ソフトウェア・SaaS","industries":[34],"mcap_rank":60,"mcap_oku":531,"tier":"狙い目","featured":null,"rank_in_segment":null,"growth_score":5,"access_score":4,"growth_reasons":["業界天気 晴れ→晴れ（ソフトウェア(業界特化)）+1","売上予想 +16.1% +2","営業利益率26.5%（今期予想） +1","営業利益率15%以上 +1"],"access_reasons":["平均年齢33.8歳と若い +1"],"why":["業界天気 晴れ→晴れ（ソフトウェア(業界特化)）","営業利益率26.5%（今期予想。目安10%）","売上予想 +16.1%"],"entry_roles":["インサイドセールス","フィールドセールス","カスタマーサクセス"],"fit":null,"caution":null,"caution_auto":[],"metrics":{"employees":477,"employees_single":421,"avg_age":33.8,"avg_salary_man_yen":543,"equity_ratio_pct":68.3,"op_margin_pct":24.1,"sales_latest_oku":133.5,"sales_forecast_oku":155.0,"sales_growth_pct":16.1,"op_margin_forecast_pct":26.5},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":1,"role":2,"customer":5,"growth":5,"access":4,"pay":1},"difficulty":null,"shikiho_page":"p0377"},{"code":"4432","name":"ウイングアーク1st","segment":"saas","segment_label":"ソフトウェア・SaaS","industries":[33],"mcap_rank":48,"mcap_oku":820,"tier":"狙い目","featured":null,"rank_in_segment":null,"growth_score":5,"access_score":4,"growth_reasons":["業界天気 晴れ→晴れ（ソフトウェア(業務特化)）+1","売上予想 +10.8% +2","営業利益率30.9%（今期予想） +1","営業利益率15%以上 +1"],"access_reasons":["従業員1,157人 +1"],"why":["業界天気 晴れ→晴れ（ソフトウェア(業務特化)）","営業利益率30.9%（今期予想。目安10%）","売上予想 +10.8%"],"entry_roles":["インサイドセールス","フィールドセールス","カスタマーサクセス"],"fit":null,"caution":null,"caution_auto":[],"metrics":{"employees":1157,"employees_single":859,"avg_age":41.0,"avg_salary_man_yen":761,"equity_ratio_pct":62.9,"op_margin_pct":29.0,"sales_latest_oku":309.5,"sales_forecast_oku":343.0,"sales_growth_pct":10.8,"op_margin_forecast_pct":30.9},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":2,"role":2,"customer":5,"growth":5,"access":4,"pay":3},"difficulty":null,"shikiho_page":"p0377"},{"code":"4434","name":"サーバーワークス","segment":"cloud","segment_label":"クラウド・データセンター","industries":[32],"mcap_rank":89,"mcap_oku":153,"tier":"狙い目","featured":null,"rank_in_segment":null,"growth_score":5,"access_score":4,"growth_reasons":["業界天気 快晴→快晴（クラウド）+2","売上予想 +25% +2"],"access_reasons":["平均年齢37.3歳と若い +1"],"why":["業界天気 快晴→快晴（クラウド）","売上予想 +25%","平均年収731万円・平均年齢37.3歳"],"entry_roles":["法人営業","SE（インフラ）","カスタマーサクセス"],"fit":null,"caution":null,"caution_auto":["営業利益率は3.6%と低め（目安10%）"],"metrics":{"employees":557,"employees_single":400,"avg_age":37.3,"avg_salary_man_yen":731,"equity_ratio_pct":46.0,"op_margin_pct":1.6,"sales_latest_oku":400.1,"sales_forecast_oku":500.0,"sales_growth_pct":25.0,"op_margin_forecast_pct":3.6},"weather":{"h2":"快晴","y27":"快晴"},"axes":{"size":2,"role":4,"customer":5,"growth":5,"access":4,"pay":3},"difficulty":null,"shikiho_page":"p0377"},{"code":"4448","name":"kubell","segment":"saas","segment_label":"ソフトウェア・SaaS","industries":[33],"mcap_rank":95,"mcap_oku":122,"tier":"狙い目","featured":null,"rank_in_segment":null,"growth_score":4,"access_score":4,"growth_reasons":["業界天気 晴れ→晴れ（ソフトウェア(業務特化)）+1","売上予想 +14.4% +2"],"access_reasons":["平均年齢34.8歳と若い +1"],"why":["業界天気 晴れ→晴れ（ソフトウェア(業務特化)）","売上予想 +14.4%","平均年収759万円・平均年齢34.8歳"],"entry_roles":["インサイドセールス","フィールドセールス","カスタマーサクセス"],"fit":null,"caution":null,"caution_auto":[],"metrics":{"employees":453,"employees_single":null,"avg_age":34.8,"avg_salary_man_yen":759,"equity_ratio_pct":36.8,"op_margin_pct":5.1,"sales_latest_oku":95.3,"sales_forecast_oku":109.0,"sales_growth_pct":14.4,"op_margin_forecast_pct":8.3},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":1,"role":2,"customer":5,"growth":4,"access":4,"pay":3},"difficulty":null,"shikiho_page":"p0381"},{"code":"4478","name":"フリー","segment":"saas","segment_label":"ソフトウェア・SaaS","industries":[33],"mcap_rank":38,"mcap_oku":1193,"tier":"狙い目","featured":null,"rank_in_segment":null,"growth_score":4,"access_score":5,"growth_reasons":["業界天気 晴れ→晴れ（ソフトウェア(業務特化)）+1","売上予想 +23% +2"],"access_reasons":["従業員1,901人 +1","平均年齢33.1歳と若い +1"],"why":["業界天気 晴れ→晴れ（ソフトウェア(業務特化)）","売上予想 +23%","平均年収688万円・平均年齢33.1歳"],"entry_roles":["インサイドセールス","フィールドセールス","カスタマーサクセス"],"fit":null,"caution":null,"caution_auto":[],"metrics":{"employees":1901,"employees_single":1851,"avg_age":33.1,"avg_salary_man_yen":688,"equity_ratio_pct":34.1,"op_margin_pct":2.6,"sales_latest_oku":424.4,"sales_forecast_oku":522.0,"sales_growth_pct":23.0,"op_margin_forecast_pct":7.9},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":2,"role":2,"customer":5,"growth":4,"access":5,"pay":2},"difficulty":null,"shikiho_page":"p0384"},{"code":"4488","name":"AI inside","segment":"ai","segment_label":"AI","industries":[31],"mcap_rank":null,"mcap_oku":null,"tier":"大手・難関","featured":null,"rank_in_segment":null,"growth_score":5,"access_score":2,"growth_reasons":["業界天気 快晴→快晴（AI(国内)）+2","売上予想 +11.6% +2"],"access_reasons":["従業員135人で採用枠は小さい −1"],"why":["業界天気 快晴→快晴（AI(国内)）","売上予想 +11.6%","平均年収932万円・平均年齢39.4歳"],"entry_roles":["ビジネス職（営業・企画）","AIコンサル","カスタマーサクセス"],"fit":null,"caution":null,"caution_auto":[],"metrics":{"employees":null,"employees_single":135,"avg_age":39.4,"avg_salary_man_yen":932,"equity_ratio_pct":77.5,"op_margin_pct":6.5,"sales_latest_oku":47.5,"sales_forecast_oku":53.0,"sales_growth_pct":11.6,"op_margin_forecast_pct":9.8},"weather":{"h2":"快晴","y27":"快晴"},"axes":{"size":1,"role":4,"customer":5,"growth":5,"access":2,"pay":4},"difficulty":null,"shikiho_page":"p0386"},{"code":"4493","name":"サイバーセキュリティクラウド","segment":"security","segment_label":"セキュリティ","industries":[36],"mcap_rank":82,"mcap_oku":182,"tier":"狙い目","featured":null,"rank_in_segment":null,"growth_score":5,"access_score":3,"growth_reasons":["業界天気 快晴→快晴（サイバーセキュリティー）+2","売上予想 +14.2% +2","営業利益率21.7% +1","営業利益率15%以上 +1"],"access_reasons":["平均年齢37.6歳と若い +1","従業員164人で採用枠は小さい −1"],"why":["業界天気 快晴→快晴（サイバーセキュリティー）","営業利益率21.7%（目安10%）","売上予想 +14.2%"],"entry_roles":["技術営業","カスタマーサポート","SE"],"fit":null,"caution":null,"caution_auto":[],"metrics":{"employees":164,"employees_single":134,"avg_age":37.6,"avg_salary_man_yen":812,"equity_ratio_pct":81.0,"op_margin_pct":21.7,"sales_latest_oku":50.8,"sales_forecast_oku":58.0,"sales_growth_pct":14.2,"op_margin_forecast_pct":20.7},"weather":{"h2":"快晴","y27":"快晴"},"axes":{"size":1,"role":4,"customer":4,"growth":5,"access":3,"pay":4},"difficulty":null,"shikiho_page":"p0387"},{"code":"4684","name":"オービック","segment":"sier","segment_label":"SIer・ITコンサル","industries":[30,33],"mcap_rank":11,"mcap_oku":18809,"tier":"大手・難関","featured":null,"rank_in_segment":null,"growth_score":5,"access_score":2,"growth_reasons":["業界天気 快晴→快晴（システム開発）+2","売上予想 +11.7% +2","営業利益率67.5%（今期予想） +1","営業利益率15%以上 +1"],"access_reasons":["就職難易度 4/5（出典: reashu 業界別偏差値）から換算（6−難易度）"],"why":["業界天気 快晴→快晴（システム開発）","営業利益率67.5%（今期予想。目安10%）","売上予想 +11.7%"],"entry_roles":["SE（文系採用が多い職種）","IT営業","ITコンサル"],"fit":"中堅企業向けの基幹業務ソフト「OBIC7」で首位の独立系。","caution":null,"caution_auto":[],"metrics":{"employees":2397,"employees_single":2156,"avg_age":35.8,"avg_salary_man_yen":1129,"equity_ratio_pct":84.4,"op_margin_pct":65.7,"sales_latest_oku":1352.1,"sales_forecast_oku":1510.0,"sales_growth_pct":11.7,"op_margin_forecast_pct":67.5},"weather":{"h2":"快晴","y27":"快晴"},"axes":{"size":3,"role":4,"customer":5,"growth":5,"access":2,"pay":5},"difficulty":{"difficulty_5":4.0,"url":"https://reashu.com/it-gyoukai-ranking/","hensachi":60,"source":"就活の教科書・就職偏差値"},"shikiho_page":"p0415"},{"code":"4686","name":"ジャストシステム","segment":"saas","segment_label":"ソフトウェア・SaaS","industries":[33],"mcap_rank":31,"mcap_oku":2350,"tier":"大手・難関","featured":null,"rank_in_segment":null,"growth_score":4,"access_score":2,"growth_reasons":["業界天気 晴れ→晴れ（ソフトウェア(業務特化)）+1","営業利益率45%（今期予想） +1","営業利益率15%以上 +1"],"access_reasons":["平均年収1,650万円で人気が集まりやすい −1"],"why":["業界天気 晴れ→晴れ（ソフトウェア(業務特化)）","営業利益率45%（今期予想。目安10%）","平均年収1,650万円・平均年齢38.8歳"],"entry_roles":["インサイドセールス","フィールドセールス","カスタマーサクセス"],"fit":null,"caution":null,"caution_auto":[],"metrics":{"employees":302,"employees_single":293,"avg_age":38.8,"avg_salary_man_yen":1650,"equity_ratio_pct":86.6,"op_margin_pct":43.7,"sales_latest_oku":515.2,"sales_forecast_oku":522.0,"sales_growth_pct":1.3,"op_margin_forecast_pct":45.0},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":1,"role":2,"customer":5,"growth":4,"access":2,"pay":5},"difficulty":null,"shikiho_page":"p0415"},{"code":"4704","name":"トレンドマイクロ","segment":"security","segment_label":"セキュリティ","industries":[36],"mcap_rank":16,"mcap_oku":8428,"tier":"大手・難関","featured":null,"rank_in_segment":null,"growth_score":5,"access_score":2,"growth_reasons":["業界天気 快晴→快晴（サイバーセキュリティー）+2","売上予想 +9.2% +1","営業利益率20.9% +1","営業利益率15%以上 +1"],"access_reasons":["就職難易度 4.2/5（出典: reashu 企業別記事）から換算（6−難易度）"],"why":["業界天気 快晴→快晴（サイバーセキュリティー）","営業利益率20.9%（目安10%）","売上予想 +9.2%"],"entry_roles":["技術営業","カスタマーサポート","SE"],"fit":null,"caution":null,"caution_auto":[],"metrics":{"employees":6711,"employees_single":691,"avg_age":40.3,"avg_salary_man_yen":988,"equity_ratio_pct":28.5,"op_margin_pct":20.9,"sales_latest_oku":2759.8,"sales_forecast_oku":3015.0,"sales_growth_pct":9.2,"op_margin_forecast_pct":14.7},"weather":{"h2":"快晴","y27":"快晴"},"axes":{"size":3,"role":4,"customer":4,"growth":5,"access":2,"pay":4},"difficulty":{"difficulty_5":4.2,"url":"https://reashu.com/trend-micro_saiyoudaigaku/","hensachi":null,"source":"就活の教科書・企業別記事"},"shikiho_page":"p0417"},{"code":"4716","name":"日本オラクル","segment":"saas","segment_label":"ソフトウェア・SaaS","industries":[33],"mcap_rank":13,"mcap_oku":10649,"tier":"大手・難関","featured":null,"rank_in_segment":null,"growth_score":5,"access_score":2,"growth_reasons":["業界天気 晴れ→晴れ（ソフトウェア(業務特化)）+1","売上予想 +8% +1","営業利益率31.5% +1","営業利益率15%以上 +1"],"access_reasons":["従業員2,097人 +1","平均年収1,298万円で人気が集まりやすい −1","時価総額10,649億円の大手で応募が集まりやすいので、2を上限にした"],"why":["業界天気 晴れ→晴れ（ソフトウェア(業務特化)）","営業利益率31.5%（目安10%）","売上予想 +8%"],"entry_roles":["インサイドセールス","フィールドセールス","カスタマーサクセス"],"fit":null,"caution":null,"caution_auto":[],"metrics":{"employees":2097,"employees_single":2097,"avg_age":45.3,"avg_salary_man_yen":1298,"equity_ratio_pct":55.6,"op_margin_pct":31.5,"sales_latest_oku":2850.7,"sales_forecast_oku":3080.0,"sales_growth_pct":8.0,"op_margin_forecast_pct":31.2},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":3,"role":2,"customer":5,"growth":5,"access":2,"pay":5},"difficulty":null,"shikiho_page":"p0418"},{"code":"4751","name":"サイバーエージェント","segment":"media","segment_label":"ゲーム・動画・ネット広告","industries":[31,126,127],"mcap_rank":18,"mcap_oku":6906,"tier":"大手・難関","featured":null,"rank_in_segment":null,"growth_score":3,"access_score":3,"growth_reasons":["業界天気 晴れ→晴れ（動画配信）+1","売上予想 +9.8% +1"],"access_reasons":["就職難易度 3/5（出典: reashu 業界別偏差値）から換算（6−難易度）"],"why":["業界天気 晴れ→晴れ（動画配信）","売上予想 +9.8%","平均年収913万円・平均年齢33.8歳"],"entry_roles":["広告営業・運用","企画・プロデューサー","マーケティング"],"fit":null,"caution":null,"caution_auto":[],"metrics":{"employees":8745,"employees_single":2795,"avg_age":33.8,"avg_salary_man_yen":913,"equity_ratio_pct":37.2,"op_margin_pct":8.2,"sales_latest_oku":8740.3,"sales_forecast_oku":9600.0,"sales_growth_pct":9.8,"op_margin_forecast_pct":8.3},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":3,"role":2,"customer":1,"growth":3,"access":3,"pay":4},"difficulty":{"difficulty_5":3.0,"url":"https://reashu.com/koukoku-mascomi-shushoku/","hensachi":55,"source":"就活の教科書・就職偏差値"},"shikiho_page":"p0422"},{"code":"4768","name":"大塚商会","segment":"sier","segment_label":"SIer・ITコンサル","industries":[28,30],"mcap_rank":14,"mcap_oku":10539,"tier":"大手・難関","featured":null,"rank_in_segment":null,"growth_score":3,"access_score":4,"growth_reasons":["業界天気 快晴→快晴（システム開発）+2"],"access_reasons":["就職難易度 2/5（出典: reashu 業界別偏差値）から換算（6−難易度）"],"why":["業界天気 快晴→快晴（システム開発）","平均年収1,027万円・平均年齢42歳","従業員10,449人"],"entry_roles":["SE（文系採用が多い職種）","IT営業","ITコンサル"],"fit":null,"caution":null,"caution_auto":[],"metrics":{"employees":10449,"employees_single":8607,"avg_age":42.0,"avg_salary_man_yen":1027,"equity_ratio_pct":50.3,"op_margin_pct":6.8,"sales_latest_oku":13227.9,"sales_forecast_oku":13800.0,"sales_growth_pct":4.3,"op_margin_forecast_pct":6.9},"weather":{"h2":"快晴","y27":"快晴"},"axes":{"size":4,"role":4,"customer":5,"growth":3,"access":4,"pay":5},"difficulty":{"difficulty_5":2.0,"url":"https://reashu.com/it-gyoukai-ranking/","hensachi":52,"source":"就活の教科書・就職偏差値"},"shikiho_page":"p0425"},{"code":"4812","name":"電通総研","segment":"sier","segment_label":"SIer・ITコンサル","industries":[30],"mcap_rank":24,"mcap_oku":4186,"tier":"大手・難関","featured":null,"rank_in_segment":null,"growth_score":5,"access_score":3,"growth_reasons":["業界天気 快晴→快晴（システム開発）+2","売上予想 +12.2% +2","営業利益率14.1%（今期予想） +1"],"access_reasons":["従業員4,847人 +1","平均年収1,125万円で人気が集まりやすい −1"],"why":["業界天気 快晴→快晴（システム開発）","営業利益率14.1%（今期予想。目安10%）","売上予想 +12.2%"],"entry_roles":["SE（文系採用が多い職種）","IT営業","ITコンサル"],"fit":null,"caution":"伊藤忠商事によるTOBが予定されていて、成立すると上場廃止になる（四季報2026年4集）","caution_auto":[],"metrics":{"employees":4847,"employees_single":2634,"avg_age":39.9,"avg_salary_man_yen":1125,"equity_ratio_pct":58.0,"op_margin_pct":13.9,"sales_latest_oku":1648.7,"sales_forecast_oku":1850.0,"sales_growth_pct":12.2,"op_margin_forecast_pct":14.1},"weather":{"h2":"快晴","y27":"快晴"},"axes":{"size":3,"role":4,"customer":5,"growth":5,"access":3,"pay":5},"difficulty":null,"shikiho_page":"p0430"},{"code":"5132","name":"pluszero","segment":"ai","segment_label":"AI","industries":[31],"mcap_rank":88,"mcap_oku":161,"tier":"狙い目","featured":null,"rank_in_segment":null,"growth_score":5,"access_score":3,"growth_reasons":["業界天気 快晴→快晴（AI(国内)）+2","売上予想 +29% +2","営業利益率37.5%（今期予想） +1","営業利益率15%以上 +1"],"access_reasons":["平均年齢31.1歳と若い +1","従業員110人で採用枠は小さい −1"],"why":["業界天気 快晴→快晴（AI(国内)）","営業利益率37.5%（今期予想。目安10%）","売上予想 +29%"],"entry_roles":["ビジネス職（営業・企画）","AIコンサル","カスタマーサクセス"],"fit":null,"caution":null,"caution_auto":[],"metrics":{"employees":110,"employees_single":null,"avg_age":31.1,"avg_salary_man_yen":679,"equity_ratio_pct":84.4,"op_margin_pct":33.4,"sales_latest_oku":15.5,"sales_forecast_oku":20.0,"sales_growth_pct":29.0,"op_margin_forecast_pct":37.5},"weather":{"h2":"快晴","y27":"快晴"},"axes":{"size":1,"role":4,"customer":5,"growth":5,"access":3,"pay":2},"difficulty":null,"shikiho_page":"p0461"},{"code":"5134","name":"POPER(ポパー)","segment":"saas","segment_label":"ソフトウェア・SaaS","industries":[34],"mcap_rank":null,"mcap_oku":null,"tier":"狙い目","featured":null,"rank_in_segment":null,"growth_score":3,"access_score":3,"growth_reasons":["業界天気 晴れ→晴れ（ソフトウェア(業界特化)）+1","営業利益率12.5% +1"],"access_reasons":["平均年齢35.7歳と若い +1","従業員89人で採用枠は小さい −1"],"why":["業界天気 晴れ→晴れ（ソフトウェア(業界特化)）","営業利益率12.5%（目安10%）","平均年収553万円・平均年齢35.7歳"],"entry_roles":["インサイドセールス","フィールドセールス","カスタマーサクセス"],"fit":null,"caution":null,"caution_auto":[],"metrics":{"employees":null,"employees_single":89,"avg_age":35.7,"avg_salary_man_yen":553,"equity_ratio_pct":75.1,"op_margin_pct":12.5,"sales_latest_oku":13.9,"sales_forecast_oku":14.3,"sales_growth_pct":2.9,"op_margin_forecast_pct":6.3},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":1,"role":2,"customer":5,"growth":3,"access":3,"pay":1},"difficulty":null,"shikiho_page":"p0462"},{"code":"5136","name":"tripla","segment":"saas","segment_label":"ソフトウェア・SaaS","industries":[34],"mcap_rank":98,"mcap_oku":104,"tier":"狙い目","featured":null,"rank_in_segment":null,"growth_score":5,"access_score":3,"growth_reasons":["業界天気 晴れ→晴れ（ソフトウェア(業界特化)）+1","売上予想 +38.1% +2","営業利益率24.8%（今期予想） +1","営業利益率15%以上 +1"],"access_reasons":["平均年齢35.7歳と若い +1","従業員201人で採用枠は小さい −1"],"why":["業界天気 晴れ→晴れ（ソフトウェア(業界特化)）","営業利益率24.8%（今期予想。目安10%）","売上予想 +38.1%"],"entry_roles":["インサイドセールス","フィールドセールス","カスタマーサクセス"],"fit":null,"caution":null,"caution_auto":[],"metrics":{"employees":201,"employees_single":96,"avg_age":35.7,"avg_salary_man_yen":664,"equity_ratio_pct":9.6,"op_margin_pct":20.2,"sales_latest_oku":25.7,"sales_forecast_oku":35.5,"sales_growth_pct":38.1,"op_margin_forecast_pct":24.8},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":1,"role":2,"customer":5,"growth":5,"access":3,"pay":2},"difficulty":null,"shikiho_page":"p0462"},{"code":"5243","name":"note","segment":"web","segment_label":"Web・ネットサービス","industries":[29],"mcap_rank":69,"mcap_oku":371,"tier":"大手・難関","featured":null,"rank_in_segment":null,"growth_score":5,"access_score":2,"growth_reasons":["業界天気 晴れ→晴れ（Webアプリ）+1","売上予想 +36.5% +2","営業利益率19.5%（今期予想） +1","営業利益率15%以上 +1"],"access_reasons":["従業員149人で採用枠は小さい −1"],"why":["業界天気 晴れ→晴れ（Webアプリ）","営業利益率19.5%（今期予想。目安10%）","売上予想 +36.5%"],"entry_roles":["企画・ディレクター","広告営業","マーケティング"],"fit":null,"caution":null,"caution_auto":[],"metrics":{"employees":149,"employees_single":145,"avg_age":39.4,"avg_salary_man_yen":763,"equity_ratio_pct":70.1,"op_margin_pct":6.2,"sales_latest_oku":41.4,"sales_forecast_oku":56.5,"sales_growth_pct":36.5,"op_margin_forecast_pct":19.5},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":1,"role":2,"customer":1,"growth":5,"access":2,"pay":3},"difficulty":null,"shikiho_page":"p0470"},{"code":"5246","name":"ELEMENTS","segment":"ai","segment_label":"AI","industries":[31],"mcap_rank":86,"mcap_oku":164,"tier":"大手・難関","featured":null,"rank_in_segment":null,"growth_score":5,"access_score":2,"growth_reasons":["業界天気 快晴→快晴（AI(国内)）+2","売上予想 +46.3% +2"],"access_reasons":["従業員103人で採用枠は小さい −1"],"why":["業界天気 快晴→快晴（AI(国内)）","売上予想 +46.3%","平均年収823万円・平均年齢38.7歳"],"entry_roles":["ビジネス職（営業・企画）","AIコンサル","カスタマーサクセス"],"fit":null,"caution":null,"caution_auto":["直近は営業赤字"],"metrics":{"employees":103,"employees_single":93,"avg_age":38.7,"avg_salary_man_yen":823,"equity_ratio_pct":52.0,"op_margin_pct":-5.5,"sales_latest_oku":38.95,"sales_forecast_oku":57.0,"sales_growth_pct":46.3,"op_margin_forecast_pct":7.0},"weather":{"h2":"快晴","y27":"快晴"},"axes":{"size":1,"role":4,"customer":5,"growth":5,"access":2,"pay":4},"difficulty":null,"shikiho_page":"p0471"},{"code":"5574","name":"ABEJA","segment":"ai","segment_label":"AI","industries":[31],"mcap_rank":79,"mcap_oku":214,"tier":"狙い目","featured":null,"rank_in_segment":null,"growth_score":5,"access_score":3,"growth_reasons":["業界天気 快晴→快晴（AI(国内)）+2","売上予想 +26.7% +2","営業利益率15.6%（今期予想） +1","営業利益率15%以上 +1"],"access_reasons":["平均年齢36.7歳と若い +1","従業員130人で採用枠は小さい −1"],"why":["業界天気 快晴→快晴（AI(国内)）","営業利益率15.6%（今期予想。目安10%）","売上予想 +26.7%"],"entry_roles":["ビジネス職（営業・企画）","AIコンサル","カスタマーサクセス"],"fit":null,"caution":null,"caution_auto":[],"metrics":{"employees":130,"employees_single":null,"avg_age":36.7,"avg_salary_man_yen":952,"equity_ratio_pct":89.5,"op_margin_pct":12.4,"sales_latest_oku":35.9,"sales_forecast_oku":45.5,"sales_growth_pct":26.7,"op_margin_forecast_pct":15.6},"weather":{"h2":"快晴","y27":"快晴"},"axes":{"size":1,"role":4,"customer":5,"growth":5,"access":3,"pay":4},"difficulty":null,"shikiho_page":"p0495"},{"code":"5586","name":"Laboro.AI","segment":"ai","segment_label":"AI","industries":[31],"mcap_rank":91,"mcap_oku":128,"tier":"狙い目","featured":null,"rank_in_segment":null,"growth_score":5,"access_score":3,"growth_reasons":["業界天気 快晴→快晴（AI(国内)）+2","売上予想 +36.8% +2","営業利益率14.6%（今期予想） +1"],"access_reasons":["平均年齢36.2歳と若い +1","従業員124人で採用枠は小さい −1"],"why":["業界天気 快晴→快晴（AI(国内)）","営業利益率14.6%（今期予想。目安10%）","売上予想 +36.8%"],"entry_roles":["ビジネス職（営業・企画）","AIコンサル","カスタマーサクセス"],"fit":null,"caution":null,"caution_auto":[],"metrics":{"employees":124,"employees_single":115,"avg_age":36.2,"avg_salary_man_yen":968,"equity_ratio_pct":90.4,"op_margin_pct":10.1,"sales_latest_oku":19.0,"sales_forecast_oku":26.0,"sales_growth_pct":36.8,"op_margin_forecast_pct":14.6},"weather":{"h2":"快晴","y27":"快晴"},"axes":{"size":1,"role":4,"customer":5,"growth":5,"access":3,"pay":4},"difficulty":null,"shikiho_page":"p0497"},{"code":"6027","name":"弁護士ドットコム","segment":"saas","segment_label":"ソフトウェア・SaaS","industries":[33,133],"mcap_rank":62,"mcap_oku":517,"tier":"狙い目","featured":null,"rank_in_segment":null,"growth_score":5,"access_score":4,"growth_reasons":["業界天気 晴れ→晴れ（ソフトウェア(業務特化)）+1","売上予想 +35.1% +2","営業利益率18.6%（今期予想） +1","営業利益率15%以上 +1"],"access_reasons":["平均年齢36.4歳と若い +1"],"why":["業界天気 晴れ→晴れ（ソフトウェア(業務特化)）","営業利益率18.6%（今期予想。目安10%）","売上予想 +35.1%"],"entry_roles":["インサイドセールス","フィールドセールス","カスタマーサクセス"],"fit":null,"caution":null,"caution_auto":[],"metrics":{"employees":734,"employees_single":659,"avg_age":36.4,"avg_salary_man_yen":724,"equity_ratio_pct":44.2,"op_margin_pct":13.5,"sales_latest_oku":162.9,"sales_forecast_oku":220.0,"sales_growth_pct":35.1,"op_margin_forecast_pct":18.6},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":2,"role":2,"customer":5,"growth":5,"access":4,"pay":3},"difficulty":null,"shikiho_page":"p0536"},{"code":"6047","name":"Gunosy","segment":"media","segment_label":"ゲーム・動画・ネット広告","industries":[133],"mcap_rank":null,"mcap_oku":null,"tier":"大手・難関","featured":null,"rank_in_segment":null,"growth_score":1,"access_score":2,"growth_reasons":[],"access_reasons":["従業員205人で採用枠は小さい −1"],"why":["平均年収700万円・平均年齢38.9歳","従業員205人","自己資本比率85.2%"],"entry_roles":["広告営業・運用","企画・プロデューサー","マーケティング"],"fit":null,"caution":null,"caution_auto":["売上は減る予想","営業利益率は2.9%と低め（目安10%）"],"metrics":{"employees":205,"employees_single":78,"avg_age":38.9,"avg_salary_man_yen":700,"equity_ratio_pct":85.2,"op_margin_pct":2.9,"sales_latest_oku":64.4,"sales_forecast_oku":52.0,"sales_growth_pct":-19.3,"op_margin_forecast_pct":2.9},"weather":{"h2":"雨","y27":"雨"},"axes":{"size":1,"role":2,"customer":1,"growth":1,"access":2,"pay":3},"difficulty":null,"shikiho_page":"p0540"},{"code":"6436","name":"アマノ","segment":"saas","segment_label":"ソフトウェア・SaaS","industries":[33],"mcap_rank":29,"mcap_oku":2588,"tier":"狙い目","featured":null,"rank_in_segment":null,"growth_score":3,"access_score":5,"growth_reasons":["業界天気 晴れ→晴れ（ソフトウェア(業務特化)）+1","営業利益率12.8% +1"],"access_reasons":["従業員5,393人で採用枠が大きい +2"],"why":["業界天気 晴れ→晴れ（ソフトウェア(業務特化)）","営業利益率12.8%（目安10%）","平均年収763万円・平均年齢44.3歳"],"entry_roles":["インサイドセールス","フィールドセールス","カスタマーサクセス"],"fit":null,"caution":null,"caution_auto":[],"metrics":{"employees":5393,"employees_single":1963,"avg_age":44.3,"avg_salary_man_yen":763,"equity_ratio_pct":70.6,"op_margin_pct":12.8,"sales_latest_oku":1764.7,"sales_forecast_oku":1810.0,"sales_growth_pct":2.6,"op_margin_forecast_pct":12.8},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":3,"role":2,"customer":5,"growth":3,"access":5,"pay":3},"difficulty":null,"shikiho_page":"p0597"},{"code":"6460","name":"セガサミーホールディングス","segment":"media","segment_label":"ゲーム・動画・ネット広告","industries":[125],"mcap_rank":null,"mcap_oku":4714,"tier":"大手・難関","featured":null,"rank_in_segment":null,"growth_score":2,"access_score":1,"growth_reasons":["業界天気 晴れ→晴れ（ゲーム）+1"],"access_reasons":["就職難易度 5/5（出典: reashu 業界別偏差値）から換算（6−難易度）"],"why":["業界天気 晴れ→晴れ（ゲーム）","平均年収883万円・平均年齢40.8歳","従業員9,228人"],"entry_roles":["広告営業・運用","企画・プロデューサー","マーケティング"],"fit":null,"caution":null,"caution_auto":[],"metrics":{"employees":9228,"employees_single":null,"avg_age":40.8,"avg_salary_man_yen":883,"equity_ratio_pct":58.2,"op_margin_pct":9.7,"sales_latest_oku":4875.4,"sales_forecast_oku":5100.0,"sales_growth_pct":4.6,"op_margin_forecast_pct":9.6},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":3,"role":2,"customer":1,"growth":2,"access":1,"pay":4},"difficulty":{"difficulty_5":5.0,"url":"https://reashu.com/pachinko-syusyokuhensachi/","hensachi":70,"source":"就活の教科書・就職偏差値"},"shikiho_page":"p0599"},{"code":"6532","name":"ベイカレント","segment":"sier","segment_label":"SIer・ITコンサル","industries":[90],"mcap_rank":null,"mcap_oku":11674,"tier":"大手・難関","featured":null,"rank_in_segment":null,"growth_score":5,"access_score":2,"growth_reasons":["業界天気 快晴→晴れ（コンサルティング）+1","売上予想 +28.1% +2","営業利益率34.3% +1","営業利益率15%以上 +1"],"access_reasons":["従業員6,788人で採用枠が大きい +2","平均年齢31.3歳と若い +1","平均年収1,331万円で人気が集まりやすい −1","時価総額11,674億円の大手で応募が集まりやすいので、2を上限にした"],"why":["業界天気 快晴→晴れ（コンサルティング）","営業利益率34.3%（目安10%）","売上予想 +28.1%"],"entry_roles":["SE（文系採用が多い職種）","IT営業","ITコンサル"],"fit":null,"caution":null,"caution_auto":[],"metrics":{"employees":6788,"employees_single":866,"avg_age":31.3,"avg_salary_man_yen":1331,"equity_ratio_pct":76.4,"op_margin_pct":34.3,"sales_latest_oku":1483.3,"sales_forecast_oku":1900.0,"sales_growth_pct":28.1,"op_margin_forecast_pct":34.1},"weather":{"h2":"快晴","y27":"晴れ"},"axes":{"size":3,"role":4,"customer":5,"growth":5,"access":2,"pay":5},"difficulty":null,"shikiho_page":"p0611"},{"code":"6633","name":"CGSホールディングス","segment":"saas","segment_label":"ソフトウェア・SaaS","industries":[34],"mcap_rank":null,"mcap_oku":null,"tier":"狙い目","featured":null,"rank_in_segment":null,"growth_score":4,"access_score":3,"growth_reasons":["業界天気 晴れ→晴れ（ソフトウェア(業界特化)）+1","売上予想 +27.5% +2"],"access_reasons":[],"why":["業界天気 晴れ→晴れ（ソフトウェア(業界特化)）","売上予想 +27.5%","平均年収560万円・平均年齢42.8歳"],"entry_roles":["インサイドセールス","フィールドセールス","カスタマーサクセス"],"fit":null,"caution":null,"caution_auto":["単独の従業員は15人。新卒採用はグループ会社ごとのことがある"],"metrics":{"employees":301,"employees_single":15,"avg_age":42.8,"avg_salary_man_yen":560,"equity_ratio_pct":44.6,"op_margin_pct":6.9,"sales_latest_oku":49.8,"sales_forecast_oku":63.5,"sales_growth_pct":27.5,"op_margin_forecast_pct":6.0},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":1,"role":2,"customer":5,"growth":4,"access":3,"pay":1},"difficulty":null,"shikiho_page":"p0626"},{"code":"6947","name":"図研","segment":"saas","segment_label":"ソフトウェア・SaaS","industries":[34],"mcap_rank":43,"mcap_oku":1022,"tier":"狙い目","featured":null,"rank_in_segment":null,"growth_score":4,"access_score":4,"growth_reasons":["業界天気 晴れ→晴れ（ソフトウェア(業界特化)）+1","売上予想 +6.7% +1","営業利益率14.6%（今期予想） +1"],"access_reasons":["従業員1,656人 +1"],"why":["業界天気 晴れ→晴れ（ソフトウェア(業界特化)）","営業利益率14.6%（今期予想。目安10%）","売上予想 +6.7%"],"entry_roles":["インサイドセールス","フィールドセールス","カスタマーサクセス"],"fit":null,"caution":null,"caution_auto":[],"metrics":{"employees":1656,"employees_single":451,"avg_age":44.3,"avg_salary_man_yen":865,"equity_ratio_pct":60.1,"op_margin_pct":13.6,"sales_latest_oku":431.0,"sales_forecast_oku":460.0,"sales_growth_pct":6.7,"op_margin_forecast_pct":14.6},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":2,"role":2,"customer":5,"growth":4,"access":4,"pay":4},"difficulty":null,"shikiho_page":"p0664"},{"code":"7832","name":"バンダイナムコホールディングス","segment":"media","segment_label":"ゲーム・動画・ネット広告","industries":[125],"mcap_rank":null,"mcap_oku":24406,"tier":"大手・難関","featured":null,"rank_in_segment":null,"growth_score":5,"access_score":2,"growth_reasons":["業界天気 晴れ→晴れ（ゲーム）+1","売上予想 +6.1% +1","営業利益率15.4%（今期予想） +1","営業利益率15%以上 +1"],"access_reasons":["従業員11,719人で採用枠が大きい +2","時価総額24,406億円の大手で応募が集まりやすいので、2を上限にした"],"why":["業界天気 晴れ→晴れ（ゲーム）","営業利益率15.4%（今期予想。目安10%）","売上予想 +6.1%"],"entry_roles":["広告営業・運用","企画・プロデューサー","マーケティング"],"fit":"ガンダムなどのキャラクター（IP）を軸に、玩具やゲーム、アニメまで手がける。","caution":null,"caution_auto":["平均年収は誌面に無い"],"metrics":{"employees":11719,"employees_single":2929,"avg_age":null,"avg_salary_man_yen":null,"equity_ratio_pct":75.1,"op_margin_pct":14.1,"sales_latest_oku":13482.5,"sales_forecast_oku":14300.0,"sales_growth_pct":6.1,"op_margin_forecast_pct":15.4},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":4,"role":2,"customer":1,"growth":5,"access":2,"pay":null},"difficulty":null,"shikiho_page":"p0779"},{"code":"8056","name":"BIPROGY","segment":"sier","segment_label":"SIer・ITコンサル","industries":[30,32],"mcap_rank":23,"mcap_oku":4224,"tier":"大手・難関","featured":null,"rank_in_segment":null,"growth_score":5,"access_score":2,"growth_reasons":["業界天気 快晴→快晴（システム開発）+2","売上予想 +8.4% +1","営業利益率10.3%（今期予想） +1"],"access_reasons":["就職難易度 4/5（出典: reashu 業界別偏差値）から換算（6−難易度）"],"why":["業界天気 快晴→快晴（システム開発）","営業利益率10.3%（今期予想。目安10%）","売上予想 +8.4%"],"entry_roles":["SE（文系採用が多い職種）","IT営業","ITコンサル"],"fit":null,"caution":null,"caution_auto":[],"metrics":{"employees":9059,"employees_single":4499,"avg_age":46.3,"avg_salary_man_yen":884,"equity_ratio_pct":48.6,"op_margin_pct":9.8,"sales_latest_oku":4336.9,"sales_forecast_oku":4700.0,"sales_growth_pct":8.4,"op_margin_forecast_pct":10.3},"weather":{"h2":"快晴","y27":"快晴"},"axes":{"size":3,"role":4,"customer":5,"growth":5,"access":2,"pay":4},"difficulty":{"difficulty_5":4.0,"url":"https://reashu.com/it-gyoukai-ranking/","hensachi":63,"source":"就活の教科書・就職偏差値"},"shikiho_page":"p0813"},{"code":"9168","name":"ライズ・コンサルティング・グループ","segment":"sier","segment_label":"SIer・ITコンサル","industries":[90],"mcap_rank":null,"mcap_oku":105,"tier":"大手・難関","featured":null,"rank_in_segment":null,"growth_score":5,"access_score":3,"growth_reasons":["業界天気 快晴→晴れ（コンサルティング）+1","売上予想 +18.8% +2","営業利益率20.2% +1","営業利益率15%以上 +1"],"access_reasons":["平均年齢33.2歳と若い +1","平均年収1,107万円で人気が集まりやすい −1"],"why":["業界天気 快晴→晴れ（コンサルティング）","営業利益率20.2%（目安10%）","売上予想 +18.8%"],"entry_roles":["SE（文系採用が多い職種）","IT営業","ITコンサル"],"fit":null,"caution":null,"caution_auto":[],"metrics":{"employees":420,"employees_single":420,"avg_age":33.2,"avg_salary_man_yen":1107,"equity_ratio_pct":74.7,"op_margin_pct":20.2,"sales_latest_oku":84.2,"sales_forecast_oku":100.0,"sales_growth_pct":18.8,"op_margin_forecast_pct":9.5},"weather":{"h2":"快晴","y27":"晴れ"},"axes":{"size":1,"role":4,"customer":5,"growth":5,"access":3,"pay":5},"difficulty":null,"shikiho_page":"p0899"},{"code":"9424","name":"日本通信","segment":"telecom","segment_label":"通信","industries":[35],"mcap_rank":83,"mcap_oku":180,"tier":"大手・難関","featured":null,"rank_in_segment":null,"growth_score":4,"access_score":2,"growth_reasons":["業界天気 晴れ→晴れ（携帯電話事業者）+1","売上予想 +24.7% +2"],"access_reasons":["従業員156人で採用枠は小さい −1"],"why":["業界天気 晴れ→晴れ（携帯電話事業者）","売上予想 +24.7%","平均年収802万円・平均年齢39.4歳"],"entry_roles":["法人営業","総合職（企画・マーケ）","SE（ネットワーク）"],"fit":null,"caution":null,"caution_auto":[],"metrics":{"employees":156,"employees_single":135,"avg_age":39.4,"avg_salary_man_yen":802,"equity_ratio_pct":39.0,"op_margin_pct":9.7,"sales_latest_oku":116.3,"sales_forecast_oku":145.0,"sales_growth_pct":24.7,"op_margin_forecast_pct":5.5},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":1,"role":3,"customer":2,"growth":4,"access":2,"pay":4},"difficulty":null,"shikiho_page":"p0931"},{"code":"9682","name":"DTS","segment":"sier","segment_label":"SIer・ITコンサル","industries":[30],"mcap_rank":36,"mcap_oku":1639,"tier":"狙い目","featured":null,"rank_in_segment":null,"growth_score":5,"access_score":3,"growth_reasons":["業界天気 快晴→快晴（システム開発）+2","売上予想 +5% +1","営業利益率12.2% +1"],"access_reasons":["就職難易度 3.3/5（出典: reashu 企業別記事）から換算（6−難易度）"],"why":["業界天気 快晴→快晴（システム開発）","営業利益率12.2%（目安10%）","売上予想 +5%"],"entry_roles":["SE（文系採用が多い職種）","IT営業","ITコンサル"],"fit":null,"caution":null,"caution_auto":[],"metrics":{"employees":6135,"employees_single":3199,"avg_age":39.7,"avg_salary_man_yen":658,"equity_ratio_pct":74.6,"op_margin_pct":12.2,"sales_latest_oku":1352.1,"sales_forecast_oku":1420.0,"sales_growth_pct":5.0,"op_margin_forecast_pct":12.0},"weather":{"h2":"快晴","y27":"快晴"},"axes":{"size":3,"role":4,"customer":5,"growth":5,"access":3,"pay":2},"difficulty":{"difficulty_5":3.3,"url":"https://reashu.com/dts_saiyoudaigaku/","hensachi":50,"source":"就活の教科書・企業別記事"},"shikiho_page":"p0954"},{"code":"9684","name":"スクウェア・エニックス・ホールディングス","segment":"media","segment_label":"ゲーム・動画・ネット広告","industries":[125],"mcap_rank":null,"mcap_oku":8859,"tier":"大手・難関","featured":null,"rank_in_segment":null,"growth_score":4,"access_score":2,"growth_reasons":["業界天気 晴れ→晴れ（ゲーム）+1","営業利益率18.4% +1","営業利益率15%以上 +1"],"access_reasons":["従業員4,290人 +1","時価総額8,859億円の大手で応募が集まりやすいので、2を上限にした"],"why":["業界天気 晴れ→晴れ（ゲーム）","営業利益率18.4%（目安10%）","平均年収782万円・平均年齢41.3歳"],"entry_roles":["広告営業・運用","企画・プロデューサー","マーケティング"],"fit":null,"caution":null,"caution_auto":[],"metrics":{"employees":4290,"employees_single":3235,"avg_age":41.3,"avg_salary_man_yen":782,"equity_ratio_pct":82.2,"op_margin_pct":18.4,"sales_latest_oku":2976.6,"sales_forecast_oku":3050.0,"sales_growth_pct":2.5,"op_margin_forecast_pct":17.4},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":3,"role":2,"customer":1,"growth":4,"access":2,"pay":3},"difficulty":null,"shikiho_page":"p0954"},{"code":"9697","name":"カプコン","segment":"media","segment_label":"ゲーム・動画・ネット広告","industries":[125],"mcap_rank":null,"mcap_oku":16054,"tier":"大手・難関","featured":null,"rank_in_segment":null,"growth_score":5,"access_score":2,"growth_reasons":["業界天気 晴れ→晴れ（ゲーム）+1","売上予想 +10% +2","営業利益率39.5%（今期予想） +1","営業利益率15%以上 +1"],"access_reasons":["従業員4,172人 +1","時価総額16,054億円の大手で応募が集まりやすいので、2を上限にした"],"why":["業界天気 晴れ→晴れ（ゲーム）","営業利益率39.5%（今期予想。目安10%）","売上予想 +10%"],"entry_roles":["広告営業・運用","企画・プロデューサー","マーケティング"],"fit":null,"caution":null,"caution_auto":[],"metrics":{"employees":4172,"employees_single":3786,"avg_age":38.1,"avg_salary_man_yen":985,"equity_ratio_pct":83.9,"op_margin_pct":38.5,"sales_latest_oku":1953.7,"sales_forecast_oku":2150.0,"sales_growth_pct":10.0,"op_margin_forecast_pct":39.5},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":3,"role":2,"customer":1,"growth":5,"access":2,"pay":4},"difficulty":null,"shikiho_page":"p0956"},{"code":"9746","name":"TKC","segment":"saas","segment_label":"ソフトウェア・SaaS","industries":[33],"mcap_rank":35,"mcap_oku":1715,"tier":"狙い目","featured":null,"rank_in_segment":null,"growth_score":4,"access_score":4,"growth_reasons":["業界天気 晴れ→晴れ（ソフトウェア(業務特化)）+1","営業利益率20.6%（今期予想） +1","営業利益率15%以上 +1"],"access_reasons":["従業員2,922人 +1"],"why":["業界天気 晴れ→晴れ（ソフトウェア(業務特化)）","営業利益率20.6%（今期予想。目安10%）","平均年収920万円・平均年齢40.3歳"],"entry_roles":["インサイドセールス","フィールドセールス","カスタマーサクセス"],"fit":null,"caution":null,"caution_auto":[],"metrics":{"employees":2922,"employees_single":2603,"avg_age":40.3,"avg_salary_man_yen":920,"equity_ratio_pct":85.5,"op_margin_pct":19.3,"sales_latest_oku":834.8,"sales_forecast_oku":855.0,"sales_growth_pct":2.4,"op_margin_forecast_pct":20.6},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":3,"role":2,"customer":5,"growth":4,"access":4,"pay":4},"difficulty":null,"shikiho_page":"p0962"},{"code":"9790","name":"福井コンピュータホールディングス","segment":"saas","segment_label":"ソフトウェア・SaaS","industries":[34],"mcap_rank":54,"mcap_oku":636,"tier":"狙い目","featured":null,"rank_in_segment":null,"growth_score":4,"access_score":3,"growth_reasons":["業界天気 晴れ→晴れ（ソフトウェア(業界特化)）+1","営業利益率43.6% +1","営業利益率15%以上 +1"],"access_reasons":[],"why":["業界天気 晴れ→晴れ（ソフトウェア(業界特化)）","営業利益率43.6%（目安10%）","平均年収791万円・平均年齢44歳"],"entry_roles":["インサイドセールス","フィールドセールス","カスタマーサクセス"],"fit":null,"caution":null,"caution_auto":["売上は減る予想"],"metrics":{"employees":558,"employees_single":470,"avg_age":44.0,"avg_salary_man_yen":791,"equity_ratio_pct":83.8,"op_margin_pct":43.6,"sales_latest_oku":166.5,"sales_forecast_oku":166.0,"sales_growth_pct":-0.3,"op_margin_forecast_pct":41.5},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":2,"role":2,"customer":5,"growth":4,"access":3,"pay":3},"difficulty":null,"shikiho_page":"p0966"},{"code":"9889","name":"JBCCホールディングス","segment":"sier","segment_label":"SIer・ITコンサル","industries":[30],"mcap_rank":45,"mcap_oku":882,"tier":"狙い目","featured":null,"rank_in_segment":null,"growth_score":4,"access_score":4,"growth_reasons":["業界天気 快晴→快晴（システム開発）+2","営業利益率11%（今期予想） +1"],"access_reasons":["従業員1,677人 +1"],"why":["業界天気 快晴→快晴（システム開発）","営業利益率11%（今期予想。目安10%）","平均年収932万円・平均年齢44.6歳"],"entry_roles":["SE（文系採用が多い職種）","IT営業","ITコンサル"],"fit":null,"caution":null,"caution_auto":[],"metrics":{"employees":1677,"employees_single":1006,"avg_age":44.6,"avg_salary_man_yen":932,"equity_ratio_pct":53.8,"op_margin_pct":9.6,"sales_latest_oku":760.2,"sales_forecast_oku":795.0,"sales_growth_pct":4.6,"op_margin_forecast_pct":11.0},"weather":{"h2":"快晴","y27":"快晴"},"axes":{"size":2,"role":4,"customer":5,"growth":4,"access":4,"pay":4},"difficulty":null,"shikiho_page":"p0976"},{"code":"9928","name":"ミロク情報サービス","segment":"saas","segment_label":"ソフトウェア・SaaS","industries":[33],"mcap_rank":57,"mcap_oku":560,"tier":"狙い目","featured":null,"rank_in_segment":null,"growth_score":5,"access_score":4,"growth_reasons":["業界天気 晴れ→晴れ（ソフトウェア(業務特化)）+1","売上予想 +10% +2","営業利益率14.3%（今期予想） +1"],"access_reasons":["従業員2,415人 +1"],"why":["業界天気 晴れ→晴れ（ソフトウェア(業務特化)）","営業利益率14.3%（今期予想。目安10%）","売上予想 +10%"],"entry_roles":["インサイドセールス","フィールドセールス","カスタマーサクセス"],"fit":null,"caution":null,"caution_auto":[],"metrics":{"employees":2415,"employees_single":1915,"avg_age":38.3,"avg_salary_man_yen":692,"equity_ratio_pct":67.3,"op_margin_pct":13.6,"sales_latest_oku":489.3,"sales_forecast_oku":538.0,"sales_growth_pct":10.0,"op_margin_forecast_pct":14.3},"weather":{"h2":"晴れ","y27":"晴れ"},"axes":{"size":3,"role":2,"customer":5,"growth":5,"access":4,"pay":2},"difficulty":null,"shikiho_page":"p0979"},{"code":"9984","name":"ソフトバンクグループ","segment":"cloud","segment_label":"クラウド・データセンター","industries":[6,31],"mcap_rank":1,"mcap_oku":340597,"tier":"大手・難関","featured":null,"rank_in_segment":null,"growth_score":5,"access_score":2,"growth_reasons":["業界天気 快晴→快晴（データセンター）+2","売上予想 +9.6% +1","営業利益率93.4% +1","営業利益率15%以上 +1"],"access_reasons":["従業員73,677人で採用枠が大きい +2","時価総額340,597億円の大手で応募が集まりやすいので、2を上限にした"],"why":["業界天気 快晴→快晴（データセンター）","営業利益率93.4%（目安10%）","売上予想 +9.6%"],"entry_roles":["法人営業","SE（インフラ）","カスタマーサクセス"],"fit":null,"caution":"投資会社で、四季報の従業員・年収の欄は子会社ソフトバンクの数字。営業利益率も投資の評価益を含む","caution_auto":[],"metrics":{"employees":73677,"employees_single":19150,"avg_age":42.0,"avg_salary_man_yen":871,"equity_ratio_pct":28.3,"op_margin_pct":93.4,"sales_latest_oku":77986.5,"sales_forecast_oku":85500.0,"sales_growth_pct":9.6,"op_margin_forecast_pct":35.1},"weather":{"h2":"快晴","y27":"快晴"},"axes":{"size":5,"role":4,"customer":5,"growth":5,"access":2,"pay":4},"difficulty":null,"shikiho_page":"p0986"}],"delisted":[{"code":"9613","name":"NTTデータグループ"}],"excluded":[{"code":"4676","name":"フジ・メディア・ホールディングス","reason":"放送局。動画配信は事業の一部"},{"code":"4839","name":"WOWOW","reason":"放送局。動画配信は事業の一部"},{"code":"8058","name":"三菱商事/MCデジタル・リアルティ","reason":"総合商社。データセンターは事業の一部"},{"code":"9404","name":"日本テレビホールディングス","reason":"放送局。動画配信は事業の一部"},{"code":"9983","name":"ファーストリテイリング","reason":"アパレル。ECは販路の一つ"}]};
+const COPY = {"title":"28卒・文系からねらうIT企業ガイド","lede":"『会社四季報 業界地図』2027年版と『会社四季報』の数字で、IT業界の上場企業を比べました。伸びている業界にいて新卒の枠が広そうな会社を「狙い目」、応募が集まりやすい会社を「大手・難関」に分けています。","listed_only_notice":"ここに載っているのは上場企業だけです。比べるのに使った四季報が上場企業しか扱っていないためです。NTTデータやNTTドコモ、外資系の日本法人、コンサル会社のように、上場していなくても新卒を採る会社はたくさんあります。主な社名はページ下の「載らない会社」にまとめました。","how_steps":["「狙い目」を上から見て、仕事の中身が想像できる区分を2つ選ぶ。区分のボタンで絞り込めます。","その区分から3社を「候補に入れる」。平均年収と平均年齢、営業利益率を並べて、3社の違いを1行で言えるようにする。","候補の「採用ページを探す」から、冬のインターンと早期選考の募集を確かめる。締め切りは会社ごとに違うので、見つけたらその日のうちに予定に入れる。"],"section_intros":{"picks":"伸びている業界にいて、従業員が多いか、若手が多い会社です。入りやすさは誌面の数字から機械的に出した推定で、倍率を測ったものではありません。","major":"給料や知名度で応募が集まりやすい会社です。狙い目の会社と並べて受けると、早い時期の選考で面接に慣れることもできます。","map":"IT業界を8つの区分に分けました。天気は業界地図2027年版の予想で、快晴がいちばん良い状態です。文系の入り口は区分ごとの一般的な傾向で、各社がその職種を募集しているとは限りません。","all":"対象にした会社すべてです。社名か証券コードで探せて、区分での絞り込みと並べ替えもできます。","not_listed":"上場していない会社は四季報に載らないので、ここでは比べていません。気になる会社は採用ページや『就職四季報』で同じ項目を調べてください。","sources":"数字はすべて次の資料からとりました。"},"not_listed":[{"group":"最近上場をやめた会社","names":["NTTデータグループ（2025年にNTTの完全子会社に）","SCSK（2026年に住友商事の完全子会社に）","富士ソフト（2026年5月に上場廃止）"],"note":"上場をやめても会社は続いています。どれも業界地図2027年版のシステム開発のページに出てきます。"},{"group":"上場をやめる可能性がある会社","names":["電通総研（伊藤忠商事がTOBを予定）","カカクコム（TOBの争奪戦が続いている）"],"note":"どちらもこのページの全社一覧には載っています。四季報2026年4集の時点で、TOBが成立すれば上場廃止になる見込みです。"},{"group":"大手の子会社（親会社だけが上場）","names":["NTTドコモ、NTTドコモビジネス（親会社はNTT）","日立システムズ（日立製作所）","NECソリューションイノベータ（NEC）","富士通Japan（富士通）","楽天モバイル（楽天グループ）","AbemaTV（サイバーエージェント）"],"note":"親会社がこのページに載っていても、新卒の採用は子会社ごとに別の場合があります。"},{"group":"外資系の日本法人","names":["アクセンチュア","日本IBM","日本タタ・コンサルタンシー・サービシズ","アマゾン、マイクロソフト、グーグル、セールスフォースなどの日本法人"],"note":"親会社は海外で上場しているため、日本の四季報には載りません。"},{"group":"コンサルティング会社","names":["デロイトトーマツコンサルティング","アビームコンサルティング","PwCコンサルティング","KPMGコンサルティング"],"note":"ITの案件も多いコンサル会社ですが、上場していません。"},{"group":"上場していない国内のIT企業（例）","names":["Preferred Networks","Sakana AI","クラスメソッド","アンドパッド","hacomono","ピクシブ","スマートニュース","ユーザベース"],"note":"業界地図2027年版の表で、証券コードの欄が空いている国内の会社です。"}],"sources":[{"title":"『会社四季報 業界地図』2027年版（東洋経済新報社）","detail":"業界の天気予想、市場規模、主要企業の表、時価総額ランキング（情報通信・インターネット 80〜81ページ、娯楽・エンタメ・メディア 242〜243ページ、どちらも2026年6月末時点）"},{"title":"『会社四季報』2026年4集（東洋経済新報社）","detail":"従業員数、平均年齢、平均年収、自己資本比率、営業利益率、売上高と次の期の予想。ランキングに無い3社の時価総額もここから"},{"title":"就活の教科書（reashu.com）","detail":"就職偏差値と、企業別記事の選考難易度。サイト独自の見方で、採用の実績を保証するものではありません。2026年9月22日に取得。"}],"limits":["比べているのは上場企業だけです。","平均年収は単独決算の社員の平均です。持株会社は社員が少ないぶん高めに出ます。残業代や賞与の含め方も会社ごとに違います。","入りやすさは、従業員数や平均年齢、平均年収から機械的に出した推定です。採用人数や倍率は説明会で確かめてください。","3年後の離職率、有給休暇、残業時間は載せていません。『就職四季報』（東洋経済新報社）で調べられます。","業界地図の表に載っていない会社は対象外です。気になる会社があれば、四季報で同じ数字を見てください。","数字は2026年6〜8月時点の誌面のものです。","「なぜおすすめか」は誌面の数字から機械的に作りました。「どんな会社か」は、資料で確かめた事業内容をもとに自分の言葉で書いたもので、資料の解説文は写していません。"],"disclaimer":"このページは就職の助言ではありません。会社の説明会やOB・OG訪問で、最後は自分の目で確かめてください。","finder":{"open_label":"6問で近い会社を探す","title":"6問で近い会社を探す","intro":"答えに近い会社を、おすすめに載せた36社から順に出します。決めていない質問は「こだわらない」のままで大丈夫です。","region_note":"本社はほとんど東京なので、勤務地は聞いていません。配属先は各社の採用ページで確かめてください。","skip_label":"こだわらない","run_label":"近い会社を見る","need_answer":"1問以上答えると、近い会社を出せます。","result_title":"近い会社","result_note":"一致度は、答えと各社の数字の近さを機械的に出したものです。","good_label":"合っている点","gap_label":"離れている点","detail_label":"詳しく見る","questions":[{"key":"size","text":"会社の大きさ","left":"小さめ（数百人）","right":"大きい（1万人以上）"},{"key":"role","text":"やりたい仕事","left":"営業や企画など、人と話す仕事","right":"システムを作る、技術寄りの仕事"},{"key":"customer","text":"サービスを使う人","left":"個人（アプリや通販など）","right":"企業（業務のシステムなど）"},{"key":"growth","text":"会社の伸び","left":"安定していれば十分","right":"急に伸びている会社がいい"},{"key":"access","text":"入りやすさ","left":"難しくても挑戦したい","right":"できるだけ入りやすく"},{"key":"pay","text":"給料","left":"ふつうで十分","right":"高い方がいい"}],"progress":"{n} / {total}","back_label":"ひとつ戻る","redo_label":"最初から答え直す","segment_lead":"答えに近いのは、{segments}の会社です。","segment_filter_label":"おすすめを絞る","bulk_label":"上位3社を候補に入れて比べる","share_label":"この答えのリンクをコピー","share_done":"リンクをコピーしました。","share_x_label":"Xに結果を投稿する","share_x_text":"6問で探した、近いIT企業は {names} でした。","share_x_tags":["28卒"],"reason_templates":{"size":"従業員{value}","role":"仕事は{value}","customer":"{value}","growth":"伸び {value}/5","access":"入りやすさ {value}/5（推定）","pay":"平均年収{value}"},"role_words":{"1":"営業・企画寄り","2":"営業・企画寄り","3":"営業と技術の両方","4":"技術寄り","5":"技術寄り"},"customer_words":{"1":"個人が使うサービス","2":"個人向けが中心","3":"個人と企業の両方","4":"企業向けが中心","5":"企業が使うサービス"}}};
+const DASH = "—";
+const STORE_KEY = "it-company-guide:candidates:v2";
+const MAX_CAND = 5;
+const INITIAL_ROWS = 30;
+const REASHU_URL = /^https:\/\/reashu\.com\//;
+
+// ---------- helpers ----------
+const $ = (sel, root = document) => root.querySelector(sel);
+const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
+function el(tag, attrs = {}, ...kids) {
+  const n = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs)) {
+    if (v == null || v === false) continue;
+    n.setAttribute(k, v === true ? "" : String(v));
+  }
+  for (const kid of kids.flat()) if (kid != null) n.append(kid);
+  return n;
+}
+const nf = new Intl.NumberFormat("ja-JP");
+const int = (v) => (v == null ? DASH : nf.format(v));
+const withUnit = (v, unit) => (v == null ? DASH : `${int(v)}${unit}`);
+const signed = (v) => (v == null ? DASH : `${v > 0 ? "+" : v < 0 ? "−" : ""}${Math.abs(v)}%`);
+const pctText = (v) => (v == null ? DASH : `${v}%`);
+// 億円 → 「20兆2,784億円」「6,218億円」
+const okuText = (v) => (v == null ? DASH : v >= 10000 ? `${int(Math.floor(v / 10000))}兆${v % 10000 ? int(v % 10000) + "億" : ""}円` : `${int(v)}億円`);
+const norm = (s) => String(s ?? "").normalize("NFKC").toLowerCase().replace(/\s+/g, "");
+const empText = (m) => (m.employees != null ? `${int(m.employees)}人` : m.employees_single != null ? `${int(m.employees_single)}人（単独）` : DASH);
+const dashIf = (s) => (s == null || s === "-" || s === "" ? DASH : s);
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+function median(values) {
+  const v = values.filter((x) => x != null).sort((a, b) => a - b);
+  if (!v.length) return null;
+  const h = v.length >> 1;
+  return v.length % 2 ? v[h] : (v[h - 1] + v[h]) / 2;
+}
+// 3列の大きな数字。items: [ラベル, 値の文字列, 単位]
+function numsList(items, attrs = {}) {
+  return el("dl", { class: "nums", ...attrs }, items.map(([label, value, unit]) =>
+    el("div", { class: "num" }, el("dt", {}, label), el("dd", {}, value, value !== DASH && unit ? el("span", { class: "u" }, unit) : null))));
+}
+
+const companies = DATA.companies;
+const byCode = new Map(companies.map((c) => [c.code, c]));
+const featured = (kind) => companies.filter((c) => c.featured === kind);
+const featuredCodes = new Set(companies.filter((c) => c.featured).map((c) => c.code));
+
+// ---------- candidates (localStorage は使えなくても動く) ----------
+const store = {
+  load() {
+    try {
+      const v = JSON.parse(localStorage.getItem(STORE_KEY) || "[]");
+      return Array.isArray(v) ? [...new Set(v)].filter((x) => typeof x === "string" && featuredCodes.has(x)).slice(0, MAX_CAND) : [];
+    } catch (e) { return []; }
+  },
+  save(codes) {
+    try { localStorage.setItem(STORE_KEY, JSON.stringify(codes)); } catch (e) { /* 保存できなくても続ける */ }
+  },
+};
+const state = { seg: "all", candidates: store.load(), showAll: false };
+
+// ---------- static copy ----------
+function fillCopy() {
+  for (const p of $$("[data-intro]")) {
+    const text = COPY.section_intros?.[p.dataset.intro];
+    if (text) p.textContent = text; else p.hidden = true;
+  }
+  $("#how-body").append(el("ol", { class: "steps" }, (COPY.how_steps || []).map((s) => el("li", {}, s))));
+  const nl = $("#not-listed-body");
+  for (const g of COPY.not_listed || []) {
+    nl.append(el("div", { class: "group" },
+      el("h3", {}, g.group),
+      el("p", { class: "names" }, (g.names || []).join("\u00a0／ ")),
+      g.note ? el("p", { class: "note" }, g.note) : null));
+  }
+  $("#sources-body").append(
+    el("h3", {}, "使った資料"),
+    el("ul", { class: "plain" }, (COPY.sources || []).map((s) => el("li", {}, el("strong", {}, s.title), s.detail ? `　${s.detail}` : ""))),
+    el("h3", {}, "この資料の限界"),
+    el("ul", { class: "plain" }, (COPY.limits || []).map((s) => el("li", {}, s))),
+    COPY.disclaimer ? el("p", { class: "disclaimer" }, COPY.disclaimer) : null,
+    el("p", { class: "built" }, `作成日 ${DATA.meta.generated}`));
+}
+
+// ---------- hero: 狙い目の中央値 ----------
+function renderDigits() {
+  const picks = featured("pick");
+  const med = (get) => median(picks.map((c) => get(c.metrics)));
+  const sal = med((m) => m.avg_salary_man_yen);
+  const age = med((m) => m.avg_age);
+  const opm = med((m) => m.op_margin_pct);
+  $("#digits-note").textContent = `狙い目${picks.length}社の中央値`;
+  $("#digits").replaceWith(numsList([
+    ["平均年収", sal == null ? DASH : int(Math.round(sal)), "万円"],
+    ["平均年齢", age == null ? DASH : age.toFixed(1), "歳"],
+    ["営業利益率", opm == null ? DASH : opm.toFixed(1), "%"],
+  ], { id: "digits" }));
+}
+
+// ---------- company block ----------
+function detailSections(c) {
+  const m = c.metrics;
+  const out = [];
+  if (c.entry_roles.length) out.push(el("div", { class: "dsec" }, el("h4", {}, "文系の入り口（区分の傾向）"), el("ul", {}, c.entry_roles.map((r) => el("li", {}, r)))));
+  if (c.fit) out.push(el("div", { class: "dsec" }, el("h4", {}, "どんな会社か"), el("p", {}, c.fit)));
+  const cautions = [c.caution, ...c.caution_auto].filter(Boolean);
+  if (cautions.length) out.push(el("div", { class: "dsec" }, el("h4", {}, "注意点"), el("ul", {}, cautions.map((w) => el("li", {}, w)))));
+  const rows = [
+    ["従業員", empText(m)],
+    ["自己資本比率", pctText(m.equity_ratio_pct)],
+    ["売上予想の伸び", signed(m.sales_growth_pct)],
+  ];
+  if (m.op_margin_forecast_pct != null) rows.push(["営業利益率（今期予想）", pctText(m.op_margin_forecast_pct)]);
+  rows.push(["時価総額", okuText(c.mcap_oku)]);
+  rows.push(["入りやすさ", c.access_score == null ? DASH : `${c.access_score}/5（推定）`]);
+  if (c.difficulty && c.difficulty.difficulty_5 != null) {
+    const d = c.difficulty;
+    const src = typeof d.url === "string" && REASHU_URL.test(d.url) ? el("a", { href: d.url, target: "_blank", rel: "noopener noreferrer" }, d.source || "出典") : (d.source || "");
+    rows.push(["就職難易度", el("span", {}, `${d.difficulty_5}/5（出典: `, src, "）")]);
+  }
+  rows.push(["四季報の掲載ページ", c.shikiho_page || DASH]);
+  out.push(el("div", { class: "dsec" }, el("h4", {}, "その他の数字"),
+    el("dl", { class: "kv" }, rows.flatMap(([k, v]) => [el("dt", {}, k), el("dd", {}, v)]))));
+  const q = encodeURIComponent(`${c.name} 新卒採用`);
+  out.push(el("a", { class: "btn-line", href: `https://www.google.com/search?q=${q}`, target: "_blank", rel: "noopener noreferrer", "aria-label": `${c.name}の採用ページを探す` }, "採用ページを探す"));
+  return out;
+}
+function companyArticle(c) {
+  const m = c.metrics;
+  const detailId = `detail-${c.code}`;
+  const art = el("article", { class: "co", id: `co-${c.code}`, "data-code": c.code, "data-featured": c.featured, "data-segment": c.segment });
+  art.append(
+    el("div", { class: "co-head" },
+      el("h3", { class: "co-name" }, c.name, el("span", { class: "co-code" }, c.code)),
+      el("span", { class: "seg-tag" }, c.segment_label)),
+    numsList([["平均年収", int(m.avg_salary_man_yen), "万円"], ["平均年齢", m.avg_age == null ? DASH : String(m.avg_age), "歳"], ["営業利益率", m.op_margin_pct == null ? DASH : String(m.op_margin_pct), "%"]]),
+    el("div", { class: "why-row" },
+      el("div", { class: "why-body" }, el("p", { class: "lab" }, "なぜおすすめか"), el("ul", { class: "why" }, c.why.map((w) => el("li", {}, w)))),
+      el("button", { type: "button", class: "expander", "aria-expanded": "false", "aria-controls": detailId, "aria-label": `${c.name}の詳細を開く` }, "›")),
+    el("div", { class: "detail", id: detailId, hidden: true }, detailSections(c)),
+    el("button", { type: "button", class: "toggle", "data-code": c.code, "data-on": "false", "aria-label": `${c.name}を候補に入れる` }, "候補に入れる"));
+  return art;
+}
+function onListClick(ev) {
+  const exp = ev.target.closest("button.expander");
+  if (exp) {
+    const art = exp.closest(".co");
+    const open = exp.getAttribute("aria-expanded") !== "true";
+    exp.setAttribute("aria-expanded", String(open));
+    $(".detail", art).hidden = !open;
+    art.classList.toggle("is-open", open);
+    return;
+  }
+  const tg = ev.target.closest("button.toggle");
+  if (tg && toggleCandidate(tg.dataset.code) === "limit") showMsg(LIMIT_TEXT);
+}
+
+// ---------- picks / major ----------
+function renderLists() {
+  for (const [id, kind] of [["#picks-list", "pick"], ["#major-list", "major"]]) {
+    const box = $(id);
+    for (const c of featured(kind)) box.append(companyArticle(c));
+    box.addEventListener("click", onListClick);
+  }
+  const picks = featured("pick");
+  const tabs = $("#seg-tabs");
+  const defs = [{ key: "all", label: `すべて ${picks.length}` }];
+  for (const s of DATA.segments) {
+    const n = picks.filter((c) => c.segment === s.key).length;
+    if (n) defs.push({ key: s.key, label: `${s.label} ${n}` });
+  }
+  for (const d of defs) tabs.append(el("button", { type: "button", class: "tab", "data-seg": d.key, "aria-pressed": String(d.key === "all") }, d.label));
+  tabs.addEventListener("click", (ev) => {
+    const b = ev.target.closest("button[data-seg]");
+    if (!b) return;
+    selectSegment(b.dataset.seg);
+    const stuck = tabs.getBoundingClientRect().bottom;
+    const top = $("#picks-list").getBoundingClientRect().top;
+    if (top < stuck) window.scrollBy(0, top - stuck - 8);
+  });
+}
+function selectSegment(key) {
+  state.seg = key;
+  for (const x of $$("#seg-tabs button[data-seg]")) x.setAttribute("aria-pressed", String(x.dataset.seg === key));
+  applyListFilter();
+}
+function applyListFilter() {
+  let n = 0;
+  for (const a of $$("#picks-list .co")) {
+    const show = state.seg === "all" || a.dataset.segment === state.seg;
+    a.hidden = !show;
+    if (show) n += 1;
+  }
+  const total = featured("pick").length;
+  $("#picks-status").textContent = n === total ? `${total}社を表示` : `${total}社のうち${n}社を表示`;
+  $("#picks-empty").hidden = n > 0;
+}
+
+// ---------- dialogs (native <dialog> の下からのシート) ----------
+const compareSheet = $("#sheet");
+const finderSheet = $("#finder");
+const openers = new Map();
+function openDialog(d, opener) {
+  if (d.open) return;
+  delete d.dataset.closing;
+  openers.set(d, opener);
+  document.documentElement.classList.add("sheet-open");
+  d.showModal();
+  requestAnimationFrame(() => requestAnimationFrame(() => d.classList.add("is-in")));
+}
+function closeDialog(d, afterClose) {
+  if (!d.open || d.dataset.closing === "1") return;
+  d.dataset.closing = "1";
+  if (afterClose) d.addEventListener("close", afterClose, { once: true });
+  if (reduceMotion.matches) { d.close(); return; }
+  d.classList.remove("is-in");
+  setTimeout(() => { if (d.open) d.close(); }, 200);
+}
+function initDialog(d, closeBtn) {
+  closeBtn.addEventListener("click", () => closeDialog(d));
+  d.addEventListener("cancel", (ev) => { ev.preventDefault(); closeDialog(d); });
+  d.addEventListener("click", (ev) => { if (ev.target === d) closeDialog(d); });
+  d.addEventListener("close", () => {
+    if (d.open) return;  // 閉じた直後に開き直されたときは何もしない
+    d.classList.remove("is-in");
+    delete d.dataset.closing;
+    document.documentElement.classList.remove("sheet-open");
+    if (d.dataset.skipFocus === "1") delete d.dataset.skipFocus;
+    else openers.get(d)?.focus({ preventScroll: true });
+  });
+}
+
+// ---------- candidates: dock ----------
+const dock = $("#dock");
+const LIMIT_TEXT = `候補は${MAX_CAND}社までです。どれかを外してから追加してください。`;
+function candidateCompanies() { return state.candidates.map((code) => byCode.get(code)).filter(Boolean); }
+function showMsg(text) {
+  const box = $("#dock-msg");
+  box.textContent = text || "";
+  box.hidden = !text;
+}
+// 戻り値: "added" | "removed" | "limit"(上限で入れなかった)
+function toggleCandidate(code) {
+  if (state.candidates.includes(code)) {
+    state.candidates = state.candidates.filter((x) => x !== code);
+    showMsg("");
+    store.save(state.candidates);
+    syncCandidates();
+    return "removed";
+  }
+  if (state.candidates.length >= MAX_CAND) return "limit";
+  state.candidates = [...state.candidates, code];
+  showMsg("");
+  store.save(state.candidates);
+  syncCandidates();
+  return "added";
+}
+function syncCandidates() {
+  const picked = candidateCompanies();
+  for (const b of $$("button.toggle")) {
+    const on = state.candidates.includes(b.dataset.code);
+    const c = byCode.get(b.dataset.code);
+    b.dataset.on = String(on);
+    b.textContent = on ? "候補から外す" : "候補に入れる";
+    b.setAttribute("aria-label", `${c.name}を${on ? "候補から外す" : "候補に入れる"}`);
+  }
+  dock.hidden = picked.length === 0;
+  document.body.classList.toggle("has-dock", picked.length > 0);
+  $("#dock-count").textContent = String(picked.length);
+  $("#dock-chips").replaceChildren(...picked.map((c) => el("button", { type: "button", class: "chip", "data-code": c.code, "aria-label": `${c.name}を候補から外す` },
+    el("span", { class: "chip-name" }, c.name), el("span", { class: "chip-code" }, `${c.code} ×`))));
+  if (picked.length === 0) showMsg("");
+  syncDockHeight();
+}
+function syncDockHeight() {
+  document.documentElement.style.setProperty("--dock-h", dock.hidden ? "0px" : `${dock.offsetHeight}px`);
+}
+function initDock() {
+  $("#dock-chips").addEventListener("click", (ev) => {
+    const b = ev.target.closest("button.chip");
+    if (b) toggleCandidate(b.dataset.code);
+  });
+  $("#dock-clear").addEventListener("click", () => {
+    state.candidates = [];
+    store.save(state.candidates);
+    syncCandidates();
+  });
+  $("#dock-compare").addEventListener("click", () => openCompare());
+  if ("ResizeObserver" in window) new ResizeObserver(syncDockHeight).observe(dock);
+  syncCandidates();
+}
+
+// ---------- compare sheet ----------
+function compareTable(list) {
+  const rows = [
+    ["平均年収", (c) => withUnit(c.metrics.avg_salary_man_yen, "万円")],
+    ["平均年齢", (c) => withUnit(c.metrics.avg_age, "歳")],
+    ["営業利益率", (c) => pctText(c.metrics.op_margin_pct)],
+    ["従業員", (c) => empText(c.metrics)],
+    ["売上予想の伸び", (c) => signed(c.metrics.sales_growth_pct)],
+    ["入りやすさ（推定）", (c) => (c.access_score == null ? DASH : `${c.access_score}/5`)],
+    ["区分", (c) => c.segment_label],
+  ];
+  return el("table", { class: "cmp", style: `--cols:${list.length}` },
+    el("caption", { class: "sr" }, "候補の会社の比較"),
+    el("thead", {}, el("tr", {}, el("td", {}), list.map((c) => el("th", { scope: "col" }, c.name)))),
+    el("tbody", {}, rows.map(([label, get]) => el("tr", {}, el("th", { scope: "row" }, label), list.map((c) => el("td", {}, get(c)))))));
+}
+function openCompare(note) {
+  const list = candidateCompanies();
+  if (!list.length || compareSheet.open) return;
+  $("#sheet-body").replaceChildren(...(note ? [el("p", { class: "cmp-note" }, note)] : []), compareTable(list));
+  openDialog(compareSheet, $("#dock-compare"));
+}
+
+// ---------- finder: 6問で近い会社を探す ----------
+const FINDER = COPY.finder;
+const QUESTIONS = FINDER?.questions || [];
+const FINDER_KEY = "it-company-guide:finder:v1";
+const SKIP = "skip";
+const finder = { answers: Object.fromEntries(QUESTIONS.map((q) => [q.key, SKIP])), step: 0 };
+const validAnswer = (x) => x === SKIP || (Number.isInteger(x) && x >= 1 && x <= 5);
+const finderStore = {
+  load() {
+    try {
+      const v = JSON.parse(localStorage.getItem(FINDER_KEY) || "null");
+      if (!v || typeof v !== "object") return null;
+      const answers = Object.fromEntries(QUESTIONS.map((q) => [q.key, validAnswer(v.a?.[q.key]) ? v.a[q.key] : SKIP]));
+      const step = Number.isInteger(v.s) && v.s >= 0 && v.s <= QUESTIONS.length ? v.s : 0;
+      return { answers, step };
+    } catch (e) { return null; }
+  },
+  save() {
+    try { localStorage.setItem(FINDER_KEY, JSON.stringify({ a: finder.answers, s: finder.step })); } catch (e) { /* 保存できなくても続ける */ }
+  },
+};
+// 共有リンクのハッシュ: #f=size1.role-.customer5.growth-.access5.pay-  ('-' はこだわらない)
+function finderHash() {
+  return "#f=" + QUESTIONS.map((q) => `${q.key}${finder.answers[q.key] === SKIP ? "-" : finder.answers[q.key]}`).join(".");
+}
+function parseFinderHash(hash) {
+  const m = /^#f=([a-z0-9.-]{1,120})$/.exec(hash || "");
+  if (!m) return null;
+  const out = {};
+  for (const tok of m[1].split(".")) {
+    const t = /^([a-z]+)([1-5-])$/.exec(tok);
+    if (!t || !QUESTIONS.some((q) => q.key === t[1]) || t[1] in out) return null;
+    out[t[1]] = t[2] === "-" ? SKIP : Number(t[2]);
+  }
+  return Object.keys(out).length === QUESTIONS.length ? out : null;
+}
+const shareUrl = () => DATA.meta.url + finderHash();
+
+function tieScore(c) {
+  const sal = c.metrics.avg_salary_man_yen;
+  const pay = sal == null ? 0 : sal >= 800 ? 1.5 : sal >= 700 ? 1 : sal >= 600 ? 0.5 : 0;
+  return (c.growth_score || 0) + (c.access_score || 0) + pay;
+}
+// 距離 = Σ|答え−軸値|、一致度 = 1 − 距離 / (4 × 比べた軸の数)。軸値が null の軸は飛ばし、分母からも外す
+function finderScore(c, answers) {
+  let dist = 0, n = 0;
+  const diffs = [];
+  for (const q of QUESTIONS) {
+    const a = answers[q.key];
+    const v = c.axes?.[q.key];
+    if (a === SKIP || v == null) continue;
+    const d = Math.abs(a - v);
+    dist += d;
+    n += 1;
+    diffs.push({ q, d });
+  }
+  return { dist, n, match: n === 0 ? 0 : 1 - dist / (4 * n), diffs };
+}
+function finderRank(answers) {
+  return companies.filter((c) => c.featured === "pick" || c.featured === "major")
+    .map((c, i) => ({ c, i, ...finderScore(c, answers) }))
+    .sort((a, b) => (Math.round(b.match * 1e9) - Math.round(a.match * 1e9)) || (tieScore(b.c) - tieScore(a.c)) || (a.i - b.i));
+}
+function reasonText(c, key) {
+  const t = FINDER.reason_templates?.[key];
+  const m = c.metrics;
+  const value = { size: empText(m), role: FINDER.role_words?.[String(c.axes?.role)], customer: FINDER.customer_words?.[String(c.axes?.customer)],
+    growth: c.axes?.growth, access: c.axes?.access, pay: withUnit(m.avg_salary_man_yen, "万円") }[key];
+  if (!t || value == null || value === DASH) return null;
+  return t.replace("{value}", String(value));
+}
+const finderBody = () => $("#finder-body");
+const resultNode = (sel) => $(sel, finderBody());
+
+function questionView() {
+  const q = QUESTIONS[finder.step];
+  const n = finder.step + 1;
+  const total = QUESTIONS.length;
+  const prog = FINDER.progress.replace("{n}", String(n)).replace("{total}", String(total));
+  const cur = finder.answers[q.key];
+  const opts = [1, 2, 3, 4, 5, SKIP].map((v) => el("label", { class: v === SKIP ? "opt opt-skip" : "opt" },
+    el("input", { type: "radio", name: `finder-${q.key}`, value: String(v), checked: cur === v }),
+    el("span", {}, v === SKIP ? FINDER.skip_label : String(v))));
+  return [
+    el("div", { class: "f-prog" }, el("p", { class: "f-prog-text" }, prog), el("progress", { value: String(n), max: String(total), "aria-label": prog })),
+    finder.step === 0 && FINDER.intro ? el("p", { class: "f-intro" }, FINDER.intro) : null,
+    el("fieldset", { class: "q", "aria-describedby": "f-hint" },
+      el("legend", {}, el("h3", { class: "q-title", tabindex: "-1" }, q.text)),
+      el("p", { class: "q-ends" }, el("span", {}, q.left), el("span", {}, q.right)),
+      el("div", { class: "q-opts" }, opts)),
+    el("p", { class: "sr", id: "f-hint" }, "矢印キーで選び、Enterキーで次の質問へ進みます。"),
+    finder.step === 0 && FINDER.region_note ? el("p", { class: "f-region" }, FINDER.region_note) : null,
+    finder.step > 0 ? el("button", { type: "button", class: "f-act f-back" }, FINDER.back_label) : null,
+  ];
+}
+function resultView() {
+  const head = el("h3", { class: "q-title", tabindex: "-1" }, FINDER.result_title);
+  const redo = el("button", { type: "button", class: "f-act f-redo" }, FINDER.redo_label);
+  if (QUESTIONS.every((q) => finder.answers[q.key] === SKIP)) {
+    return [head, el("p", { class: "f-need", role: "status" }, FINDER.need_answer), redo];
+  }
+  const top = finderRank(finder.answers).slice(0, 5);
+  // 区分の傾向: 上位5社に多い区分の上位2つ
+  const counts = new Map();
+  top.forEach((r, i) => {
+    const e = counts.get(r.c.segment) || { n: 0, first: i };
+    e.n += 1;
+    counts.set(r.c.segment, e);
+  });
+  const segKeys = [...counts.entries()].sort((a, b) => b[1].n - a[1].n || a[1].first - b[1].first).slice(0, 2).map(([k]) => k);
+  const segLabel = (k) => DATA.segments.find((s) => s.key === k)?.label || k;
+  const hasTab = (k) => featured("pick").some((c) => c.segment === k);
+  const tabKey = segKeys.find(hasTab);
+  const names3 = top.slice(0, 3).map((r) => r.c.name).join("、");
+  const xText = (FINDER.share_x_text || "").replace("{names}", names3);
+  const tags = (FINDER.share_x_tags || []).join(",");
+  const xHref = `https://x.com/intent/post?text=${encodeURIComponent(xText)}&url=${encodeURIComponent(shareUrl())}${tags ? `&hashtags=${encodeURIComponent(tags)}` : ""}`;
+  const items = top.map((r) => {
+    const c = r.c;
+    const good = r.diffs.filter((x) => x.d <= 1).sort((a, b) => a.d - b.d).map((x) => reasonText(c, x.q.key) || x.q.text).slice(0, 3);
+    const gap = r.diffs.filter((x) => x.d >= 3).map((x) => x.q.text);
+    return el("li", { class: "f-item", "data-code": c.code, "data-segment": c.segment, "data-match": r.match.toFixed(4), "data-dist": String(r.dist), "data-axes": String(r.n) },
+      el("div", { class: "f-head" },
+        el("h4", { class: "f-name" }, c.name, el("span", { class: "co-code" }, c.code)),
+        el("p", { class: "f-match" }, el("small", {}, "一致度"), `${Math.round(r.match * 100)}%`)),
+      el("p", { class: "f-seg" }, c.segment_label),
+      good.length ? el("p", { class: "lab" }, FINDER.good_label) : null,
+      good.length ? el("ul", { class: "f-why" }, good.map((t) => el("li", {}, t))) : null,
+      gap.length ? el("p", { class: "f-gap" }, `${FINDER.gap_label}: ${gap.join("、")}`) : null,
+      el("div", { class: "f-btns" },
+        el("button", { type: "button", class: "toggle", "data-code": c.code, "data-on": "false" }, "候補に入れる"),
+        el("button", { type: "button", class: "f-act f-more", "data-code": c.code }, FINDER.detail_label)));
+  });
+  return [
+    head,
+    el("p", { class: "f-note" }, FINDER.result_note),
+    el("p", { class: "f-lead" }, (FINDER.segment_lead || "").replace("{segments}", segKeys.map(segLabel).join("と"))),
+    tabKey ? el("button", { type: "button", class: "f-act f-seg-btn", "data-seg": tabKey }, `${FINDER.segment_filter_label}（${segLabel(tabKey)}）`) : null,
+    el("ol", { class: "f-res" }, items),
+    el("button", { type: "button", class: "f-act solid f-bulk" }, FINDER.bulk_label),
+    el("p", { class: "f-note f-msg", role: "status" }),
+    el("div", { class: "f-sec" },
+      el("button", { type: "button", class: "f-act f-copy" }, FINDER.share_label),
+      el("a", { class: "f-act f-x", href: xHref, target: "_blank", rel: "noopener noreferrer" }, FINDER.share_x_label),
+      el("input", { type: "text", class: "f-url", readonly: true, hidden: true, "aria-label": "共有リンク" })),
+    redo,
+  ];
+}
+function finderRender(moveFocus = true) {
+  const body = finderBody();
+  body.replaceChildren(...(finder.step >= QUESTIONS.length ? resultView() : questionView()).filter(Boolean));
+  if (finder.step >= QUESTIONS.length) syncCandidates();
+  body.scrollTop = 0;
+  if (moveFocus) $("h3", body)?.focus({ preventScroll: true });
+}
+function answerStep(value) {
+  const q = QUESTIONS[finder.step];
+  if (!q) return;
+  finder.answers = { ...finder.answers, [q.key]: value === SKIP ? SKIP : Number(value) };
+  finder.step += 1;
+  finderStore.save();
+  finderRender();
+}
+function setFinderMsg(text) {
+  const box = resultNode(".f-msg");
+  if (box) box.textContent = text || "";
+}
+function revealCompany(code) {
+  const art = $(`#co-${code}`);
+  if (!art) return;
+  if (art.dataset.featured === "pick" && state.seg !== "all" && art.dataset.segment !== state.seg) selectSegment("all");
+  const exp = $("button.expander", art);
+  if (exp.getAttribute("aria-expanded") !== "true") exp.click();
+  const offset = $(".topbar").offsetHeight + (art.dataset.featured === "pick" ? $("#seg-tabs").offsetHeight : 0) + 8;
+  window.scrollTo(0, art.getBoundingClientRect().top + window.scrollY - offset);
+}
+async function copyShare() {
+  const msg = resultNode(".f-msg");
+  const box = resultNode(".f-url");
+  try {
+    await navigator.clipboard.writeText(shareUrl());
+    box.hidden = true;
+    msg.textContent = FINDER.share_done;
+  } catch (e) {
+    box.value = shareUrl();
+    box.hidden = false;
+    box.focus();
+    box.select();
+    msg.textContent = "コピーできませんでした。表示した文字を選んでコピーしてください。";
+  }
+}
+function onFinderClick(ev) {
+  const opt = ev.target.closest(".opt");
+  if (opt) {
+    // ポインタの操作(detail>0)だけ自動で次へ。矢印キーの選択移動(detail=0)では進まない
+    if (ev.detail > 0) answerStep(opt.querySelector("input").value);
+    return;
+  }
+  const btn = ev.target.closest("button");
+  if (!btn) return;
+  const cls = btn.classList;
+  if (cls.contains("f-back")) {
+    finder.step = Math.max(0, finder.step - 1);
+    finderStore.save();
+    finderRender();
+  } else if (cls.contains("f-redo")) {
+    finder.step = 0;
+    finderStore.save();
+    finderRender();
+  } else if (cls.contains("toggle")) {
+    setFinderMsg(toggleCandidate(btn.dataset.code) === "limit" ? LIMIT_TEXT : "");
+  } else if (cls.contains("f-more")) {
+    const code = btn.dataset.code;
+    finderSheet.dataset.skipFocus = "1";
+    closeDialog(finderSheet, () => revealCompany(code));
+  } else if (cls.contains("f-seg-btn")) {
+    const key = btn.dataset.seg;
+    finderSheet.dataset.skipFocus = "1";
+    closeDialog(finderSheet, () => {
+      selectSegment(key);
+      $("#picks").scrollIntoView();
+    });
+  } else if (cls.contains("f-bulk")) {
+    const codes = $$(".f-item", finderBody()).slice(0, 3).map((li) => li.dataset.code);
+    const next = [...state.candidates];
+    let skipped = 0;
+    for (const code of codes) {
+      if (next.includes(code)) continue;
+      if (next.length >= MAX_CAND) skipped += 1; else next.push(code);
+    }
+    state.candidates = next;
+    store.save(next);
+    showMsg("");
+    syncCandidates();
+    const note = skipped ? `候補は${MAX_CAND}社までなので、${skipped}社は入れていません。` : "";
+    finderSheet.dataset.skipFocus = "1";
+    closeDialog(finderSheet, () => openCompare(note));
+  } else if (cls.contains("f-copy")) {
+    copyShare();
+  }
+}
+function onFinderKey(ev) {
+  const r = ev.target;
+  if (!(r instanceof HTMLInputElement) || r.type !== "radio") return;
+  // 矢印キーは選択の移動だけ。Enter(または選択済みでの Space)で次の質問へ
+  if (ev.key === "Enter" || (ev.key === " " && r.checked)) {
+    ev.preventDefault();
+    answerStep(r.value);
+  }
+}
+function openFinder() {
+  if (finderSheet.open) return;
+  finderRender(false);
+  openDialog(finderSheet, $("#finder-open"));
+  requestAnimationFrame(() => $("h3", finderBody())?.focus({ preventScroll: true }));
+}
+function initFinder() {
+  if (!FINDER || !QUESTIONS.length) return;  // copy.finder が無ければボタンは出さない
+  const btn = $("#finder-open");
+  btn.textContent = FINDER.open_label;
+  btn.hidden = false;
+  $("#finder-h").textContent = FINDER.title;
+  initDialog(finderSheet, $("#finder-close"));
+  finderBody().addEventListener("click", onFinderClick);
+  finderBody().addEventListener("keydown", onFinderKey);
+  const saved = finderStore.load();
+  if (saved) { finder.answers = saved.answers; finder.step = saved.step; }
+  const shared = parseFinderHash(location.hash);
+  if (shared) {
+    finder.answers = shared;
+    finder.step = QUESTIONS.length;
+    finderStore.save();
+  }
+  btn.addEventListener("click", openFinder);
+  if (shared) openFinder();
+}
+
+// ---------- map ----------
+function renderMap() {
+  const box = $("#map-body");
+  for (const s of DATA.segments) {
+    box.append(el("div", { class: "seg" },
+      el("h3", {}, s.label),
+      el("p", {}, s.what),
+      el("dl", { class: "seg-kv" },
+        el("dt", {}, "業界天気"),
+        el("dd", {}, el("ul", {}, s.industries.map((i) => el("li", {}, `${i.name}　${dashIf(i.weather_26h2)}→${dashIf(i.weather_27)}`)))),
+        el("dt", {}, "文系の入り口"),
+        el("dd", {}, s.entry_roles.join("、")),
+        el("details", {}, el("summary", {}, "国内市場規模を見る"),
+          el("ul", {}, s.industries.map((i) => el("li", {}, `${i.name}　${dashIf(i.market_japan)}`)))))));
+  }
+}
+
+// ---------- all companies ----------
+const SORTS = [
+  { id: "mcap", label: "時価総額順", key: (c) => c.mcap_oku, dir: -1 },
+  { id: "salary", label: "平均年収順", key: (c) => c.metrics.avg_salary_man_yen, dir: -1 },
+  { id: "age", label: "年齢が若い順", key: (c) => c.metrics.avg_age, dir: 1 },
+  { id: "opm", label: "営業利益率順", key: (c) => c.metrics.op_margin_pct, dir: -1 },
+  { id: "growth", label: "売上の伸び順", key: (c) => c.metrics.sales_growth_pct, dir: -1 },
+];
+let rows = [];
+function rowItem(c, i) {
+  const m = c.metrics;
+  const li = el("li", { class: "row", "data-code": c.code },
+    el("div", { class: "row-main" },
+      el("span", {}, el("span", { class: "row-name" }, c.name), el("span", { class: "row-code" }, c.code)),
+      el("span", { class: "row-seg" }, c.segment_label)),
+    el("p", { class: "row-sub" },
+      el("span", {}, `時価総額 ${okuText(c.mcap_oku)}`),
+      el("span", {}, `年収 ${withUnit(m.avg_salary_man_yen, "万円")}`),
+      el("span", {}, `年齢 ${withUnit(m.avg_age, "歳")}`),
+      el("span", {}, `利益率 ${pctText(m.op_margin_pct)}`),
+      el("span", {}, `売上 ${signed(m.sales_growth_pct)}`)),
+    c.caution ? el("p", { class: "row-note" }, `注：${c.caution}`) : null);
+  return { c, li, i, q: norm(`${c.name} ${c.code}`) };
+}
+function renderAllRows() {
+  const q = norm($("#all-q").value);
+  const seg = $("#all-seg").value;
+  const sort = SORTS.find((s) => s.id === $("#all-sort").value) || SORTS[0];
+  const matched = rows.filter((r) => (!q || r.q.includes(q)) && (!seg || r.c.segment === seg));
+  matched.sort((a, b) => {
+    const ka = sort.key(a.c), kb = sort.key(b.c);
+    if (ka == null || kb == null) return ka == null && kb == null ? a.i - b.i : ka == null ? 1 : -1;
+    return ka !== kb ? (ka - kb) * sort.dir : a.i - b.i;
+  });
+  const limit = q || seg || state.showAll ? Infinity : INITIAL_ROWS;
+  const shown = matched.slice(0, limit);
+  $("#all-rows").replaceChildren(...shown.map((r) => r.li));
+  const rest = matched.length - shown.length;
+  const more = $("#all-more");
+  more.hidden = rest <= 0;
+  more.textContent = `残り${rest}社を表示`;
+  $("#all-empty").hidden = matched.length > 0;
+  $("#all-status").textContent = matched.length === rows.length ? `${rows.length}社を表示` : `${rows.length}社のうち${matched.length}社が当てはまります`;
+}
+function initAll() {
+  rows = companies.map((c, i) => rowItem(c, i));
+  for (const s of DATA.segments) $("#all-seg").append(el("option", { value: s.key }, `${s.label}（${s.count}）`));
+  for (const s of SORTS) $("#all-sort").append(el("option", { value: s.id }, s.label));
+  $("#all-q").addEventListener("input", renderAllRows);
+  $("#all-seg").addEventListener("change", renderAllRows);
+  $("#all-sort").addEventListener("change", renderAllRows);
+  $("#all-more").addEventListener("click", () => { state.showAll = true; renderAllRows(); });
+  renderAllRows();
+  $("#search-btn").addEventListener("click", () => {
+    const box = $("#all-q");
+    box.scrollIntoView({ block: "center" });
+    box.focus({ preventScroll: true });
+  });
+}
+
+// ---------- start ----------
+fillCopy();
+renderDigits();
+renderLists();
+applyListFilter();
+renderMap();
+initAll();
+initDialog(compareSheet, $("#sheet-close"));
+initDock();
+initFinder();
+})();
+</script>
+</body>
+</html>
